@@ -8,122 +8,122 @@
     <title>Trang Bán Máy Tính</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Custom styles */
-        .custom-header {
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
-            color: white;
-            padding: 20px 0;
-        }
+    /* Custom styles */
+    .custom-header {
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+        color: white;
+        padding: 20px 0;
+    }
 
-        .custom-nav {
-            background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    .custom-nav {
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        .carousel-item img {
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .carousel-item img {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .card {
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    .card {
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
 
-        .btn-primary {
-            background-color: #6a11cb;
-            border-color: #6a11cb;
-        }
+    .btn-primary {
+        background-color: #6a11cb;
+        border-color: #6a11cb;
+    }
 
-        .btn-primary:hover {
-            background-color: #2575fc;
-            border-color: #2575fc;
-        }
+    .btn-primary:hover {
+        background-color: #2575fc;
+        border-color: #2575fc;
+    }
 
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 40px 0;
-        }
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 40px 0;
+    }
 
-        footer a {
-            color: #adb5bd;
-            transition: color 0.3s ease;
-        }
+    footer a {
+        color: #adb5bd;
+        transition: color 0.3s ease;
+    }
 
-        footer a:hover {
-            color: #f8f9fa;
-        }
+    footer a:hover {
+        color: #f8f9fa;
+    }
 
-        .section-title {
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
+    .section-title {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+    }
 
-        .section-title::after {
-            content: '';
-            width: 50px;
-            height: 4px;
-            background-color: #6a11cb;
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-        }
+    .section-title::after {
+        content: '';
+        width: 50px;
+        height: 4px;
+        background-color: #6a11cb;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
 
-        .col-md-3 {
-            padding-top: 20px;
-        }
+    .col-md-3 {
+        padding-top: 20px;
+    }
 
-        .link {
-            text-decoration: none;
-            color: black;
-        }
+    .link {
+        text-decoration: none;
+        color: black;
+    }
 
-        /* Custom styles for the user greeting link */
-        a.user-greeting {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #343a40;
-            /* Màu chữ tối */
-            display: flex;
-            align-items: center;
-            padding: 5px 10px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+    /* Custom styles for the user greeting link */
+    a.user-greeting {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #343a40;
+        /* Màu chữ tối */
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-        a.user-greeting i {
-            font-size: 1.5rem;
-            color: #8a4de8;
-            /* Màu biểu tượng */
-            transition: color 0.3s ease;
-        }
+    a.user-greeting i {
+        font-size: 1.5rem;
+        color: #8a4de8;
+        /* Màu biểu tượng */
+        transition: color 0.3s ease;
+    }
 
-        a.user-greeting:hover {
-            background-color: #f0f0f5;
-            /* Màu nền nhạt khi hover */
-            color: #6b3fc9;
-            /* Màu chữ đổi khi hover */
-        }
+    a.user-greeting:hover {
+        background-color: #f0f0f5;
+        /* Màu nền nhạt khi hover */
+        color: #6b3fc9;
+        /* Màu chữ đổi khi hover */
+    }
 
-        a.user-greeting:hover i {
-            color: #6b3fc9;
-            /* Màu biểu tượng đổi khi hover */
-        }
+    a.user-greeting:hover i {
+        color: #6b3fc9;
+        /* Màu biểu tượng đổi khi hover */
+    }
     </style>
 </head>
 
 <body>
-
+    <?= $status ? "Kết nối thành công" : "Có lỗi sảy ra trong quá trình kê" ?>
     <!-- Header -->
     <header class="custom-header">
         <div class="container d-flex justify-content-between align-items-center">
@@ -135,21 +135,21 @@
             </div>
             <div class="user">
                 <?php if (!isset($_SESSION["username"])) { ?>
-                    <div class="account-popup">
-                        <div class="d-flex">
-                            <a href="?wh=login"
-                                class="btn btn-light me-2 shadow-sm border border-primary text-primary d-flex align-items-center">
-                                <i class="bi bi-box-arrow-in-right me-1"></i> Đăng nhập
-                            </a>
-                            <a href="?wh=reg" class="btn btn-primary shadow-sm d-flex align-items-center">
-                                <i class="bi bi-person-plus-fill me-1"></i> Đăng ký
-                            </a>
-                        </div>
+                <div class="account-popup">
+                    <div class="d-flex">
+                        <a href="?wh=login"
+                            class="btn btn-light me-2 shadow-sm border border-primary text-primary d-flex align-items-center">
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Đăng nhập
+                        </a>
+                        <a href="?wh=reg" class="btn btn-primary shadow-sm d-flex align-items-center">
+                            <i class="bi bi-person-plus-fill me-1"></i> Đăng ký
+                        </a>
                     </div>
+                </div>
                 <?php } else { ?>
-                    <a href="?wh=client" class="text-decoration-none user-greeting">
-                        <i class="bi bi-person-circle me-2"></i> Xin chào, <?= $_SESSION["username"] ?>
-                    </a>
+                <a href="?wh=client" class="text-decoration-none user-greeting">
+                    <i class="bi bi-person-circle me-2"></i> Xin chào, <?= $_SESSION["username"] ?>
+                </a>
 
                 <?php } ?>
             </div>

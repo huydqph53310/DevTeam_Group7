@@ -8,13 +8,14 @@ class AdminController
     public function __construct()
     {
         $this->connect = new ConnectDatabase();
-        $this->swuser = new SwitchQuery();
+        // $this->swuser = new SwitchQuery();
     }
 
     public function __destruct() {}
 
     public function Trangchu()
     {
+        $status = $this->connect->statusConnect;
         include "app/view/Home.php";
     }
 
@@ -47,7 +48,7 @@ class AdminController
         } else {
             header("Location: ?wh=");
         }
-        include "project/app/view/LoginScr/LoginScr.php";
+        include "app/view/LoginScr/LoginScr.php";
     }
 
     public function Logout()
@@ -106,7 +107,7 @@ class AdminController
         } else {
             header("Location: ?wh=");
         }
-        include "project/app/view/LoginScr/RegsiterScr.php";
+        include "app/view/LoginScr/RegsiterScr.php";
     }
 
     public function GETURL()

@@ -2,22 +2,22 @@
 // trang này chỉ sử dụng điều hướng không có logic
 /// nhúng các file cần thiết nào đấy
 include_once "config/Config.php";
+include_once "config/ConnectDatabase.php";
 //model
-include_once "app/model/admin/ConnectDatabase.php";
-include_once "app/model/admin/SwitchQuery.php";
-// include_once "project/app/model/user/SwitchQueryUser.php";
-include_once "app/model/admin/usermanager/users.php";
-include_once "app/model/admin/usermanager/datauser.php";
+// include_once "app/model/admin/SwitchQuery.php";
+// // include_once "project/app/model/user/SwitchQueryUser.php";
+// include_once "app/model/admin/usermanager/users.php";
+// include_once "app/model/admin/usermanager/datauser.php";
 session_start();
-//controller
-include_once "app/controller/Admin/AdminController.php";
-include_once "app/controller/Client/ClientController.php";
+// //controller
+include_once "app/controller/moderator/AdminController.php";
+// include_once "app/controller/Client/ClientController.php";
 //include_once "project/app/controller/Admin/SwitchQuery.php";
 
 //include_once
 // gọi thằng cha trở về
 $Admicontroller = new AdminController();
-$Clientcontroller = new ClientController();
+// $Clientcontroller = new ClientController();
 // $checkConnect = new ConnectDatabase();
 // logic điều hướng
 switch ($Admicontroller->GETURL()) {
