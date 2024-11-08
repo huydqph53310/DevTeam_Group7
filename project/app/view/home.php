@@ -290,7 +290,7 @@
                             <h5 class="card-title">Sản phẩm 2</h5>
                             <p class="card-text">Mô tả sản phẩm 2</p>
                             <a href="#" class="btn btn-primary">Mua ngay</a>
-                        </div>
+                        </div>-
                     </div>
                 </div>
                 <div class="col-md-3">
