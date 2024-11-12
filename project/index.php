@@ -4,45 +4,53 @@
 include_once "config/Config.php";
 include_once "config/ConnectDatabase.php";
 //model
-// include_once "app/model/admin/SwitchQuery.php";
+include_once "app/model/user/ClientModel.php";
 // // include_once "project/app/model/user/SwitchQueryUser.php";
 // include_once "app/model/admin/usermanager/users.php";
 // include_once "app/model/admin/usermanager/datauser.php";
 session_start();
 // //controller
-include_once "app/controller/moderator/AdminController.php";
+include_once "app/controller/RouterController.php";
+include_once "app/controller/UsersController/InfoUserController.php";
+include_once "app/controller/UsersController/RegisterController.php";
+include_once "app/controller/UsersController/LogoutController.php";
+include_once "app/controller/UsersController/LoginController.php";
 // include_once "app/controller/Client/ClientController.php";
 //include_once "project/app/controller/Admin/SwitchQuery.php";
 
 //include_once
 // gọi thằng cha trở về
-$Admicontroller = new AdminController();
+$router = new RouterController();
 // $Clientcontroller = new ClientController();
 // $checkConnect = new ConnectDatabase();
 // logic điều hướng
-switch ($Admicontroller->GETURL()) {
+switch ($router->GETURL()) {
     case "":
         header("location: ?wh=home");
         break;
     case "home":
-        $Admicontroller->Trangchu();
+        $router->Trangchu();
         break;
     case "login":
-        $Admicontroller->Login();
+        $login = new LoginController();
+        $login->login();
         break;
     case "reg":
-        $Admicontroller->Regsiter();
-        break;
+        $reg = new RegisterController();
+        $reg->Regsiter();
     case "logout":
-        $Admicontroller->Logout();
+        $logout = new LogoutController();
+        $logout->Logout();
         break;
     case "client":
-        $Clientcontroller->Profile();
+        $client = new InfoUserController();
+        $client->InfoClient();
+
         break;
     case "disconnect":
-        include "project/app/view/Disconnect.php";
+        include "app/view/Disconnect.php";
         break;
     default:
-        include "project/app/view/404.php";
+        include "app/view/404.php";
         break;
 }

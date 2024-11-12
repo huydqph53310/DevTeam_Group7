@@ -6,7 +6,7 @@ class ChiTietBillModel
     {
         try {
             //code...
-        } catch (\Throwable $th) {
+        } catch (Exception $err) {
             //throw $th;
         }
     }
@@ -15,7 +15,7 @@ class ChiTietBillModel
     {
         try {
             //code...
-        } catch (\Throwable $th) {
+        } catch (Exception $err) {
             //throw $th;
         }
     }
@@ -25,7 +25,7 @@ class ChiTietBillModel
     {
         try {
             //code...
-        } catch (\Throwable $th) {
+        } catch (Exception $err) {
             //throw $th;
         }
     }
@@ -35,7 +35,7 @@ class ChiTietBillModel
     {
         try {
             //code...
-        } catch (\Throwable $th) {
+        } catch (Exception $err) {
             //throw $th;
         }
     }
@@ -45,7 +45,7 @@ class ChiTietBillModel
     {
         try {
             //code...
-        } catch (\Throwable $th) {
+        } catch (Exception $err) {
             //throw $th;
         }
     }

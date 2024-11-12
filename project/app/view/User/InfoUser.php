@@ -123,8 +123,8 @@
                     <div class="card p-4">
                         <h5 class="card-title">Thông tin tài khoản</h5>
                         <p><strong>Tên người dùng:</strong> <?= $data->username ?></p>
-                        <p><strong>Loại tài khoản:</strong> <?= $data->premium = 0 ? "Premium" : "Thường" ?></p>
-                        <p><strong>Ngày tham gia:</strong> <?= $data->johndate ?></p>
+                        <p><strong>Loại tài khoản:</strong> <?= $data->vip = 0 ? "Premium" : "Thường" ?></p>
+                        <p><strong>Ngày tham gia:</strong> <?= $data->datejoin ?></p>
                         <p><strong>Điểm tích lũy:</strong> <?= $data->point ?></p>
                     </div>
                 </div>

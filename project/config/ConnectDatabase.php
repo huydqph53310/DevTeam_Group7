@@ -19,6 +19,7 @@ class ConnectDatabase extends Config
                 $this->USERNAE,
                 $this->PASSWORD
             );
+
             $this->statusConnect = true;
             //echo "Connect Succsses fully ";
         } catch (Exception $e) {

@@ -7,10 +7,6 @@ class SwitchQuery extends ConnectDatabase
     public function InsertUser(object $obj)
     {
         try {
-            // $this->connect->query("USE " . parent::DB_NAME);
-            $sql = "INSERT INTO `users` (`users_id`, `name`, `username`, `password`, `email`, `phone`, `action`, `ban`) VALUES (NULL, '$obj->name', '$obj->username', '$obj->password', '$obj->email', '$obj->phone', '0', '0')";
-            $dataCheck = $this->connect->exec($sql);
-            return $dataCheck;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
