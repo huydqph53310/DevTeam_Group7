@@ -1,0 +1,254 @@
+{
+    "Thành phố Hồ Chí Minh": {
+        "code": "41 / 50 / 51 / 52 / 53 / 54 / 55 / 56 / 57 / 58 / 59",
+        "name": "Thành phố Hồ Chí Minh"
+    },
+    "Hà Nội": {
+        "code": "29 / 30 / 31 / 32 / 33 / 40",
+        "name": "Hà Nội"
+    },
+    "Đà Nẵng": {
+        "code": "43",
+        "name": "Đà Nẵng"
+    },
+    "Bình Dương": {
+        "code": "61",
+        "name": "Bình Dương"
+    },
+    "Đồng Nai": {
+        "code": "39 / 60",
+        "name": "Đồng Nai"
+    },
+    "Khánh Hòa": {
+        "code": "79",
+        "name": "Khánh Hòa"
+    },
+    "Hải Phòng": {
+        "code": "15 / 16",
+        "name": "Hải Phòng"
+    },
+    "Long An": {
+        "code": "62",
+        "name": "Long An"
+    },
+    "Quảng Nam": {
+        "code": "92",
+        "name": "Quảng Nam"
+    },
+    "Bà Rịa - Vũng Tàu": {
+        "code": "72",
+        "name": "Bà Rịa - Vũng Tàu"
+    },
+    "Đắk Lắk": {
+        "code": "47",
+        "name": "Đắk Lắk"
+    },
+    "Cần Thơ": {
+        "code": "65",
+        "name": "Cần Thơ"
+    },
+    "Bình Thuận": {
+        "code": "86",
+        "name": "Bình Thuận"
+    },
+    "Lâm Đồng": {
+        "code": "49",
+        "name": "Lâm Đồng"
+    },
+    "Thừa Thiên Huế": {
+        "code": "75",
+        "name": "Thừa Thiên Huế"
+    },
+    "Kiên Giang": {
+        "code": "68",
+        "name": "Kiên Giang"
+    },
+    "Bắc Ninh": {
+        "code": "99",
+        "name": "Bắc Ninh"
+    },
+    "Quảng Ninh": {
+        "code": "14",
+        "name": "Quảng Ninh"
+    },
+    "Thanh Hóa": {
+        "code": "36",
+        "name": "Thanh Hóa"
+    },
+    "Nghệ An": {
+        "code": "37",
+        "name": "Nghệ An"
+    },
+    "Hải Dương": {
+        "code": "34",
+        "name": "Hải Dương"
+    },
+    "Gia Lai": {
+        "code": "81",
+        "name": "Gia Lai"
+    },
+    "Bình Phước": {
+        "code": "93",
+        "name": "Bình Phước"
+    },
+    "Hưng Yên": {
+        "code": "89",
+        "name": "Hưng Yên"
+    },
+    "Bình Định": {
+        "code": "77",
+        "name": "Bình Định"
+    },
+    "Tiền Giang": {
+        "code": "63",
+        "name": "Tiền Giang"
+    },
+    "Thái Bình": {
+        "code": "17",
+        "name": "Thái Bình"
+    },
+    "Bắc Giang": {
+        "code": "98",
+        "name": "Bắc Giang"
+    },
+    "Hòa Bình": {
+        "code": "28",
+        "name": "Hòa Bình"
+    },
+    "An Giang": {
+        "code": "67",
+        "name": "An Giang"
+    },
+    "Vĩnh Phúc": {
+        "code": "88",
+        "name": "Vĩnh Phúc"
+    },
+    "Tây Ninh": {
+        "code": "70",
+        "name": "Tây Ninh"
+    },
+    "Thái Nguyên": {
+        "code": "20",
+        "name": "Thái Nguyên"
+    },
+    "Lào Cai": {
+        "code": "24",
+        "name": "Lào Cai"
+    },
+    "Nam Định": {
+        "code": "18",
+        "name": "Nam Định"
+    },
+    "Quảng Ngãi": {
+        "code": "76",
+        "name": "Quảng Ngãi"
+    },
+    "Bến Tre": {
+        "code": "71",
+        "name": "Bến Tre"
+    },
+    "Đắk Nông": {
+        "code": "48",
+        "name": "Đắk Nông"
+    },
+    "Cà Mau": {
+        "code": "69",
+        "name": "Cà Mau"
+    },
+    "Vĩnh Long": {
+        "code": "64",
+        "name": "Vĩnh Long"
+    },
+    "Ninh Bình": {
+        "code": "35",
+        "name": "Ninh Bình"
+    },
+    "Phú Thọ": {
+        "code": "19",
+        "name": "Phú Thọ"
+    },
+    "Ninh Thuận": {
+        "code": "85",
+        "name": "Ninh Thuận"
+    },
+    "Phú Yên": {
+        "code": "78",
+        "name": "Phú Yên"
+    },
+    "Hà Nam": {
+        "code": "90",
+        "name": "Hà Nam"
+    },
+    "Hà Tĩnh": {
+        "code": "38",
+        "name": "Hà Tĩnh"
+    },
+    "Đồng Tháp": {
+        "code": "66",
+        "name": "Đồng Tháp"
+    },
+    "Sóc Trăng": {
+        "code": "83",
+        "name": "Sóc Trăng"
+    },
+    "Kon Tum": {
+        "code": "82",
+        "name": "Kon Tum"
+    },
+    "Quảng Bình": {
+        "code": "73",
+        "name": "Quảng Bình"
+    },
+    "Quảng Trị": {
+        "code": "74",
+        "name": "Quảng Trị"
+    },
+    "Trà Vinh": {
+        "code": "84",
+        "name": "Trà Vinh"
+    },
+    "Hậu Giang": {
+        "code": "95",
+        "name": "Hậu Giang"
+    },
+    "Sơn La": {
+        "code": "26",
+        "name": "Sơn La"
+    },
+    "Bạc Liêu": {
+        "code": "94",
+        "name": "Bạc Liêu"
+    },
+    "Yên Bái": {
+        "code": "21",
+        "name": "Yên Bái"
+    },
+    "Tuyên Quang": {
+        "code": "22",
+        "name": "Tuyên Quang"
+    },
+    "Điện Biên": {
+        "code": "27",
+        "name": "Điện Biên"
+    },
+    "Lai Châu": {
+        "code": "25",
+        "name": "Lai Châu"
+    },
+    "Lạng Sơn": {
+        "code": "12",
+        "name": "Lạng Sơn"
+    },
+    "Hà Giang": {
+        "code": "23",
+        "name": "Hà Giang"
+    },
+    "Bắc Kạn": {
+        "code": "97",
+        "name": "Bắc Kạn"
+    },
+    "Cao Bằng": {
+        "code": "11",
+        "name": "Cao Bằng"
+    }
+}

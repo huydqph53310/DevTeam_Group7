@@ -35,6 +35,20 @@ class Client
 class ClientModel extends ConnectDatabase
 {
 
+    public function CheckUsername($username)
+    {
+        try {
+            //code...
+            $this->connect->query("USE " . parent::DB_NAME);
+            $sql = "SELECT username FROM `users` WHERE `username` like `$username`";
+            $data = $this->connect->prepare($sql);
+            $data->execute();
+            $data->fetch(PDO::FETCH_ASSOC);
+            return $data;
+        } catch (Exception $err) {
+            //throw $th;
+        }
+    }
     public function getClientById($id)
     {
         try {
@@ -109,7 +123,7 @@ class ClientModel extends ConnectDatabase
             $stmt2 = $this->connect->prepare($sql2);
             $stmt2->execute([
                 ':new_user_id' => $new_user_id,
-                ':diachi' => 'Hà Nam', // giá trị cố định
+                ':diachi' => $data->address, // giá trị cố định
                 ':phone' => $data->phone
             ]);
 

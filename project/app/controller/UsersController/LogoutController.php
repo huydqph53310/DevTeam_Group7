@@ -4,7 +4,7 @@ class LogoutController extends ConnectDatabase
     public function Logout()
     {
         // Kiểm tra nếu người dùng đã đăng nhập
-        if (isset($_SESSION['user_id'])) {
+        if (isset($_SESSION['username'])) {
             // Hủy bỏ tất cả các biến session
             $_SESSION = [];
 
@@ -28,7 +28,6 @@ class LogoutController extends ConnectDatabase
         session_unset();
 
         // Chuyển hướng người dùng đến trang đăng nhập hoặc trang chủ
-        header("Location: ?wh=");
-        exit();
+        header("location: ?wh=home");
     }
 }

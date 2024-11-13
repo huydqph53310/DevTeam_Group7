@@ -4,7 +4,9 @@ class RouterController extends ConnectDatabase
 
     public function Trangchu()
     {
+        include_once "app/view/Header.php";
         include_once "app/view/Home.php";
+        include_once "app/view/Footer.php";
     }
 
 
@@ -14,6 +16,14 @@ class RouterController extends ConnectDatabase
         if (isset($_GET["wh"])) {
             $act = $_GET["wh"];
             return $act;
+        }
+    }
+    public function getId()
+    {
+        $id = "";
+        if (isset($_GET["id"])) {
+            $id = $_GET["id"];
+            return $id;
         }
     }
 }
