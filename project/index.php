@@ -15,6 +15,7 @@ include_once "app/controller/UsersController/InfoUserController.php";
 include_once "app/controller/UsersController/RegisterController.php";
 include_once "app/controller/UsersController/LogoutController.php";
 include_once "app/controller/UsersController/LoginController.php";
+include_once "app/controller/UsersController/ListOrders.php";
 include_once "app/controller/Product/DetailProduct.php";
 // include_once "app/controller/Client/ClientController.php";
 //include_once "project/app/controller/Admin/SwitchQuery.php";
@@ -35,6 +36,10 @@ switch ($router->GETURL()) {
     case "login":
         $login = new LoginController();
         $login->login();
+        break;
+    case "orders":
+        $orders = new ListOrders();
+        $orders->getOrderById();
         break;
     case "reg":
         $reg = new RegisterController();

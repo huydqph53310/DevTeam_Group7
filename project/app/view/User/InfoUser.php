@@ -270,7 +270,7 @@
                                             href="javascript:void(0);">Thông tin tài khoản</a>
                                     </li>
                                     <li>
-                                        <a class="title-info" href="/account/orders">Đơn hàng của bạn</a>
+                                        <a class="title-info" href="?wh=orders">Đơn hàng của bạn</a>
                                     </li>
                                     <li>
                                         <a class="title-info" href="/account/changepassword">Đổi mật khẩu</a>
