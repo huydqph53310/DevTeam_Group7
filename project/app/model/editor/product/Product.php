@@ -47,7 +47,15 @@ class Product extends ConnectDatabase
             //throw $th;      
         }
     }
-
+    public function SearchProductsByName($searchTerm)
+    {
+        $searchTerm = '%' . $searchTerm . '%';  // Thêm dấu % để tìm kiếm theo kiểu LIKE
+        $sql = "SELECT * FROM products WHERE name LIKE :searchTerm";
+        $stmt = $this->connect->prepare($sql);
+        $stmt->bindParam(':searchTerm', $searchTerm);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);  // Trả về tất cả sản phẩm tìm được
+    }
     public function GetProductById($id)
     {
         {
