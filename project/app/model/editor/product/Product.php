@@ -2,20 +2,20 @@
 // Dùng chung hàm connect với thằng cha
 class Product extends ConnectDatabase
 {
-    public $connect;
+    // public $connect;
 
-    // trỏ khi db connect vào controller
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    // // trỏ khi db connect vào controller
+    // public function __construct()
+    // {
+    //     parent::__construct();
+    // }
 
-    // trả về null khi db không dùng
+    // // trả về null khi db không dùng
 
-    public function __destruct()
-    {
-        parent::__destruct();
-    }
+    // public function __destruct()
+    // {
+    //     parent::__destruct();
+    // }
 
     // Them moi san pham 
     // -> here
