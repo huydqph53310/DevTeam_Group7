@@ -6,7 +6,7 @@ class DetailProduct
        // Kiểm tra id có hợp lệ không
     if (!empty($id) && is_numeric($id)) {
         // Gọi model để lấy sản phẩm theo id
-        $product = (new Product())->FindProductFollowId($id);
+        $product = (new Product())->GetProductById($id);
         
         if ($product) {
             // Nếu tìm thấy sản phẩm, bao gồm các view

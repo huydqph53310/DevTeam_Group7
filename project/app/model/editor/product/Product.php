@@ -48,7 +48,7 @@ class Product extends ConnectDatabase
         }
     }
 
-    public function FindProductFollowId($id)
+    public function GetProductById($id)
     {
         {
             try {
