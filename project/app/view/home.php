@@ -11,8 +11,6 @@
     <script src="//bizweb.dktcdn.net/assets/themes_support/option-selectors.js"></script>
     <main>
         <h1 class="d-none">Ego Mobile - Thế giới mobile cho mọi nhà</h1>
-
-
         <section style="margin-bottom:20px;">
             <div class="section-slide-banner">
                 <div class="container">
@@ -706,8 +704,6 @@
                                             <div class="swiper-slide">
                                                 <div class="product-item-flash" data-productID="34149032" data-qty="350"
                                                     data-pavailable="true">
-
-
                                                     <form action="/cart/add" method="post"
                                                         class="variants product-action item_product_main" data-cart-form
                                                         data-id="product-actions-34149032"
@@ -717,7 +713,6 @@
                                                             <span class="label-sale ">
                                                                 Giảm
                                                                 5%
-
                                                             </span>
                                                             <img width="214" height="214" style="transform:scale(0.9)"
                                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
@@ -777,7 +772,6 @@
                                                                                     xlink:href="#searchicon"></use>
                                                                             </svg>
                                                                         </a>
-
                                                                         <a href="javascript:;"
                                                                             data-url="/apple-iphone-14-pro-max-128gb-vn-a"
                                                                             data-text="So sánh" data-type="Điện thoại"
@@ -802,11 +796,9 @@
                                                                     <div class="countlength_sale"></div>
                                                                 </div>
                                                             </div>
-
                                                             <div class="nowship">
                                                                 Giao siêu tốc 2H
                                                             </div>
-
                                                         </div>
                                                     </form>
                                                 </div>
