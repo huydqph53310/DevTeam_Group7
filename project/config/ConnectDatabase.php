@@ -1,30 +1,22 @@
 <?php
-
 class ConnectDatabase extends Config
 {
     public $connect;
-    public $BaseURL = parent::BASEURL;
-    public $MYSQL = parent::MYSQL;
-    public $PORT = parent::PORT;
-    public $USERNAE = parent::USERNAME;
-    public $PASSWORD = parent::PASSWORD;
-    public $DBNAME = parent::DB_NAME;
-
     public $statusConnect;
+
     public function __construct()
     {
         try {
+            // Sử dụng các hằng số từ lớp Config
             $this->connect = new PDO(
-                "mysql:host=$this->MYSQL;port=$this->PORT; dbname = $this->DBNAME",
-                $this->USERNAE,
-                $this->PASSWORD
+                "mysql:host=" . self::MYSQL . ";port=" . self::PORT . ";dbname=" . self::DB_NAME,
+                self::USERNAME,
+                self::PASSWORD
             );
-
             $this->statusConnect = true;
-            //echo "Connect Succsses fully ";
         } catch (Exception $e) {
             $this->statusConnect = false;
-            // echo $e->getMessage();
+            echo "Lỗi kết nối: " . $e->getMessage();
         }
     }
 
@@ -33,3 +25,5 @@ class ConnectDatabase extends Config
         $this->connect = null;
     }
 }
+
+

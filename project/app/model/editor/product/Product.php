@@ -1,6 +1,6 @@
 <?php
 // Dùng chung hàm connect với thằng cha
-class ProductManager extends ConnectDatabase
+class Product extends ConnectDatabase
 {
     public $connect;
 
