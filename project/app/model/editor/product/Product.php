@@ -50,10 +50,16 @@ class Product extends ConnectDatabase
 
     public function FindProductFollowId($id)
     {
-        try {
-            //code...
-        } catch (Exception $err) {
-            //throw $th;      
+        {
+            try {
+                $stmt = $this->connect->prepare("SELECT * FROM products WHERE id = :id");
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                return $stmt->fetch(PDO::FETCH_ASSOC); // Trả về dữ liệu sản phẩm dưới dạng mảng
+            } catch (Exception $e) {
+                echo "Lỗi truy vấn: " . $e->getMessage();
+                return null;
+            }
         }
     }
 }
