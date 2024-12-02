@@ -8,15 +8,15 @@ class DetailProduct
         // Gọi model để lấy sản phẩm theo id
         $product = (new Product())->GetProductById($id);
         
-        if ($product) {
+        // if ($product) {
             // Nếu tìm thấy sản phẩm, bao gồm các view
             include_once "app/view/Header.php";
             include_once "app/view/Product/DetailProduct.php";  // Truyền $product vào đây
             include_once "app/view/Footer.php";
-        } else {
-            // Nếu không tìm thấy sản phẩm, hiển thị thông báo
-            echo "Sản phẩm không tồn tại.";
-        }
+        // } else {
+        //     // Nếu không tìm thấy sản phẩm, hiển thị thông báo
+        //     echo "Sản phẩm không tồn tại.";
+        // }
     } else {
         // Nếu id không hợp lệ, hiển thị thông báo lỗi
         echo "Không có giá trị id truyền vào hoặc id không hợp lệ.";

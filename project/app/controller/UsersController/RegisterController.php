@@ -45,9 +45,9 @@ class RegisterController extends ConnectDatabase
                     $this->router->reigisterClient($createUser);
                 }
             }
-            include "app/view/Header.php";
-            include "app/view/User/RegsiterScr.php";
-            include "app/view/Footer.php";
+            include  __DIR__ . "/../../view/Header.php";
+            include  __DIR__ . "/../../view/User/RegsiterScr.php";
+            include  __DIR__ . "/../../view/Footer.php";
         } else {
             header("location: ?wh=home");
         }
@@ -65,7 +65,6 @@ class RegisterController extends ConnectDatabase
     }
     public function CheckRepeatUsername($username)
     {
-        $data =  $this->router->CheckUsername($username);
         return $this->router->CheckUsername($username);
     }
 

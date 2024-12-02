@@ -9,5 +9,4 @@ class Config
 
     public const PASSWORD = "";
 
-    public const BASEURL = "/";
 }

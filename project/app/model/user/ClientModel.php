@@ -84,12 +84,11 @@ class ClientModel extends ConnectDatabase
                     $dataClient["SDT"]
                 );
                 return $accountInfo;
-            } else {
-                return $id;
             }
         } catch (Exception $err) {
             // Xử lý lỗi
-            echo "Error: " . $err->getMessage();
+            $logMessage = "Lỗi truy vấn: " . $err->getMessage() . " at " . date('[Y-m-d H:i:s]');
+            error_log($logMessage . PHP_EOL, 3, $this->filePath);
         } // Trả về null nếu không tìm thấy dữ liệu
     }
 
@@ -129,7 +128,11 @@ class ClientModel extends ConnectDatabase
 
             // Commit transaction nếu không có lỗi
             $this->connect->commit();
-
+            // $logMessage nội dung tin nhắn
+            // message_type 3 có quyền ghi file
+            // destination đường dẫn đến file log
+            $logMessage = $data->username . " Đã đăng kí thành công " . " at " . date('[Y-m-d H:i:s]');
+            error_log($logMessage . PHP_EOL, 3, $this->filePath);
             // Trả về kết quả thành công
             return true;
         } catch (PDOException $e) {
@@ -141,13 +144,16 @@ class ClientModel extends ConnectDatabase
     }
     public function loginClient($iduser)
     {
-        // code đăng ký tài khoản mới cho client\
+        // code login
         try {
+            $mees = new WriteLog();
             $sql = "SELECT users_id,email, username, password FROM `users` WHERE username like '%$iduser%'";
             $this->connect->query("USE " . parent::DB_NAME);
             $dataCheck = $this->connect->query($sql)->fetch();
             if ($dataCheck != false) {
                 $userLogin = new Client($dataCheck["users_id"], null, $dataCheck["username"], $dataCheck["password"], $dataCheck["email"]);
+                $logMessage = $iduser . " Đã đăng nhập thành công " . " at " . date('[Y-m-d H:i:s]');
+                $mees->logToJson($logMessage);
                 return $userLogin;
             }
             //code...

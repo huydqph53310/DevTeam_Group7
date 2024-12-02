@@ -33,11 +33,9 @@ class LoginController extends ConnectDatabase
                     }
                 }
             }
-            include "app/view/Header.php";
-            include "app/view/User/LoginScr.php";
-            include "app/view/Footer.php";
-        } else {
-            header("location: ?wh=home");
+            include_once __DIR__ . '/../../view/Header.php';
+            include_once  __DIR__ . "'/../../view/User/LoginScr.php";
+            include_once  __DIR__ . "'/../../view/Footer.php";
         }
     }
 

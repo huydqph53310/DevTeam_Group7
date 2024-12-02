@@ -3,6 +3,8 @@ class ConnectDatabase extends Config
 {
     public $connect;
     public $statusConnect;
+    public $filePath = __DIR__ . 'project/log/log.txt';
+
 
     public function __construct()
     {
@@ -20,10 +22,9 @@ class ConnectDatabase extends Config
         }
     }
 
+ 
     public function __destruct()
     {
         $this->connect = null;
     }
 }
-
-
