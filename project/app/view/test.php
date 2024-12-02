@@ -69,11 +69,6 @@
 <link href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/header.scss.css?1731407153286" rel="stylesheet" type="text/css" media="all" />
 <link href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/quickview.scss.css?1731407153286" rel="stylesheet" type="text/css" media="all" />
 <link href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/ajax-cart-new.scss.css?1731407153286" rel="stylesheet" type="text/css" media="all" />
-
-
-
-
-
 		<script>
 			"undefined" == typeof BaseGlobal && (BaseGlobal = {});
 			window.theme = window.theme || {};
@@ -106,8 +101,6 @@
 				useCompare: 'true',
 				useWish: 'true',
 			};
-			
-
 		</script>
 
 		<script>
@@ -144,32 +137,13 @@
 	window.BizwebAnalytics.meta = window.BizwebAnalytics.meta || {};
 	window.BizwebAnalytics.meta.currency = 'VND';
 	window.BizwebAnalytics.tracking_url = '/s';
-
 	var meta = {};
-	
-	
 	meta.customer = { "id": 16436299, "first_name": "phung", "last_name": "duong",  "phone": "84941097302", "email": "duongphph53276@gmail.com" };
-	
 	for (var attr in meta) {
 	window.BizwebAnalytics.meta[attr] = meta[attr];
 	}
 </script>
-
-	
 		<script src="/dist/js/stats.min.js?v=96f2ff2"></script>
-	
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="application/ld+json">
         {
         "@context": "http://schema.org",
@@ -185,12 +159,6 @@
                   "name": "Trang chủ"
                 }
             },
-      
-        
-      
-      
-      
-      
       {
                 "@type": "ListItem",
                 "position": 2,
@@ -200,19 +168,15 @@
                   "name": "Giỏ hàng"
                 }
             }
-      
-    
         ]
         }
 </script>
-
 	</head>
 	<body>  
 		<link rel="preload" href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/jquery-plugin.js?1731407153286" as="script">
 		<script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/jquery-plugin.js?1731407153286"></script>
 		<link rel="preload" href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/swiper-plugin.js?1731407153286" as="script">
 		<script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/swiper-plugin.js?1731407153286" ></script>
-
 		<header class="header other">
 	<div class="top-bar d-none d-md-block">
 		<div class="container">
@@ -230,10 +194,8 @@
 						</a>
 					</div>
 					<div class="item-top-bar d-inline-flex">
-						
 						<a class="btnx" href="/account" title="Tài khoản">Tài khoản</a>&nbsp;/&nbsp;
-						<a href="/account/logout" title="Đăng xuất">Đăng xuất</a>
-						
+						<a href="/account/logout" title="Đăng xuất">Đăng xuất</a>	
 					</div>
 				</div>
 			</div>
@@ -259,19 +221,16 @@
 									<li data-tab="#sp" class="current" onclick="showTab(event, '#sp')">Sản phẩm</li>
 									<li data-tab="#tt" onclick="showTab(event, '#tt')">Tin tức</li>
 								</ul>
-								<div id="sp" class="t-ct current">
-									
+								<div id="sp" class="t-ct current">									
 								</div>
-								<div id="tt" class="t-ct">
-									
+								<div id="tt" class="t-ct">								
 								</div>
 							</div>	
 						</form>
 					</div>
 					<div class="item-header block-phone">
 						<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phoneicon"></use> </svg>
-						<div class="right-item ">
-							
+						<div class="right-item ">						
 							Gọi đặt hàng
 							<a class="phone" title="Gọi ngay" href="tel:19006750">
 								19006750

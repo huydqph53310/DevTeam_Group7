@@ -2229,6 +2229,5 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-    </main>
+        </main>
