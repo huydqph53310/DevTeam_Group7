@@ -4,11 +4,10 @@ class RouterController extends ConnectDatabase
 
     public function Trangchu()
     {
-        include_once "app/view/Header.php";
-        include_once "app/view/Home.php";
-        include_once "app/view/Footer.php";
+        include_once  __DIR__ . "/../../app/view/Header.php";
+        include_once  __DIR__ . "/../../app/view/Home.php";
+        include_once  __DIR__ . "/../../app/view/Footer.php";
     }
-
 
     public function getUrl()
     {
@@ -17,6 +16,17 @@ class RouterController extends ConnectDatabase
             $act = $_GET["wh"];
             return $act;
         }
+    }
+
+    public function urlCheck(){
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+
+        // Lấy tên miền và đường dẫn
+        $full_url = $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $index = "/project";
+        $position = stripos($full_url, $index);
+        return $position;
+        // echo "URL hiện tại: " . $full_url;
     }
     public function getId()
     {
