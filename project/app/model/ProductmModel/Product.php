@@ -20,6 +20,11 @@ class Product extends ConnectDatabase
         }
     }
 
+    public function ListProduct(){
+        $stmt=$this->connect->prepare("select * from products");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function SearchProductsByName($searchTerm)
     {
         $searchTerm = '%' . $searchTerm . '%';  // Thêm dấu % để tìm kiếm theo kiểu LIKE

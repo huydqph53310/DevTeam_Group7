@@ -23,6 +23,7 @@ $userRouter = new RouterController();
 
 switch ($userRouter->getUrl()) {
     case "":
+        (new ListProduct)->ListProduct();
         header("location: ?wh=home");
         break;
     case "home":
