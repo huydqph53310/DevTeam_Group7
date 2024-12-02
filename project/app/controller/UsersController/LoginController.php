@@ -10,6 +10,10 @@ class LoginController{
                 $_SESSION['username']=$user['username'];
                 header("Location: index.php");
             }
+            else
+            {
+                $error="Ten dang nhap hoac mat khau khong dung";
+            }
         }
     }
 }
