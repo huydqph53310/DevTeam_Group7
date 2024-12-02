@@ -13,13 +13,7 @@ class LoginController{
             else
             {
                 $error="Ten dang nhap hoac mat khau khong dung";
-//             }
-// <<<<<<< HEAD
-// =======
-//             include_once __DIR__ . '/../../view/Header.php';
-//             include_once  __DIR__ . "'/../../view/User/LoginScr.php";
-//             include_once  __DIR__ . "'/../../view/Footer.php";
-// >>>>>>> 2bff0f29088e48c8ee65ef198c699cb6a6db48fb
-//         }
-//     }
-// }
+            }
+        }
+    }
+}

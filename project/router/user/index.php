@@ -16,6 +16,7 @@ include_once __DIR__ . '/../../app/controller/UsersController/LogoutController.p
 include_once __DIR__ . '/../../app/controller/UsersController/LoginController.php';
 include_once __DIR__ . '/../../app/controller/UsersController/ListOrders.php';
 include_once __DIR__ . '/../../app/controller/Product/DetailProduct.php';
+include_once __DIR__ . '/../../app/controller/Product/ListProduct.php';
 include_once __DIR__ . '/../../log/WriteLog.php';
 
 
@@ -23,7 +24,7 @@ $userRouter = new RouterController();
 
 switch ($userRouter->getUrl()) {
     case "":
-        (new ListProduct)->ListProduct();
+        (new ListProduct())->ListProduct();
         header("location: ?wh=home");
         break;
     case "home":
