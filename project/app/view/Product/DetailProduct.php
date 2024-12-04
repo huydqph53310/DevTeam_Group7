@@ -237,18 +237,15 @@
                         <svg class="icon">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#homeicon"></use>
                         </svg>
-                        <span class="mr_lr"><svg class="icon">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nexticon"></use>
-                            </svg></span>
                     </li>
                     <li>
-                        <a class="changeurl" href="?wh=home"><span>IPhone</span></a>
+                        <a class="changeurl" href="?wh=home"><span>Laptop</span></a>
                         <span class="mr_lr"><svg class="icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nexticon"></use>
                             </svg></span>
                     </li>
 
-                    <li><strong><span>iPhone 15 Pro Chính hãng (VN/A)</span></strong>
+                    <li><strong><span><?= $product["product_name"]?></span></strong>
                     <li>
                 </ul>
             </div>
@@ -273,16 +270,16 @@
                 </div>
                 <link itemprop="availability" href="http://schema.org/InStock">
                 <meta itemprop="priceCurrency" content="VND">
-                <meta itemprop="price" content="34900000">
+                <meta itemprop="price" content="<?= $product["price"]?>">
                 <meta itemprop="url" content="https://ego-mobile.mysapo.net/iphone-15-pro-chinh-hang-vn-a">
                 <div itemprop="seller" itemscope itemtype="https://schema.org/Organization">
                     <span itemprop="name">Tự động</span>
                 </div>
                 <div itemprop="priceSpecification" itemscope itemtype="https://schema.org/UnitPriceSpecification">
-                    <span itemprop="priceType" content="34900000">34900000</span>
+                    <span itemprop="priceType" content="<?= $product["price"]?>"><?= $product["price"]?></span>
                 </div>
                 <span itemprop="UnitPriceSpecification" itemscope itemtype="https://schema.org/Downpayment">
-                    <meta itemprop="priceSpecification" content="35990000">
+                    <meta itemprop="priceSpecification" content="<?= $product["price"]?>">
                 </span>
                 <meta itemprop="priceValidUntil" content="2099-01-01">
             </div>
@@ -308,14 +305,6 @@
                                                 </use>
                                             </svg>
                                         </a>
-                                        <a href="javascript:;" data-url="/iphone-15-pro-chinh-hang-vn-a"
-                                            data-type="Điện thoại"
-                                            data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
-                                            data-name="iPhone 15 Pro Chính hãng (VN/A)" title="So sánh"
-                                            class="compare-link d-inline-block"><svg class="icon">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    xlink:href="#compareIcon"></use>
-                                            </svg></a>
                                         <div class="product-image-detail">
                                             <div class="swiper-container gallery-top margin-bottom-10">
                                                 <div class="swiper-wrapper" id="lightgallery">
@@ -405,7 +394,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-12">
-                                    <h1 class="title-head">iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)</h1>
+                                    <h1 class="title-head">Laptop <?= $product["product_name"]?></h1>
                                     <div class="details-pro">
                                         <div class="prview">
                                             <div class="sapo-product-reviews-badge" data-id="34149156"></div>
@@ -425,12 +414,12 @@
                                                 <div class="price-box clearfix">
 
                                                     <div class="product-price">
-                                                        34.900.000₫
+                                                    <?= number_format($product["price"] * 24000 - 1000000, 0, ',', '.') ?>₫
                                                     </div>
                                                     <div class="price-compare">
                                                         <span class="old-price">
                                                             <del class="price product-price-old">
-                                                                35.990.000₫
+                                                            <?= number_format($product["price"] * 24000, 0, ',', '.') ?>₫
                                                             </del>
                                                         </span>
                                                         <span class="save-price">
@@ -470,27 +459,25 @@
                                                 </div>
                                             </div>
                                             <div class="kmkemtheo">
-                                                <p>Combo ốp lưng, dán màn hình miễn phí</p>
+                                                <p>Combo dán chống xước, chống trầy cho màn hình và mặt lưng máy</p>
                                             </div>
                                             <div class="d-flex vendor-group">
                                                 <div class="vendor">
-                                                    Thương hiệu: <span>Apple</span>
+                                                    Thương hiệu: <span><?= $brand["name"]?></span>
                                                 </div>
                                                 <div class="type">
-                                                    Loại: <span>Điện thoại</span>
+                                                    Loại: <span>Laptop</span>
                                                 </div>
                                             </div>
                                             <form enctype="multipart/form-data" id="add-to-cart-form" data-cart-form
                                                 action="/cart/add" method="post" class="wishItem">
-
-
                                                 <input type="hidden" name="properties[Quà tặng]" value=" 
 Combo ốp lưng dán màn hình miễn phí" />
                                                 <div class="form-product ">
                                                     <div class="select-swatch">
                                                         <div class="swatch-color swatch clearfix" data-option-index="0">
                                                             <h4 class="option-title">
-                                                                Màu sắc
+                                                                Cpu
                                                             </h4>
                                                             <div data-value="Đen"
                                                                 class="swatch-element color den has-img  available">
@@ -498,18 +485,9 @@ Combo ốp lưng dán màn hình miễn phí" />
                                                                     value="Đen" checked />
                                                                 <label for="swatch-0-den" title="Đen"
                                                                     style="background-image:url(https://bizweb.dktcdn.net/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593);background-size:contain;background-repeat:no-repeat;background-position: center;">
-                                                                    Đen
+                                                                    <?= $config["cpu"]?>
                                                                 </label>
                                                             </div>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Đen";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Đen";
-                                                            </script>
-
                                                             <div data-value="Xanh titan"
                                                                 class="swatch-element color xanh-titan has-img  available">
                                                                 <input id="swatch-0-xanh-titan" type="radio"
@@ -1077,6 +1055,7 @@ Combo ốp lưng dán màn hình miễn phí" />
                                     <div class="swiper-container swiper-data" data-xxl="6" data-xl="6" data-lg="5"
                                         data-md="4" data-xs="2.5" data-x="2" data-space="20">
                                         <div class="swiper-wrapper">
+                                            <!-- list sản phẩm -->
                                             <div class="swiper-slide">
                                                 <form action="/cart/add" method="post"
                                                     class="variants product-action item_product_main" data-cart-form
@@ -1132,542 +1111,9 @@ Combo ốp lưng dán màn hình miễn phí" />
                                                                                 xlink:href="#searchicon"></use>
                                                                         </svg>
                                                                     </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/iphone-11-pro-max-chinh-hang-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/4-31-2-gcys-1b-n0fy-k2.jpg?v=1704428666870"
-                                                                        data-name="iPhone 11 Pro Max Chính hãng VN/A"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34149947" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/apple-iphone-11-chinh-hang-vn-a"
-                                                        title="Apple iPhone 11 Chính hãng VN/A">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            3%
-
-                                                        </span>
-                                                        <img width="214" height="214"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-11-64gb-84.jpg?v=1704428384293"
-                                                            alt="Apple iPhone 11 Chính hãng VN/A"
-                                                            class="lazyload img-responsive center-block" />
-                                                    </a>
-                                                    <a href="javascript:;" data-url="/apple-iphone-11-chinh-hang-vn-a"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a
-                                                                href="/apple-iphone-11-chinh-hang-vn-a"
-                                                                title="Apple iPhone 11 Chính hãng VN/A">Apple iPhone 11
-                                                                Chính hãng VN/A</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">8.900.000₫</span>
-                                                                <span class="compare-price">9.150.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <input type="hidden" name="variantId"
-                                                                        data-qty="1000000" value="106965861" />
-                                                                    <button data-text="Thêm vào giỏ"
-                                                                        class="btn-buy btn-left btn-views add_to_cart "
-                                                                        title="Thêm vào giỏ">
-                                                                        <svg class="icon svg-cart">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#addcarticon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="apple-iphone-11-chinh-hang-vn-a">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/apple-iphone-11-chinh-hang-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/iphone-11-64gb-84.jpg?v=1704428384293"
-                                                                        data-name="Apple iPhone 11 Chính hãng VN/A"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34149419" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/apple-iphone-13-plus-128gb"
-                                                        title="Apple iPhone 13 Plus 128GB">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            9%
-
-                                                        </span>
-                                                        <img width="214" height="214"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/5-9a6cf23d-f88b-4dd7-80a0-817bd860e6bf.jpg?v=1704426193237"
-                                                            alt="Apple iPhone 13 Plus 128GB"
-                                                            class="lazyload img-responsive center-block" />
-                                                    </a>
-                                                    <a href="javascript:;" data-url="/apple-iphone-13-plus-128gb"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a href="/apple-iphone-13-plus-128gb"
-                                                                title="Apple iPhone 13 Plus 128GB">Apple iPhone 13 Plus
-                                                                128GB</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">15.490.000₫</span>
-                                                                <span class="compare-price">16.990.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <button data-text="Nhiều lựa chọn"
-                                                                        class="btn btn-cart btn-left  btn btn-views left-to option-choice"
-                                                                        title="Nhiều lựa chọn" type="button"
-                                                                        onclick="window.location.href='/apple-iphone-13-plus-128gb'">
-                                                                        <svg class="icon">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#optionicon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="apple-iphone-13-plus-128gb">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/apple-iphone-13-plus-128gb"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/5-9a6cf23d-f88b-4dd7-80a0-817bd860e6bf.jpg?v=1704426193237"
-                                                                        data-name="Apple iPhone 13 Plus 128GB"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="nowship">
-                                                            Giao siêu tốc 2H
-                                                        </div>
-
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                            <div class="swiper-slide">
-
-
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34149372" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/iphone-12-pro-max-chinh-hang-vn-a"
-                                                        title="iPhone 12 Pro Max Chính hãng (VN/A)">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            9%
-
-                                                        </span>
-                                                        <img width="214" height="214"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/6-5ca728d1-c2c6-447f-8343-a846095ee36b.jpg?v=1704425958740"
-                                                            alt="iPhone 12 Pro Max Chính hãng (VN/A)"
-                                                            class="lazyload img-responsive center-block" />
-                                                    </a>
-                                                    <a href="javascript:;" data-url="/iphone-12-pro-max-chinh-hang-vn-a"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a
-                                                                href="/iphone-12-pro-max-chinh-hang-vn-a"
-                                                                title="iPhone 12 Pro Max Chính hãng (VN/A)">iPhone 12
-                                                                Pro Max Chính hãng (VN/A)</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">15.490.000₫</span>
-                                                                <span class="compare-price">16.990.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <button data-text="Nhiều lựa chọn"
-                                                                        class="btn btn-cart btn-left  btn btn-views left-to option-choice"
-                                                                        title="Nhiều lựa chọn" type="button"
-                                                                        onclick="window.location.href='/iphone-12-pro-max-chinh-hang-vn-a'">
-                                                                        <svg class="icon">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#optionicon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="iphone-12-pro-max-chinh-hang-vn-a">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/iphone-12-pro-max-chinh-hang-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/6-5ca728d1-c2c6-447f-8343-a846095ee36b.jpg?v=1704425958740"
-                                                                        data-name="iPhone 12 Pro Max Chính hãng (VN/A)"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="nowship">
-                                                            Giao siêu tốc 2H
-                                                        </div>
-
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34149320" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/iphone-15-pro-max-chinh-hang-vn-a"
-                                                        title="iPhone 15 Pro Max Đen Chính hãng (VN/A)">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            6%
-
-                                                        </span>
-                                                        <img width="214" height="214"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870-93c02860-e729-4700-a057-3576eb8cad0f.jpg?v=1704425629593"
-                                                            alt="iPhone 15 Pro Max Đen Chính hãng (VN/A)"
-                                                            class="lazyload img-responsive center-block" />
-                                                    </a>
-                                                    <a href="javascript:;" data-url="/iphone-15-pro-max-chinh-hang-vn-a"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a
-                                                                href="/iphone-15-pro-max-chinh-hang-vn-a"
-                                                                title="iPhone 15 Pro Max Đen Chính hãng (VN/A)">iPhone
-                                                                15 Pro Max Đen Chính hãng (VN/A)</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">32.590.000₫</span>
-                                                                <span class="compare-price">34.690.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <button data-text="Nhiều lựa chọn"
-                                                                        class="btn btn-cart btn-left  btn btn-views left-to option-choice"
-                                                                        title="Nhiều lựa chọn" type="button"
-                                                                        onclick="window.location.href='/iphone-15-pro-max-chinh-hang-vn-a'">
-                                                                        <svg class="icon">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#optionicon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="iphone-15-pro-max-chinh-hang-vn-a">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/iphone-15-pro-max-chinh-hang-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870-93c02860-e729-4700-a057-3576eb8cad0f.jpg?v=1704425629593"
-                                                                        data-name="iPhone 15 Pro Max Đen Chính hãng (VN/A)"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="nowtext">
-                                                            Giao thứ 6, ngày 15/11
-                                                        </div>
-
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34149032" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                        title="Apple iPhone 14 Pro Max 128Gb (VN/A)">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            8%
-
-                                                        </span>
-                                                        <img width="214" height="214" style="transform:scale(0.9)"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-m-main-979.png?v=1704424297997"
-                                                            alt="Apple iPhone 14 Pro Max 128Gb (VN/A)"
-                                                            class="lazyload img-responsive center-block" />
-                                                        <img width="214" height="214" class="lazyload frame"
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/themes/936909/assets/frame1.png?1731407153286"
-                                                            alt="Apple iPhone 14 Pro Max 128Gb (VN/A)"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" />
-                                                    </a>
-                                                    <a href="javascript:;"
-                                                        data-url="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a
-                                                                href="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                                title="Apple iPhone 14 Pro Max 128Gb (VN/A)">Apple
-                                                                iPhone 14 Pro Max 128Gb (VN/A)</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">27.000.000₫</span>
-                                                                <span class="compare-price">29.490.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <input type="hidden" name="variantId"
-                                                                        data-qty="1000000" value="106946027" />
-                                                                    <button data-text="Thêm vào giỏ"
-                                                                        class="btn-buy btn-left btn-views add_to_cart "
-                                                                        title="Thêm vào giỏ">
-                                                                        <svg class="icon svg-cart">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#addcarticon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="apple-iphone-14-pro-max-128gb-vn-a">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/iphone-14-pro-m-main-979.png?v=1704424297997"
-                                                                        data-name="Apple iPhone 14 Pro Max 128Gb (VN/A)"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="nowship">
-                                                            Giao siêu tốc 2H
-                                                        </div>
-
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                            <div class="swiper-slide">
-
-
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action item_product_main" data-cart-form
-                                                    data-id="product-actions-34148564" enctype="multipart/form-data">
-                                                    <a class="image_thumb" href="/apple-iphone-13-chinh-hang-vn-a"
-                                                        title="Apple iPhone 13 Chính hãng (VN/A)">
-                                                        <span class="label-sale ">
-                                                            Giảm
-                                                            3%
-
-                                                        </span>
-                                                        <img width="214" height="214"
-                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/2.jpg?v=1704422644523"
-                                                            alt="Apple iPhone 13 Chính hãng (VN/A)"
-                                                            class="lazyload img-responsive center-block" />
-                                                    </a>
-                                                    <a href="javascript:;" data-url="/apple-iphone-13-chinh-hang-vn-a"
-                                                        title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#wishlist"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="info-product">
-                                                        <h3 class="product-name"><a
-                                                                href="/apple-iphone-13-chinh-hang-vn-a"
-                                                                title="Apple iPhone 13 Chính hãng (VN/A)">Apple iPhone
-                                                                13 Chính hãng (VN/A)</a></h3>
-                                                        <div class="price-action">
-                                                            <div class="price-box">
-                                                                <span class="price">16.490.000₫</span>
-                                                                <span class="compare-price">16.990.000₫</span>
-
-                                                            </div>
-                                                            <div class="action-cart">
-                                                                <span class="more-action">
-                                                                    <svg class="icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                            xlink:href="#plusicon"></use>
-                                                                    </svg>
-                                                                </span>
-                                                                <div class="group-action">
-                                                                    <button data-text="Nhiều lựa chọn"
-                                                                        class="btn btn-cart btn-left  btn btn-views left-to option-choice"
-                                                                        title="Nhiều lựa chọn" type="button"
-                                                                        onclick="window.location.href='/apple-iphone-13-chinh-hang-vn-a'">
-                                                                        <svg class="icon">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#optionicon"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <a class="quick-view btn-views"
-                                                                        data-text="Xem nhanh" href="javascript:;"
-                                                                        title="Xem nhanh" onclick="onQuickView(this);"
-                                                                        data-handle="apple-iphone-13-chinh-hang-vn-a">
-                                                                        <svg class="icon svg-qv">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#searchicon"></use>
-                                                                        </svg>
-                                                                    </a>
-
-                                                                    <a href="javascript:;"
-                                                                        data-url="/apple-iphone-13-chinh-hang-vn-a"
-                                                                        data-text="So sánh" data-type="Điện thoại"
-                                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/2.jpg?v=1704422644523"
-                                                                        data-name="Apple iPhone 13 Chính hãng (VN/A)"
-                                                                        title="So sánh"
-                                                                        class="compare-link btn-views d-inline-block">
-                                                                        <svg class="icon compa">
-                                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                xlink:href="#compareIcon"></use>
-                                                                        </svg>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="nowtext">
-                                                            Giao thứ 6, ngày 15/11
-                                                        </div>
-
                                                     </div>
                                                 </form>
                                             </div>
@@ -2338,107 +1784,8 @@ Combo ốp lưng dán màn hình miễn phí" />
                                     reverseDirection: true,
                                     disableOnInteraction: false,
                                 }
-                            })
+                            });
                         </script>
-                        <div class="white-p component-blog-tech">
-                            <div class="block-title">
-                                <h2>
-                                    <a href="tin-tuc" title="Tin nổi bật">Tin nổi bật</a>
-                                </h2>
-                            </div>
-                            <div class="blog-column">
-                                <article class="d-flex flex-wrap thumb-large relative">
-                                    <a class="thumb" href="/phu-kien-nay-bien-iphone-cua-ban-thanh-blackberry"
-                                        title="Phụ kiện n&#224;y biến iPhone của bạn th&#224;nh BlackBerry">
-
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                            data-src="https://bizweb.dktcdn.net/100/507/051/articles/b1.jpg?v=1704869258123"
-                                            alt="Phụ kiện n&#224;y biến iPhone của bạn th&#224;nh BlackBerry"
-                                            class="radius-7 lazyload img-responsive" />
-                                    </a>
-                                    <h3><a href="/phu-kien-nay-bien-iphone-cua-ban-thanh-blackberry"
-                                            title="Phụ kiện n&#224;y biến iPhone của bạn th&#224;nh BlackBerry"
-                                            class="a-title">Phụ kiện n&#224;y biến iPhone của bạn th&#224;nh
-                                            BlackBerry</a></h3>
-                                </article>
-                                <article class="d-flex flex-wrap default-thumb relative">
-                                    <a class="thumb" href="/oneplus-buds-3-lo-gia-ban-hap-dan-truoc-khi-ra-mat"
-                                        title="OnePlus Buds 3 lộ gi&#225; b&#225;n hấp dẫn trước khi ra mắt">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                            data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/articles/oneplus-buds-pro-2-1.jpg?v=1704468397957"
-                                            alt="OnePlus Buds 3 lộ gi&#225; b&#225;n hấp dẫn trước khi ra mắt"
-                                            class="radius-7 lazyload img-responsive" />
-                                    </a>
-                                    <div class="info-box">
-                                        <h3><a href="/oneplus-buds-3-lo-gia-ban-hap-dan-truoc-khi-ra-mat"
-                                                title="OnePlus Buds 3 lộ gi&#225; b&#225;n hấp dẫn trước khi ra mắt"
-                                                class="a-title">OnePlus Buds 3 lộ gi&#225; b&#225;n hấp dẫn trước khi ra
-                                                mắt</a></h3>
-                                        <span>Thứ Sáu,
-                                            05/01/2024
-                                        </span>
-                                    </div>
-                                </article>
-
-                                <article class="d-flex flex-wrap default-thumb relative">
-                                    <a class="thumb"
-                                        href="/macos-sonoma-14-3-public-beta-2-duoc-phat-hanh-tiep-tuc-sua-loi"
-                                        title="macOS Sonoma 14.3 public beta 2 được ph&#225;t h&#224;nh, tiếp tục sửa lỗi">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                            data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/articles/fdg.jpg?v=1704468252173"
-                                            alt="macOS Sonoma 14.3 public beta 2 được ph&#225;t h&#224;nh, tiếp tục sửa lỗi"
-                                            class="radius-7 lazyload img-responsive" />
-                                    </a>
-                                    <div class="info-box">
-                                        <h3><a href="/macos-sonoma-14-3-public-beta-2-duoc-phat-hanh-tiep-tuc-sua-loi"
-                                                title="macOS Sonoma 14.3 public beta 2 được ph&#225;t h&#224;nh, tiếp tục sửa lỗi"
-                                                class="a-title">macOS Sonoma 14.3 public beta 2 được ph&#225;t
-                                                h&#224;nh, tiếp tục sửa lỗi</a></h3>
-                                        <span>Thứ Sáu,
-                                            05/01/2024
-                                        </span>
-                                    </div>
-                                </article>
-
-                                <article class="d-flex flex-wrap default-thumb relative">
-                                    <a class="thumb" href="/can-canh-honor-90-gt-thiet-ke-tinh-te-mat-lung-gia-da"
-                                        title="Cận cảnh HONOR 90 GT - Thiết kế tinh tế, mặt lưng giả da">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                            data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/articles/22.jpg?v=1704468100083"
-                                            alt="Cận cảnh HONOR 90 GT - Thiết kế tinh tế, mặt lưng giả da"
-                                            class="radius-7 lazyload img-responsive" />
-                                    </a>
-                                    <div class="info-box">
-                                        <h3><a href="/can-canh-honor-90-gt-thiet-ke-tinh-te-mat-lung-gia-da"
-                                                title="Cận cảnh HONOR 90 GT - Thiết kế tinh tế, mặt lưng giả da"
-                                                class="a-title">Cận cảnh HONOR 90 GT - Thiết kế tinh tế, mặt lưng giả
-                                                da</a></h3>
-                                        <span>Thứ Sáu,
-                                            05/01/2024
-                                        </span>
-                                    </div>
-                                </article>
-                                <article class="d-flex flex-wrap default-thumb relative">
-                                    <a class="thumb"
-                                        href="/vivo-ra-mat-tai-nghe-iqoo-tws-1e-voi-pin-44-gio-ho-tro-anc-gia-610-ngan-dong"
-                                        title="Vivo ra mắt tai nghe iQOO TWS 1e với pin 44 giờ, hỗ trợ ANC, gi&#225; 610 ng&#224;n đồng">
-                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                            data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/articles/tai-nghe-tws-dang-mua-nhat-thang-6-1-800x600.jpg?v=1704467733007"
-                                            alt="Vivo ra mắt tai nghe iQOO TWS 1e với pin 44 giờ, hỗ trợ ANC, gi&#225; 610 ng&#224;n đồng"
-                                            class="radius-7 lazyload img-responsive" />
-                                    </a>
-                                    <div class="info-box">
-                                        <h3><a href="/vivo-ra-mat-tai-nghe-iqoo-tws-1e-voi-pin-44-gio-ho-tro-anc-gia-610-ngan-dong"
-                                                title="Vivo ra mắt tai nghe iQOO TWS 1e với pin 44 giờ, hỗ trợ ANC, gi&#225; 610 ng&#224;n đồng"
-                                                class="a-title">Vivo ra mắt tai nghe iQOO TWS 1e với pin 44 giờ, hỗ trợ
-                                                ANC, gi&#225; 610 ng&#224;n đồng</a></h3>
-                                        <span>Thứ Sáu,
-                                            05/01/2024
-                                        </span>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -2882,12 +2229,6 @@ Combo ốp lưng dán màn hình miễn phí" />
                 <span class="count_item_pr">0</span>
                 Giỏ hàng
             </div>
-            <div class="item-nav userIcon" onclick="goCompare()">
-                <svg class="icon compa">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use>
-                </svg>
-                So sánh
-            </div>
         </div>
     </div>
     <script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/base-global.js?1731407153286"></script>
@@ -2896,23 +2237,10 @@ Combo ốp lưng dán màn hình miễn phí" />
     <script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/main.js?1731407153286" type="text/javascript">
     </script>
     <script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/cw-func.js?1731407153286" defer></script>
-    <div class="mini-stick-compare">
-        <a href="javascript:;" onclick="showCompare()">
-            <i class="iconcate-ss"><svg class="icon compa">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareminiicon"></use>
-                </svg></i>
-            <span>So sánh <span class="compareCountMini">(0)</span></span>
-        </a>
-    </div>
     <div class="stick-compare">
         <span class="mini-compare" onclick="miniCompare()">Thu gọn</span>
         <ul id="list-compare" class="list-compare">
-
         </ul>
-        <div class="closecompare">
-            <a href="javascript:;" title="so sánh ngay" onclick="goCompare()" class="doss button-default">So sánh</a>
-            <a href="javascript:;" onclick="RemoveAllIdCompare()" class="txtremoveall">Xóa tất cả</a>
-        </div>
     </div>
     <script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/ajax-cart-new.js?1731407153286"
         type="text/javascript"></script>

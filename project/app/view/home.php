@@ -901,27 +901,25 @@
                             </ul>
                         </div>
                         <div class="row">
-
+                            <?php var_dump($product )?>
+                            <?php foreach ($product as $a) {?>
                             <div class="col-lg-2-5 col-xl-2 col-md-3 col-6">
-
-
                                 <form action="/cart/add" method="post" class="variants product-action item_product_main"
                                     data-cart-form data-id="product-actions-34149032" enctype="multipart/form-data">
-                                    <a class="image_thumb" href="/apple-iphone-14-pro-max-128gb-vn-a"
-                                        title="Apple iPhone 14 Pro Max 128Gb (VN/A)">
+                                    <a class="image_thumb" href="?wh=sanpham&id=<?= $a["product_id"]?>"
+                                        title="<?= $a["product_name"]?>">
                                         <span class="label-sale ">
                                             Giảm
                                             8%
-
                                         </span>
                                         <img width="214" height="214" style="transform:scale(0.9)"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
                                             data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-m-main-979.png?v=1704424297997"
-                                            alt="Apple iPhone 14 Pro Max 128Gb (VN/A)"
-                                            class="lazyload img-responsive center-block" />
+                                            alt="<?= $a["product_name"]?>"
+                                            class="lazyload img-responsive center-block"/>
                                         <img width="214" height="214" class="lazyload frame"
                                             data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/themes/936909/assets/frame1.png?1731407153286"
-                                            alt="Apple iPhone 14 Pro Max 128Gb (VN/A)"
+                                            alt="<?= $a["product_name"]?>"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" />
                                     </a>
                                     <a href="javascript:;" data-url="/apple-iphone-14-pro-max-128gb-vn-a"
@@ -932,14 +930,12 @@
                                         </svg>
                                     </a>
                                     <div class="info-product">
-                                        <h3 class="product-name"><a href="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                title="Apple iPhone 14 Pro Max 128Gb (VN/A)">Apple iPhone 14 Pro Max
-                                                128Gb (VN/A)</a></h3>
+                                        <h3 class="product-name"><a href="?wh=sanpham&id=<?= $a["product_id"]?>"
+                                                title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><?= $a["product_name"]?></a></h3>
                                         <div class="price-action">
                                             <div class="price-box">
-                                                <span class="price">27.000.000₫</span>
-                                                <span class="compare-price">29.490.000₫</span>
-
+                                                <span class="price"><?= number_format($a["price"] * 24000 - 2000000, 0, ',', '.') ?>₫</span>
+                                                <span class="compare-price"><?= number_format($a["price"] * 24000, 0, ',', '.') ?>₫</span>
                                             </div>
                                             <div class="action-cart">
                                                 <span class="more-action">
@@ -959,31 +955,9 @@
                                                                 xlink:href="#addcarticon"></use>
                                                         </svg>
                                                     </button>
-                                                    <a class="quick-view btn-views" data-text="Xem nhanh"
-                                                        href="javascript:;" title="Xem nhanh"
-                                                        onclick="onQuickView(this);"
-                                                        data-handle="apple-iphone-14-pro-max-128gb-vn-a">
-                                                        <svg class="icon svg-qv">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#searchicon"></use>
-                                                        </svg>
-                                                    </a>
-
-                                                    <a href="javascript:;"
-                                                        data-url="/apple-iphone-14-pro-max-128gb-vn-a"
-                                                        data-text="So sánh" data-type="Điện thoại"
-                                                        data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/iphone-14-pro-m-main-979.png?v=1704424297997"
-                                                        data-name="Apple iPhone 14 Pro Max 128Gb (VN/A)" title="So sánh"
-                                                        class="compare-link btn-views d-inline-block">
-                                                        <svg class="icon compa">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#compareIcon"></use>
-                                                        </svg>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="nowship">
                                             Giao siêu tốc 2H
                                         </div>
@@ -991,13 +965,10 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="col-lg-2-5 col-xl-2 col-md-3 col-6">
+                            <?php }?>
 
-
-                                
-                            </div>
                             <div class="col-12 text-center">
-                                <a class="button-default" href="san-pham-noi-bat" title="Xem thêm">Xem thêm (18) sản
+                                <a class="button-default" href="san-pham-noi-bat" title="Xem thêm">Xem thêm <?= count($allProduct)?> sản
                                     phẩm</a>
                             </div>
 
