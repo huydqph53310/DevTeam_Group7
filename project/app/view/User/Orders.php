@@ -265,30 +265,28 @@
         <section class="signup page_customer_account">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
+                    
+                <div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
                         <div class="white">
                             <div class="block-account">
                                 <h5 class="title-account">Trang tài khoản</h5>
-                                <p>
-                                    Xin chào, <span style="color:#f72c0f;">do huy</span>&nbsp;!
-                                </p>
+                                <p>Xin chào, <span style="color:#f72c0f;"><?= $data->name ?></span>&nbsp;!</p>
                                 <ul>
                                     <li>
-                                        <a disabled="disabled" class="title-info" href="/account">Thông tin tài
-                                            khoản</a>
+                                        <a disabled="disabled" class="title-info active"
+                                            href="javascript:void(0);">Thông tin tài khoản</a>
                                     </li>
                                     <li>
-                                        <a disabled="disabled" class="title-info active" href="javascript:void(0);">Đơn
-                                            hàng của bạn</a>
+                                        <a class="title-info" href="?wh=orders">Đơn hàng của bạn</a>
                                     </li>
                                     <li>
-                                        <a class="title-info" href="/account/changepassword">Đổi mật khẩu</a>
+                                        <a class="title-info" href="?wh=changepassword">Đổi mật khẩu</a>
                                     </li>
                                     <li>
-                                        <a class="title-info" href="/account/addresses">Sổ địa chỉ (0)</a>
+                                        <a class="title-info" href="?wh=addresses">Sổ địa chỉ (0)</a>
                                     </li>
                                     <li>
-                                        <a class="title-info" href="/account/logout">Đăng xuất</a>
+                                        <a class="title-info" href="?wh=logout">Đăng xuất</a>
                                     </li>
                                 </ul>
                             </div>

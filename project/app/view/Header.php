@@ -191,22 +191,7 @@
             window.BizwebAnalytics.meta[attr] = meta[attr];
         }
     </script>
-
-
     <script src="/dist/js/stats.min.js?v=96f2ff2"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -302,10 +287,9 @@
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phoneicon"></use>
                         </svg>
                         <div class="right-item ">
-
                             Gọi đặt hàng
                             <a class="phone" title="Gọi ngay" href="tel:19006750">
-                                19006750
+                                19001090
                             </a>
                         </div>
                     </div>
@@ -342,7 +326,7 @@
                         <div class="right-item">
                             Giỏ hàng
                             <a class="cartcount" href="/cart" title="Giỏ hàng">
-                                (<span class="count_item_pr">0</span>) sản phẩm
+                                (<span class="count_item_pr">20</span>) sản phẩm
                             </a>
                         </div>
                     </div>
@@ -371,16 +355,6 @@
                             </div>
                             <nav class="nav-horizontal">
                                 <ul class="item_big">
-
-
-                                    <li class="nav-item  
-					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_1.png?1731407153286">
-                                        <a class="a-img" href="/dien-thoai-tablet" title="Điện thoại, tablet">
-                                            Điện thoại, tablet
-                                        </a>
-                                    </li>
-
-
                                     <li class="nav-item  
 					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_2.png?1731407153286">
                                         <span class="tag-style" style="background-color:#ded200;"><span
@@ -401,14 +375,6 @@
                                     </li>
 
 
-                                    <li class="nav-item  
-					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_4.png?1731407153286">
-                                        <a class="a-img" href="/am-thanh" title="Âm thanh">
-                                            Âm thanh
-                                        </a>
-                                    </li>
-
-
                                     <li class="nav-item has-child   has-mega 
 					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_5.png?1731407153286">
                                         <span class="tag-style" style="background-color:#00a3ff;"><span
@@ -424,38 +390,6 @@
                                         <div class="mega-content">
                                             <ul class="level0">
 
-
-                                                <li class="level1 parent item">
-                                                    <h4>
-                                                        <a href="/dien-thoai-tablet" title="Điện thoại, tablet">Điện
-                                                            thoại, tablet</a>
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#icondown"></use>
-                                                        </svg>
-                                                    </h4>
-                                                    <ul class="level1">
-
-                                                        <li class="level2"><a href="/iphone" title="IPhone">IPhone</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/samsung"
-                                                                title="Samsung">Samsung</a> </li>
-
-                                                        <li class="level2"><a href="/xiaomi" title="Xiaomi">Xiaomi</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/oppo" title="Oppo">Oppo</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/realme" title="Realme">Realme</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/sony" title="Sony">Sony</a>
-                                                        </li>
-
-                                                    </ul>
-                                                </li>
 
 
 
@@ -487,105 +421,6 @@
 
                                                     </ul>
                                                 </li>
-
-
-
-                                                <li class="level1 parent item">
-                                                    <h4>
-                                                        <a href="/am-thanh" title="Âm thanh">Âm thanh</a>
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#icondown"></use>
-                                                        </svg>
-                                                    </h4>
-                                                    <ul class="level1">
-
-                                                        <li class="level2"><a href="/tai-nghe-apple"
-                                                                title="Tai nghe Apple">Tai nghe Apple</a> </li>
-
-                                                        <li class="level2"><a href="/tai-nghe-sony"
-                                                                title="Tai nghe Sony">Tai nghe Sony</a> </li>
-
-                                                        <li class="level2"><a href="/tai-nghe-xiaomi"
-                                                                title="Tai nghe Xiaomi">Tai nghe Xiaomi</a> </li>
-
-                                                        <li class="level2"><a href="/tai-nghe-samsung"
-                                                                title="Tai nghe Samsung">Tai nghe Samsung</a> </li>
-
-                                                        <li class="level2"><a href="/tai-nghe-soul"
-                                                                title="Tai nghe Soul">Tai nghe Soul</a> </li>
-
-                                                        <li class="level2"><a href="/tai-nghe-edifer"
-                                                                title="Tai nghe Edifer">Tai nghe Edifer</a> </li>
-
-                                                    </ul>
-                                                </li>
-
-
-
-                                                <li class="level1 parent item">
-                                                    <h4>
-                                                        <a href="/dong-ho-camera" title="Đồng hồ, Camera">Đồng hồ,
-                                                            Camera</a>
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#icondown"></use>
-                                                        </svg>
-                                                    </h4>
-                                                    <ul class="level1">
-
-                                                        <li class="level2"><a href="/dong-ho-apple"
-                                                                title="Đồng hồ Apple">Đồng hồ Apple</a> </li>
-
-                                                        <li class="level2"><a href="/dong-ho-xiaomi"
-                                                                title="Đồng hồ Xiaomi">Đồng hồ Xiaomi</a> </li>
-
-                                                        <li class="level2"><a href="/dong-ho-huawei"
-                                                                title="Đồng hồ Huawei">Đồng hồ Huawei</a> </li>
-
-                                                        <li class="level2"><a href="/dong-ho-samsung"
-                                                                title="Đồng hồ Samsung">Đồng hồ Samsung</a> </li>
-
-                                                        <li class="level2"><a href="/dong-ho-garmi"
-                                                                title="Đồng hồ Garmi">Đồng hồ Garmi</a> </li>
-
-                                                        <li class="level2"><a href="/dong-ho-coros"
-                                                                title="Đồng hồ Coros">Đồng hồ Coros</a> </li>
-
-                                                    </ul>
-                                                </li>
-
-
-
-                                                <li class="level1 parent item">
-                                                    <h4>
-                                                        <a href="/gia-dung-smart-home" title="Gia dụng, Smart home">Gia
-                                                            dụng, Smart home</a>
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#icondown"></use>
-                                                        </svg>
-                                                    </h4>
-                                                    <ul class="level1">
-
-                                                        <li class="level2"><a href="/gia-dung-nha-bep"
-                                                                title="Gia dụng nhà bếp">Gia dụng nhà bếp</a> </li>
-
-                                                        <li class="level2"><a href="/suc-khoe-lam-dep"
-                                                                title="Sức khỏe làm đẹp">Sức khỏe làm đẹp</a> </li>
-
-                                                        <li class="level2"><a href="/thiet-bi-gia-dinh"
-                                                                title="Thiết bị gia đình">Thiết bị gia đình</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/may-loc-khong-khi"
-                                                                title="Máy lọc không khí">Máy lọc không khí</a>
-                                                        </li>
-
-                                                    </ul>
-                                                </li>
-
-
 
                                                 <li class="level1 parent item">
                                                     <h4>
@@ -620,27 +455,9 @@
                                                     <h4><a href="/pc-man-hinh" title="Pc, Màn hình">Pc, Màn hình</a>
                                                     </h4>
                                                 </li>
-
-
-
-                                                <li class="level1 item">
-                                                    <h4><a href="/tivi" title="Tivi">Tivi</a></h4>
-                                                </li>
-
-
                                             </ul>
                                         </div>
                                     </li>
-
-
-                                    <li class="nav-item  
-					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_6.png?1731407153286">
-                                        <a class="a-img" href="/pc-man-hinh" title="Pc, Màn hình">
-                                            Pc, Màn hình
-                                        </a>
-                                    </li>
-
-
                                     <li class="nav-item has-child   
 					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_7.png?1731407153286">
                                         <a class="a-img caret-down" href="/tin-tuc" title="Tin tức">
@@ -695,22 +512,6 @@
                                             Liên hệ
                                         </a>
                                     </li>
-
-
-                                    <li class="nav-item  
-					   ">
-                                        <a class="a-img" href="/he-thong-cua-hang" title="Hệ thống cửa hàng">
-                                            Hệ thống cửa hàng
-                                        </a>
-                                    </li>
-
-
-                                    <li class="nav-item  
-					   ">
-                                        <a class="a-img" href="/so-sanh-san-pham" title="So sánh sản phẩm">
-                                            So sánh sản phẩm
-                                        </a>
-                                    </li>
                                 </ul>
                             </nav>
                             <div class="last-nav d-xl-none d-flex">
@@ -723,18 +524,6 @@
                                         Gọi đặt hàng
                                         <a class="phone" href="tel:19006750">
                                             19006750
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="item-header block-store">
-                                    <svg class="icon">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shopicon">
-                                        </use>
-                                    </svg>
-                                    <div class="right-item">
-                                        Hệ thống
-                                        <a class="phone" href="/he-thong-cua-hang">
-                                            <span>Hơn 12</span> cửa hàng
                                         </a>
                                     </div>
                                 </div>
