@@ -44,8 +44,8 @@ class Product extends ConnectDatabase
             } catch (Exception $e) {
                 // echo "Lỗi truy vấn: " . $e->getMessage();
                 // nên đổ log vào admin thay vì là đổ lỗi ở đây
-                $logMessage = "Lỗi truy vấn: " . $e->getMessage() . " at " . date('[Y-m-d H:i:s]');
-                error_log($logMessage . PHP_EOL, 3, $this->filePath);
+                // $logMessage = "Lỗi truy vấn: " . $e->getMessage() . " at " . date('[Y-m-d H:i:s]');
+                // error_log($logMessage . PHP_EOL, 3, $this->filePath);
                 return null;
             }
         }
