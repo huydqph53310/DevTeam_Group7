@@ -265,7 +265,7 @@
                                 <h5 class="title-account">Trang tài khoản</h5>
                                 <p>Xin chào, <span style="color:#f72c0f;"><?= $data->name ?></span>&nbsp;!</p>
                                 <ul>
-                                <li>
+                                    <li>
                                         <a disabled="disabled" class="title-info active"
                                             href="javascript:void(0);">Thông tin tài khoản</a>
                                     </li>
@@ -274,9 +274,6 @@
                                     </li>
                                     <li>
                                         <a class="title-info" href="?wh=changepassword">Đổi mật khẩu</a>
-                                    </li>
-                                    <li>
-                                        <a class="title-info" href="?wh=addresses">Sổ địa chỉ (0)</a>
                                     </li>
                                     <li>
                                         <a class="title-info" href="?wh=logout">Đăng xuất</a>

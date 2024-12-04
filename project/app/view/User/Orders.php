@@ -273,17 +273,14 @@
                                 <p>Xin chào, <span style="color:#f72c0f;"><?= $data->name ?></span>&nbsp;!</p>
                                 <ul>
                                     <li>
-                                        <a disabled="disabled" class="title-info active"
-                                            href="javascript:void(0);">Thông tin tài khoản</a>
+                                           <a href="?wh=client" class="title-info">Thông tin tài khoản</a>
                                     </li>
                                     <li>
-                                        <a class="title-info" href="?wh=orders">Đơn hàng của bạn</a>
+                                        <a disabled="disabled" class="title-info active" 
+                                        href="javascript:void(0);">Đơn hàng của bạn</a>
                                     </li>
                                     <li>
                                         <a class="title-info" href="?wh=changepassword">Đổi mật khẩu</a>
-                                    </li>
-                                    <li>
-                                        <a class="title-info" href="?wh=addresses">Sổ địa chỉ (0)</a>
                                     </li>
                                     <li>
                                         <a class="title-info" href="?wh=logout">Đăng xuất</a>

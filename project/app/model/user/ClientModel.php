@@ -146,20 +146,24 @@ class ClientModel extends ConnectDatabase
     {
         // code login
         try {
-            $mees = new WriteLog();
             $sql = "SELECT users_id,email, username, password FROM `users` WHERE username like '%$iduser%'";
             $this->connect->query("USE " . parent::DB_NAME);
             $dataCheck = $this->connect->query($sql)->fetch();
             if ($dataCheck != false) {
                 $userLogin = new Client($dataCheck["users_id"], null, $dataCheck["username"], $dataCheck["password"], $dataCheck["email"]);
-                $logMessage = $iduser . " Đã đăng nhập thành công " . " at " . date('[Y-m-d H:i:s]');
-                $mees->logToJson($logMessage);
+                // $logMessage = $iduser . " Đã đăng nhập thành công " . " at " . date('[Y-m-d H:i:s]');
+                // $mees->logToJson($logMessage);
                 return $userLogin;
             }
             //code...
         } catch (Exception $err) {
             //throw $th;
         }
+    }
+    public function GetUserByUsername($username){
+        $stmt=$this->connect->prepare("select * from users where username =:username");
+        $stmt->execute(['username'=> $username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     public function updateClient($id, $data)
     {
