@@ -10,6 +10,7 @@
     <script type="text/javascript" src="//bizweb.dktcdn.net/assets/themes_support/api.jquery.js"></script>
     <script src="//bizweb.dktcdn.net/assets/themes_support/option-selectors.js"></script>
     <main>
+            
         <h1 class="d-none">Ego Mobile - Thế giới mobile cho mọi nhà</h1>
         <section style="margin-bottom:20px;">
             <div class="section-slide-banner">
@@ -215,7 +216,6 @@
                                                                     <div class="price-box">
                                                                         <span class="price"><?= number_format($b["price"] * 24000 - 2400000, 0, ',', '.') ?>₫</span>
                                                                         <span class="compare-price"><?= number_format($b["price"] * 24000, 0, ',', '.') ?>₫</span>
-
                                                                     </div>
                                                                     <div class="action-cart">
                                                                         <span class="more-action">
@@ -261,14 +261,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="swiper-button- prev"><svg class="icon">
-                                            <use xlink:href="#previcon"></use>
-                                        </svg></div>
-                                    <div class="swiper-button-next"><svg class="icon">
-                                            <use xlink:href="#nexticon"></use>
-                                        </svg></div> -->
                         </div>
-
                     </div>
                     <div class="pane"></div>
                 </div>

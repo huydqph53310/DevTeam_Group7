@@ -12,9 +12,10 @@ include_once 'config/ConnectDatabase.php';
 include_once 'app/model/user/ClientModel.php';
 include_once 'app/model/ProductmModel/Product.php';
 // controller
-include_once 'app/controller/AdminController/AdminController.php';
+// include_once 'app/controller/AdminController/AdminController.php';
 include_once 'app/controller/RouterController.php';
 include_once 'app/controller/UsersController/InfoUserController.php';
+include_once 'app/controller/UsersController/ChangePassController.php';
 include_once 'app/controller/UsersController/RegisterController.php';
 include_once 'app/controller/UsersController/LogoutController.php';
 include_once 'app/controller/UsersController/LoginController.php';
@@ -42,28 +43,25 @@ switch ($router->GETURL()) {
         $router->Trangchu();
         break;
     case "login":
-        $login = new LoginController();
-        $login->login();
+        (new LoginController())->Login();
         break;
     case "orders":
-        $orders = new ListOrders();
-        $orders->getOrderById();
+        (new ListOrders())->getOrderById();
         break;
     case "reg":
-        $reg = new RegisterController();
-        $reg->Regsiter();
+        (new RegisterController())->Regsiter();
         break;
     case "logout":
-        $logout = new LogoutController();
-        $logout->Logout();
+        (new LogoutController())->Logout();
         break;
     case "client":
-        $client = new InfoUserController();
-        $client->InfoClient();
+        (new InfoUserController())->InfoClient();
         break;
     case "sanpham":
-        $sanpham = new DetailProduct();
-        $sanpham->getProductById($userRouter->getId());
+        (new DetailProduct())->getProductById($router->getId());
+        break;
+    case "changepassword":
+        (new ChangePassController())->ChangePass();
         break;
     case "test":
         include "app/view/Header.php";

@@ -222,7 +222,10 @@
         media="screen and (min-width: 481px)">
 
 </head>
-<header class="header index">
+<?php 
+$fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
+?>
+<header class="header <?= $fix?>">
     <div class="top-bar d-none d-md-block">
         <div class="container">
             <div class="row">
@@ -268,18 +271,6 @@
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use>
                                 </svg>
                             </button>
-                            <div id="result-search" class="result-search">
-                                <ul class="d-flex d-tab">
-                                    <li data-tab="#sp" class="current" onclick="showTab(event, '#sp')">Sản phẩm</li>
-                                    <li data-tab="#tt" onclick="showTab(event, '#tt')">Tin tức</li>
-                                </ul>
-                                <div id="sp" class="t-ct current">
-
-                                </div>
-                                <div id="tt" class="t-ct">
-
-                                </div>
-                            </div>
                         </form>
                     </div>
                     <div class="item-header block-phone">
@@ -458,56 +449,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-item has-child   
-					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_7.png?1731407153286">
-                                        <a class="a-img caret-down" href="/tin-tuc" title="Tin tức">
-                                            Tin tức
-                                            <svg class="icon">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown">
-                                                </use>
-                                            </svg>
-                                        </a>
-                                        <i class="icon-down"></i>
-                                        <ul class="item_small">
-                                            <li>
-                                                <a class="caret-down" href="/tin-cong-nghe" title="Tin công nghệ">
-                                                    Tin công nghệ
-                                                    <svg class="icon">
-                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                            xlink:href="#icondown"></use>
-                                                    </svg>
-                                                </a>
-                                                <i class="icon-down"><svg class="icon">
-                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                            xlink:href="#icondown"></use>
-                                                    </svg></i>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/tin-tuc" title="Sản phẩm mới nhất" class="a3">Sản
-                                                            phẩm mới nhất</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/tin-tuc" title="Unbox công nghệ" class="a3">Unbox
-                                                            công nghệ</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a class="" href="/tin-reviews" title="Tin reviews">
-                                                    Tin reviews
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="/tin-khuyen-mai" title="Tin khuyến mãi">
-                                                    Tin khuyến mãi
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <li class="nav-item  
-					   ">
+                                    <li class="nav-item">
                                         <a class="a-img" href="/lien-he" title="Liên hệ">
                                             Liên hệ
                                         </a>

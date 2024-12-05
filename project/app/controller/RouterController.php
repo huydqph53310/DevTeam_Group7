@@ -1,9 +1,7 @@
 <?php
 class RouterController extends ConnectDatabase
 {
-
     public $connect;
-
     public function Trangchu()
     {
         $this->connect = new Product();
