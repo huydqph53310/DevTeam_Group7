@@ -15,6 +15,7 @@ include_once 'app/model/ProductmModel/Product.php';
 // include_once 'app/controller/AdminController/AdminController.php';
 include_once 'app/controller/RouterController.php';
 include_once 'app/controller/UsersController/InfoUserController.php';
+include_once 'app/controller/UsersController/Cart.php';
 include_once 'app/controller/UsersController/ChangePassController.php';
 include_once 'app/controller/UsersController/RegisterController.php';
 include_once 'app/controller/UsersController/LogoutController.php';
@@ -62,6 +63,9 @@ switch ($router->GETURL()) {
         break;
     case "changepassword":
         (new ChangePassController())->ChangePass();
+        break;
+    case "cart":
+        (new Cart())->Cart();
         break;
     case "test":
         include "app/view/Header.php";

@@ -316,8 +316,8 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                         </svg>
                         <div class="right-item">
                             Giỏ hàng
-                            <a class="cartcount" href="/cart" title="Giỏ hàng">
-                                (<span class="count_item_pr">20</span>) sản phẩm
+                            <a class="cartcount" href="?wh=cart" title="Giỏ hàng">
+                                (<span class="count_item_pr">1</span>) sản phẩm
                             </a>
                         </div>
                     </div>
