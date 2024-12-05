@@ -12,9 +12,9 @@ class DetailProduct
 
         if ($product) {
             // Nếu tìm thấy sản phẩm, bao gồm các view
-            include_once __DIR__ . "/../../../app/view/Header.php";
-            include_once __DIR__ . "/../../../app/view/Product/DetailProduct.php";  // Truyền $product vào đây
-            include_once __DIR__ . "/../../../app/view/Footer.php";
+            include_once "app/view/Header.php";
+            include_once "app/view/Product/DetailProduct.php";  // Truyền $product vào đây
+            include_once "app/view/Footer.php";
         } else {
             // Nếu không tìm thấy sản phẩm, hiển thị thông báo
             echo "Sản phẩm không tồn tại.";

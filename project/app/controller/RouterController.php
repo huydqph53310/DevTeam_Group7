@@ -9,10 +9,10 @@ class RouterController extends ConnectDatabase
         $this->connect = new Product();
         $product = $this->connect->TopListProductPriceDESC();
         $allProduct = $this->connect->ListProduct();
-        
-        include_once  __DIR__ . "/../../app/view/Header.php";
-        include_once  __DIR__ . "/../../app/view/Home.php";
-        include_once  __DIR__ . "/../../app/view/Footer.php";
+        $allCountCllick = $this->connect->TopProductCountClickDESC();
+        include_once "app/view/Header.php";
+        include_once "app/view/Home.php";
+        include_once "app/view/Footer.php";
     }
 
     public function getUrl()

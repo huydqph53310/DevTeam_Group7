@@ -10,9 +10,9 @@ class ListOrders
         if (isset($_SESSION["id"])) {
             $data = $this->router->getClientById($_SESSION["id"]);
 
-            include  __DIR__ . "/../../view/Header.php";
-            include  __DIR__ . "/../../view/User/Orders.php";
-            include  __DIR__ . "/../../view/Footer.php";
+            include  "app/view/Header.php";
+            include  "app/view/User/Orders.php";
+            include  "app/view/Footer.php";
         } else {
             echo "Không có giá trị id truyền vào";
         }

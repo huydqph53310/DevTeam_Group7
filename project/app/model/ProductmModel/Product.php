@@ -37,6 +37,16 @@ class Product extends ConnectDatabase
             //throw $th;
         }
     }
+    public function TopProductCountClickDESC()
+    {
+        try {
+            $stmt = $this->connect->prepare("SELECT * FROM `products` ORDER BY countclick DESC LIMIT 8");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (Throwable $th) {
+            //throw $th;
+        }
+    }
     public function SearchProductsByName($searchTerm)
     {
         $searchTerm = '%' . $searchTerm . '%';  // Thêm dấu % để tìm kiếm theo kiểu LIKE

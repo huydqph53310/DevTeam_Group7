@@ -471,144 +471,82 @@
                                             </div>
                                             <form enctype="multipart/form-data" id="add-to-cart-form" data-cart-form
                                                 action="/cart/add" method="post" class="wishItem">
-                                                <input type="hidden" name="properties[Quà tặng]" value=" 
-Combo ốp lưng dán màn hình miễn phí" />
+                                                <input type="hidden" name="properties[Quà tặng]" value="Combo dán chống xước, chống trầy cho màn hình và mặt lưng máy"/>
                                                 <div class="form-product ">
                                                     <div class="select-swatch">
                                                         <div class="swatch-color swatch clearfix" data-option-index="0">
                                                             <h4 class="option-title">
                                                                 Cpu
                                                             </h4>
-                                                            <div data-value="Đen"
+                                                            <div data-value="Cpu"
                                                                 class="swatch-element color den has-img  available">
                                                                 <input id="swatch-0-den" type="radio" name="option-0"
                                                                     value="Đen" checked />
-                                                                <label for="swatch-0-den" title="Đen"
-                                                                    style="background-image:url(https://bizweb.dktcdn.net/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593);background-size:contain;background-repeat:no-repeat;background-position: center;">
-                                                                    <?= $config["cpu"]?>
-                                                                </label>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16">
+                                                                            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+                                                                </svg>
+                                                                <?= $config["cpu"]?>
                                                             </div>
-                                                            <div data-value="Xanh titan"
-                                                                class="swatch-element color xanh-titan has-img  available">
-                                                                <input id="swatch-0-xanh-titan" type="radio"
-                                                                    name="option-0" value="Xanh titan" />
-                                                                <label for="swatch-0-xanh-titan" title="Xanh titan"
-                                                                    style="background-image:url(https://bizweb.dktcdn.net/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593);background-size:contain;background-repeat:no-repeat;background-position: center;">
-                                                                    Xanh titan
-                                                                </label>
-                                                            </div>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Xanh titan";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Xanh titan";
-                                                            </script>
-
-                                                            <div data-value="V&#224;ng"
-                                                                class="swatch-element color vang has-img  available">
-                                                                <input id="swatch-0-vang" type="radio" name="option-0"
-                                                                    value="V&#224;ng" />
-                                                                <label for="swatch-0-vang" title="Vàng"
-                                                                    style="background-image:url(https://bizweb.dktcdn.net/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593);background-size:contain;background-repeat:no-repeat;background-position: center;">
-                                                                    Vàng
-                                                                </label>
-                                                            </div>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Vàng";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "0";
-                                                                var value = "Vàng";
-                                                            </script>
                                                         </div>
-                                                        <script>
-                                                            var swatches = document.querySelectorAll('.swatch');
-                                                            swatches.forEach(function(swatch) {
-                                                                var dataOptionIndex = swatch.getAttribute(
-                                                                    'data-option-index');
-                                                                var innerText = swatch.textContent || swatch
-                                                                    .innerText;
-
-                                                                if (dataOptionIndex === optionIndex && innerText
-                                                                    .trim() === value) {
-                                                                    swatch.classList.remove('soldout');
-                                                                    swatch.classList.add('available');
-                                                                    var radioInput = swatch.querySelector(':radio');
-                                                                    if (radioInput) {
-                                                                        radioInput.removeAttribute('disabled');
-                                                                    }
-                                                                }
-                                                            });
-                                                        </script>
-                                                        <div class=" swatch clearfix" data-option-index="1">
+                                                        <div class="swatch-color swatch clearfix" data-option-index="0">
                                                             <h4 class="option-title">
-                                                                Dung lượng
+                                                                Ram
                                                             </h4>
-
-                                                            <div data-value="256GB"
-                                                                class="swatch-element 256gb has-img  available">
-                                                                <input id="swatch-1-256gb" type="radio" name="option-1"
-                                                                    value="256GB" checked />
-                                                                <label title="256GB" for="swatch-1-256gb">
-                                                                    256GB
-                                                                </label>
+                                                            <div data-value="Ram"
+                                                                class="swatch-element color den has-img  available">
+                                                                <input id="swatch-0-den" type="radio" name="option-0"
+                                                                    value="Đen" checked />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-memory" viewBox="0 0 16 16">
+  <path d="M1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707-.293l.353-.353a.5.5 0 0 1 .708 0l.353.353a1 1 0 0 0 .707.293H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm.5 1h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5m5 0h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5m4.5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zM2 10v2H1v-2zm2 0v2H3v-2zm2 0v2H5v-2zm3 0v2H8v-2zm2 0v2h-1v-2zm2 0v2h-1v-2zm2 0v2h-1v-2z"/>
+</svg>
+                                                                <?= $config["ram"]?>
                                                             </div>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "256GB";
-                                                            </script>
-
-                                                            <div data-value="512GB"
-                                                                class="swatch-element 512gb has-img  available">
-                                                                <input id="swatch-1-512gb" type="radio" name="option-1"
-                                                                    value="512GB" />
-                                                                <label title="512GB" for="swatch-1-512gb">
-                                                                    512GB
-                                                                </label>
-                                                            </div>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "512GB";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "256GB";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "512GB";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "256GB";
-                                                            </script>
-                                                            <script>
-                                                                var optionIndex = "1";
-                                                                var value = "512GB";
-                                                            </script>
                                                         </div>
-                                                        <script>
-                                                            var swatches = document.querySelectorAll('.swatch');
-                                                            swatches.forEach(function(swatch) {
-                                                                var dataOptionIndex = swatch.getAttribute(
-                                                                    'data-option-index');
-                                                                var innerText = swatch.textContent || swatch
-                                                                    .innerText;
+                                                        <div class="swatch-color swatch clearfix" data-option-index="0">
+                                                            <h4 class="option-title">
+                                                                SSD/HDD
+                                                            </h4>
+                                                            <div data-value="SSD/HDD"
+                                                                class="swatch-element color den has-img  available">
+                                                                <input id="swatch-0-den" type="radio" name="option-0"
+                                                                    value="Đen" checked />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy-fill" viewBox="0 0 16 16">
+  <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/>
+  <path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/>
+</svg>
+                                                                <?= $config["storage"]?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swatch-color swatch clearfix" data-option-index="0">
+                                                            <h4 class="option-title">
+                                                                VGA
+                                                            </h4>
+                                                            <div data-value="VGA"
+                                                                class="swatch-element color den has-img  available">
+                                                                <input id="swatch-0-den" type="radio" name="option-0"
+                                                                    value="Đen" checked />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-nvidia" viewBox="0 0 16 16">
+  <path d="M1.635 7.146S3.08 5.012 5.97 4.791v-.774C2.77 4.273 0 6.983 0 6.983s1.57 4.536 5.97 4.952v-.824c-3.23-.406-4.335-3.965-4.335-3.965M5.97 9.475v.753c-2.44-.435-3.118-2.972-3.118-2.972S4.023 5.958 5.97 5.747v.828h-.004c-1.021-.123-1.82.83-1.82.83s.448 1.607 1.824 2.07M6 2l-.03 2.017A7 7 0 0 1 6.252 4c3.637-.123 6.007 2.983 6.007 2.983s-2.722 3.31-5.557 3.31q-.39-.002-.732-.065v.883q.292.039.61.04c2.638 0 4.546-1.348 6.394-2.943.307.246 1.561.842 1.819 1.104-1.757 1.47-5.852 2.657-8.173 2.657a7 7 0 0 1-.65-.034V14H16l.03-12zm-.03 3.747v-.956a6 6 0 0 1 .282-.015c2.616-.082 4.332 2.248 4.332 2.248S8.73 9.598 6.743 9.598c-.286 0-.542-.046-.773-.123v-2.9c1.018.123 1.223.572 1.835 1.593L9.167 7.02s-.994-1.304-2.67-1.304a5 5 0 0 0-.527.031"/>
+</svg>
+                                                                <?=  $config["gpu"]?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swatch-color swatch clearfix" data-option-index="0">
+                                                            <h4 class="option-title">
+                                                                LCD
+                                                            </h4>
+                                                            <div data-value="LCD"
+                                                                class="swatch-element color den has-img  available">
+                                                                <input id="swatch-0-den" type="radio" name="option-0"
+                                                                    value="Đen" checked />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pci-card" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .5.5V4h13.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5H2v2.5a.5.5 0 0 1-1 0V2H.5a.5.5 0 0 1-.5-.5"/>
+  <path d="M3 12.5h3.5v1a.5.5 0 0 1-.5.5H3.5a.5.5 0 0 1-.5-.5zm4 0h4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+                                                                <?= $config["screen"]?>
+                                                            </div>
+                                                        </div>
 
-                                                                if (dataOptionIndex === optionIndex && innerText
-                                                                    .trim() === value) {
-                                                                    swatch.classList.remove('soldout');
-                                                                    swatch.classList.add('available');
-                                                                    var radioInput = swatch.querySelector(':radio');
-                                                                    if (radioInput) {
-                                                                        radioInput.removeAttribute('disabled');
-                                                                    }
-                                                                }
-                                                            });
-                                                        </script>
                                                     </div>
                                                     <div class="box-variant clearfix  d-none ">
                                                         <select id="product-selectors"

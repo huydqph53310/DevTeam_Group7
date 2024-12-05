@@ -45,9 +45,9 @@ class RegisterController extends ConnectDatabase
                     $this->router->reigisterClient($createUser);
                 }
             }
-            include  __DIR__ . "/../../view/Header.php";
-            include  __DIR__ . "/../../view/User/RegsiterScr.php";
-            include  __DIR__ . "/../../view/Footer.php";
+            include "app/view/Header.php";
+            include "app/view/User/RegsiterScr.php";
+            include "app/view/Footer.php";
         } else {
             header("location: ?wh=home");
         }
