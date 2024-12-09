@@ -3,6 +3,7 @@ class DetailProduct
 {
     public function getProductById($id)
     {
+
        // Kiểm tra id có hợp lệ không
     if (!empty($id) && is_numeric($id)) {
         // Gọi model để lấy sản phẩm theo id
@@ -11,6 +12,9 @@ class DetailProduct
         $config = (new Product())->GetConfigById($product["config_id"]);
 
         if ($product) {
+            if(isset($_POST["muangay"])){
+                header("location: ?wh=mua");
+            }
             // Nếu tìm thấy sản phẩm, bao gồm các view
             include_once "app/view/Header.php";
             include_once "app/view/Product/DetailProduct.php";  // Truyền $product vào đây

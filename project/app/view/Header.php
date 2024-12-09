@@ -290,7 +290,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                         </svg>
                         <div class="right-item">
                             Hệ thống
-                            <a title="Xem ngay" class="phone" href="/he-thong-cua-hang">
+                            <a title="Xem ngay" class="phone" href="?wh=hethongcuahang">
                                 <span>Hơn 12</span> cửa hàng
                             </a>
                         </div>
@@ -450,8 +450,13 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="a-img" href="/lien-he" title="Liên hệ">
+                                        <a class="a-img" href="?wh=lienhe" title="Liên hệ">
                                             Liên hệ
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="a-img" href="?wh=admin" title="Quản trị">
+                                            Quản trị
                                         </a>
                                     </li>
                                 </ul>

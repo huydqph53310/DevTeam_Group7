@@ -27,15 +27,29 @@ class Product extends ConnectDatabase
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function TopListProductPriceDESC()
+    public function TopListProductPriceDESC($quantity)
     {
         try {
-            $stmt = $this->connect->prepare("SELECT * FROM `products` ORDER BY price DESC LIMIT 6");
+            $stmt = $this->connect->prepare("SELECT * FROM `products` ORDER BY price DESC LIMIT $quantity");
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (Throwable $th) {
             //throw $th;
         }
+    }
+
+    // đọc số ảnh trong file
+    function countImagesByNamePattern($directory) {
+        if (!is_dir($directory)) {
+            return "Thư mục không tồn tại.";
+        }
+        $count = 0;
+        $i = 0;
+        while (file_exists($directory . '/' . $i . '.png')) {
+            $count++;
+            $i++;
+        }
+        return $count;
     }
     public function TopProductCountClickDESC()
     {
@@ -47,6 +61,33 @@ class Product extends ConnectDatabase
             //throw $th;
         }
     }
+
+    public function TopBrandDESC()
+    {
+        try {
+            $stmt = $this->connect->prepare("SELECT b.brand_id, b.name, COUNT(p.product_id) AS `product_count` FROM `products` p JOIN brand b ON p.brand_id = b.brand_id GROUP BY b.brand_id, b.name ORDER BY product_count DESC LIMIT 5;");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (Throwable $th) {
+            //throw $th;
+        }
+    }
+
+    function getBrandNameById($id_brand) {
+        try {
+            // Chuẩn bị và thực thi truy vấn
+            $stmt = $this->connect->prepare("SELECT * FROM brand WHERE brand_id = :id_brand");
+            $stmt->bindParam(':id_brand', $id_brand, PDO::PARAM_INT);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['name'] ?? null;
+        } catch (PDOException $e) {
+            // Xử lý lỗi
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+    }
+
     public function SearchProductsByName($searchTerm)
     {
         $searchTerm = '%' . $searchTerm . '%';  // Thêm dấu % để tìm kiếm theo kiểu LIKE

@@ -4,10 +4,10 @@ class RouterController extends ConnectDatabase
     public $connect;
     public function Trangchu()
     {
-        $this->connect = new Product();
-        $product = $this->connect->TopListProductPriceDESC();
-        $allProduct = $this->connect->ListProduct();
-        $allCountCllick = $this->connect->TopProductCountClickDESC();
+        $product = (new Product())->TopListProductPriceDESC(12);
+        $allProduct = (new Product())->ListProduct();
+        $allCountCllick = (new Product())->TopProductCountClickDESC();
+        $topBrand = (new Product())->TopBrandDESC();
         include_once "app/view/Header.php";
         include_once "app/view/Home.php";
         include_once "app/view/Footer.php";

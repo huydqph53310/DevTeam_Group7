@@ -308,77 +308,38 @@
                                         <div class="product-image-detail">
                                             <div class="swiper-container gallery-top margin-bottom-10">
                                                 <div class="swiper-wrapper" id="lightgallery">
+                                                <?php for($j = 0; $j < (new Product())->countImagesByNamePattern("public/img/product/" . (new Product())->getBrandNameById($product["brand_id"]) . "/" . $product["product_name"]); $j++) {?>
                                                     <a class="swiper-slide pro_img" data-hash="0"
-                                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
-                                                        title="Bấm vào để xem thư viện ảnh iPhone 15 Pro Chính hãng (VN/A)">
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/large/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
-                                                            alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                            data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
+                                                        href="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $j?>.png"
+                                                        title="Bấm vào để xem thư viện ảnh <?= $product["product_name"]?> Chính hãng (VN/A)">
+                                                        <img src="<?= $product["product_name"]?>"
+                                                            data-src="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $j?>.png"
+                                                            alt="<?= $product["product_name"]?>"
+                                                            data-image="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $j?>.png"
                                                             class="smallImg img-responsive mx-auto d-block swiper-lazy" />
                                                         <div class="swiper-lazy-preloader swiper-lazy-preloader-black">
                                                         </div>
                                                     </a>
-                                                    <a class="swiper-slide pro_img" data-hash="1"
-                                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593"
-                                                        title="Bấm vào để xem thư viện ảnh iPhone 15 Pro Chính hãng (VN/A)">
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/large/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593"
-                                                            alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                            data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593"
-                                                            class="smallImg img-responsive mx-auto d-block swiper-lazy" />
-                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black">
-                                                        </div>
-                                                    </a>
-                                                    <a class="swiper-slide pro_img" data-hash="2"
-                                                        href="//bizweb.dktcdn.net/thumb/1024x1024/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593"
-                                                        title="Bấm vào để xem thư viện ảnh iPhone 15 Pro Chính hãng (VN/A)">
-                                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                            data-src="//bizweb.dktcdn.net/thumb/large/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593"
-                                                            alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                            data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593"
-                                                            class="smallImg img-responsive mx-auto d-block swiper-lazy" />
-                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black">
-                                                        </div>
-                                                    </a>
+                                                <?php }?>
+
                                                 </div>
                                                 <div class="swiper-pagination d-block d-md-none"></div>
                                             </div>
                                             <div class="swiper-button align-space slidethumb">
                                                 <div class="swiper-container gallery-thumbs d-none d-md-block">
                                                     <div class="swiper-wrapper">
-                                                        <div class="swiper-slide" data-hash="0">
+                                                        <?php for($i = 0; $i < (new Product())->countImagesByNamePattern("public/img/product/" . (new Product())->getBrandNameById($product["brand_id"]) . "/" . $product["product_name"]); $i++) {?>
+                                                            <div class="swiper-slide" data-hash="<?= $i?>">                        
                                                             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                                data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
-                                                                alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                                data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/00904369-638301752870211274-ip-15-pro-max-xanh-1-774ed4d9d6.jpg?v=1704424821593"
+                                                                data-src="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $i?>.png"
+                                                                alt="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $i?>.png"
+                                                                data-image="public/img/product/<?php echo (new Product())->getBrandNameById($product["brand_id"])?>/<?= $product["product_name"]?>/<?php echo $i?>.png"
                                                                 class="swiper-lazy" />
-                                                            <div
-                                                                class="swiper-lazy-preloader swiper-lazy-preloader-black">
+                                                                <div
+                                                                    class="swiper-lazy-preloader swiper-lazy-preloader-black">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="swiper-slide" data-hash="1">
-                                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                                data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593"
-                                                                alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                                data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-max-gia-re-hai-phong-cr-800x800-jpeg-b165657e-b629-4f4a-9f87-6b2c33f9c870.jpg?v=1704424821593"
-                                                                class="swiper-lazy" />
-                                                            <div
-                                                                class="swiper-lazy-preloader swiper-lazy-preloader-black">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="swiper-slide" data-hash="2">
-                                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                                data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593"
-                                                                alt="iPhone 15 Pro Ch&#237;nh h&#227;ng (VN/A)"
-                                                                data-image="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/iphone-14-pro-m-main-979-6055dc77-9526-42d7-aaaa-b48ad6449329.png?v=1704424821593"
-                                                                class="swiper-lazy" />
-                                                            <div
-                                                                class="swiper-lazy-preloader swiper-lazy-preloader-black">
-                                                            </div>
-                                                        </div>
-
+                                                        <?php }?>
                                                     </div>
                                                 </div>
                                                 <div class="swiper-button-prev d-none d-md-inline-block"><svg
@@ -470,7 +431,7 @@
                                                 </div>
                                             </div>
                                             <form enctype="multipart/form-data" id="add-to-cart-form" data-cart-form
-                                                action="/cart/add" method="post" class="wishItem">
+                                                action="" method="post" class="wishItem">
                                                 <input type="hidden" name="properties[Quà tặng]" value="Combo dán chống xước, chống trầy cho màn hình và mặt lưng máy"/>
                                                 <div class="form-product ">
                                                     <div class="select-swatch">
@@ -593,9 +554,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="btn-mua">
-
-                                                            <button type="button"
-                                                                class="btn btn-lg btn-gray btn_buy btn-buy-now btn-buy-now-grid">Mua
+                                                            <button type="submit" name="muangay"
+                                                                class="btn btn-lg btn-gray btn_buy btn-buy-now">Mua
                                                                 ngay quá rẻ</button>
                                                             <button type="button" onclick="window.location.href='#'"
                                                                 class="btn btn-lg btn-gray btn-tragop">Mua trả
@@ -603,7 +563,6 @@
                                                             <button type="submit" data-role='addtocart'
                                                                 class="btn btn-lg btn-gray btn-cart btn_buy add_to_cart">Thêm
                                                                 vào giỏ<span>Thêm trước thanh toán sau</span></button>
-
                                                         </div>
                                                     </div>
                                                 </div>

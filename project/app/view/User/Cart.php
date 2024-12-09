@@ -252,8 +252,7 @@
 												<div class="grid__item cart_info">
 													<div class="ajaxcart__product-name-wrapper cart_name">
 														<a href="/apple-iphone-14-pro-max-128gb-vn-a" class="ajaxcart__product-name h4" title="Apple iPhone 14 Pro Max 128Gb (VN/A)">Apple iPhone 14 Pro Max 128Gb (VN/A)</a>
-														
-														
+													
 														<a onclick="CartBase.removeItemCart(this);" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-alias="/apple-iphone-14-pro-max-128gb-vn-a" data-line="1" title="Xóa">Xóa</a>
 													</div>
 													<div class="grid">
@@ -264,20 +263,25 @@
 													</div>
 													<div class="grid">
 														<div class="grid__item one-half cart_select">
-															<div class="ajaxcart__qty input-group-btn">
-																<button type="button" onclick="CartBase.updateCount(this, -1)"  class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="" data-qty="0" data-line="1" aria-label="-">
-																	-
-																</button>
-																<input type="text"readonly onkeypress="return CartBase.allowOnlyDigits(event)" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="1" min="0" data-id="" data-line="1" aria-label="quantity" pattern="[0-9]*">
-																<button type="button" onclick="CartBase.updateCount(this, +1)"  class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="" data-line="1" data-qty="2" aria-label="+">
-																	+							
-																</button>
-															</div>
+                                                        <div
+                                                                class="custom custom-btn-numbers clearfix input_number_product">
+                                                                <button
+                                                                    onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty) & qty > 1 ) result.value--;return false;"
+                                                                    class="btn-minus btn-cts" type="button">–</button>
+                                                                <input aria-label="Số lượng" readonly type="text"
+                                                                    class="qty input-text" id="qty" name="quantity"
+                                                                    size="4" value="1" maxlength="3"
+                                                                    onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                                                    onchange="if(this.value == 0)this.value=1;" />
+                                                                <button
+                                                                    onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;"
+                                                                    class="btn-plus btn-cts" type="button">+</button>
+                                                            </div>
 														</div>
 													</div>
 													<div class="grid line-price">
 														<div class="grid__item one-half text-right cart_prices">
-															<span class="cart-price">27.000.000₫</span>
+															<span class="cart-price">27.000.000 ₫</span>
 														</div>
 													</div>
 												</div>

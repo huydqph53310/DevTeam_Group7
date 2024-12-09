@@ -67,6 +67,28 @@ switch ($router->GETURL()) {
     case "cart":
         (new Cart())->Cart();
         break;
+    case "admin":
+        include "app/view/AdminManagner/HomeAdmin.php";
+        break;
+    case "CreateItem":
+        include "app/view/AdminManagner/Add_product.php";
+        break;
+    case "mua":
+        include "app/view/Product/Checkout.php";
+        break;
+    case "create":
+        include "app/view/Product/CreateQr.php";
+        break;
+    case "hethongcuahang":
+        include "app/view/Header.php";
+        include "app/view/ListShopAddress.php";
+        include "app/view/Footer.php";
+        break;
+    case "lienhe":
+        include "app/view/Header.php";
+        include "app/view/LienHe.php";
+        include "app/view/Footer.php";
+        break;
     case "test":
         include "app/view/Header.php";
         include "app/view/test.php";
