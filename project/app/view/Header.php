@@ -62,7 +62,7 @@
             --footer-background: #24272e;
         }
     </style>
-    <link href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/plugin-css.scss.css?1731407153286" rel="stylesheet"
+<link href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/plugin-css.scss.css?1731407153286" rel="stylesheet"
         type="text/css" media="all" />
     <link rel="preload" as='style'
         href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/swiper-style.scss.css?1731407153286">
@@ -109,13 +109,13 @@
             addCartFalse: 'Thêm vào giỏ hàng thất bại',
             addWishTrue: 'Đã thêm sản phẩm vào yêu thích thành công',
             addWishFalse: 'Đã bỏ sản phẩm khỏi danh sách yêu thích',
-            addCompareTrue: 'Đã thêm sản phẩm vào so sánh thành công',
+addCompareTrue: 'Đã thêm sản phẩm vào so sánh thành công',
             addCompareFalse: 'Đã bỏ sản phẩm khỏi danh sách so sánh',
             addCompareTypeFalse: 'Sản phẩm so sánh phải cùng loại',
             addCompareMax: 'Chỉ có thể so sánh tối đa 3 sản phẩm',
             swatch: true,
             textQuantam: 'Sản phẩm đang được quan tâm,',
-            liststore: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWqVkCPUwFr8Bz9XMwLFaVKWdH5yBdFnef1WA4wrKcySRkh3AZyTx0ibxhXtF9SPd_M-e8t_ZxC5T5/pub?gid=0&single=true&output=csv',
+            liststore: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWqVkCPUwFr8Bz9XMwLFaVKWdH5yBdFnef1WA4wrKcySRkh3AZyTx0ibxhXtF9SPd_M-e8t_ZxC5T5/pub?gid=...put=csv',
             comparePage: 'so-sanh-san-pham',
             useCompare: 'true',
             useWish: 'true',
@@ -185,9 +185,7 @@
         window.BizwebAnalytics.tracking_url = '/s';
 
         var meta = {};
-
-
-        for (var attr in meta) {
+for (var attr in meta) {
             window.BizwebAnalytics.meta[attr] = meta[attr];
         }
     </script>
@@ -258,7 +256,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                 <div class="col-md-9 col-lg-9 col-xl-9 group-header-action">
                     <div class="item-header search-group">
                         <form action="/search" id="searchForm" method="get" class="header-search-form " role="search">
-                            <input type="text" name="query" id="searchInput" class="search-auto form-control"
+<input type="text" name="query" id="searchInput" class="search-auto form-control"
                                 onkeyup="searchHeader()" placeholder="Nhập tìm kiếm" autocomplete="off" />
                             <button class="btn btn-default" id="submitButton" type="submit" aria-label="Tìm kiếm">
                                 <svg class="icon">
@@ -289,7 +287,8 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                             </a>
                         </div>
                     </div>
-                    <div class="item-header block-cart d-none d-md-inline-flex">
+                    <?php if(isset($_SESSION["username"])) {?>
+                        <div class="item-header block-cart d-none d-md-inline-flex">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
                             viewBox="0 0 24 24" fill="none">
                             <g clip-path="url(#clip0_15_35)">
@@ -303,7 +302,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                                 <circle cx="17.5" cy="20" r="1" stroke="#fff" stroke-linejoin="round" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_15_35">
+<clipPath id="clip0_15_35">
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -323,6 +322,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                             </a>
                         </div>
                     </div>
+                    <?php }?>
                 </div>
                 <div class="col-12 col-lg-12 col-mobile">
                     <div class="navigation-header header_nav_main">
@@ -352,8 +352,8 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
 					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_2.png?1731407153286">
                                         <span class="tag-style" style="background-color:#ded200;"><span
                                                 style="background:#ded200;"></span>Nổi bật</span>
-                                        <a class="a-img" href="/laptop" title="Laptop">
-                                            Laptop
+                                        <a class="a-img" href="?wh=listlaptop" title="Laptop">
+Laptop
                                         </a>
                                     </li>
 
@@ -402,7 +402,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                                                         </li>
 
                                                         <li class="level2"><a href="/dell" title="Dell">Dell</a>
-                                                        </li>
+</li>
 
                                                         <li class="level2"><a href="/acer" title="Acer">Acer</a>
                                                         </li>
@@ -452,15 +452,17 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="a-img" href="?wh=lienhe" title="Liên hệ">
+<a class="a-img" href="?wh=lienhe" title="Liên hệ">
                                             Liên hệ
                                         </a>
                                     </li>
+                                <?php if((new ClientModel())->GetUserByUsername($_SESSION['username'])["action"] === 1){?>
                                     <li class="nav-item">
                                         <a class="a-img" href="?wh=admin" title="Quản trị">
                                             Quản trị
                                         </a>
                                     </li>
+                                    <?php }?>
                                 </ul>
                             </nav>
                             <div class="last-nav d-xl-none d-flex">

@@ -24,12 +24,13 @@ class ChiTietBillModel
     public function updateDetailBills($id, $data)
     {
         try {
-            //code...
+            $sql = "UPDATE `bill` SET `status`='$data' WHERE id = $id";
+            $stmt = (new ConnectDatabase())->connect->prepare($sql)->execute();
+            return $stmt;
         } catch (Exception $err) {
-            //throw $th;
+            echo $err->getMessage();
         }
     }
-
     // Xóa
     public function deleteDetailBills($id)
     {

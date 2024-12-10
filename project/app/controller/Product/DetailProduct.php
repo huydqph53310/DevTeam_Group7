@@ -15,6 +15,9 @@ class DetailProduct
             if(isset($_POST["muangay"])){
                 header("location: ?wh=mua");
             }
+            if(isset($_POST["addtocart"])){
+                header("location: ?wh=add&id=".$id);
+            }
             // Nếu tìm thấy sản phẩm, bao gồm các view
             include_once "app/view/Header.php";
             include_once "app/view/Product/DetailProduct.php";  // Truyền $product vào đây

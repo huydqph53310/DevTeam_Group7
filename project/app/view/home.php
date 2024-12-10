@@ -173,16 +173,28 @@
                                 </div>
                                 <ul class="d-flex acction-link">
                                     <li>
-                                        <span class="count_item_pr">0</span>
-                                        <a href="/cart" title="Đã thêm">Đã thêm</a>
+                                        <?php
+                                        $totalQuantity = 0;
+                                        foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
+                                            $totalQuantity += $items['quantity'];  // Tính tổng giá trị của từng sản phẩm
+                                        }
+
+                                        ?>
+                                        <span class="count_item_pr"><?php echo  $totalQuantity ?></span>
+                                        <a href="?wh=cart" title="Đã thêm">Đã thêm</a>
                                     </li>
                                     <li>
-                                        <span class="wishlistCount">0</span>
-                                        <a href="yeu-thich" title="Đã lưu">Đã lưu</a>
+                                        <?php
+                                        $totalRevenue = (new BillModel())->getTotalRevenue(); // Lấy dữ liệu từ phương thức
+                                        $totalCount = is_array($totalRevenue) ? count($totalRevenue) : 0; // Kiểm tra và đếm phần tử trong mảng
+                                        ?>
+                                        <span><?php echo $totalCount; ?></span>
+                                        <a href="?wh=orders" title="Đã lưu">Đơn Hàng</a>
                                     </li>
+
                                     <li>
                                         <span class="compareCount">0</span>
-                                        <a href="so-sanh-san-pham" title="So sánh">So sánh</a>
+                                        <a href="so-sanh-san-pham" title="So sánh">Đã Mua</a>
                                     </li>
                                 </ul>
                                 <div class="list-social d-flex">
@@ -441,167 +453,6 @@
                 </div>
             </div>
         </section>
-
-        <section style="margin-bottom:20px;">
-            <div class="section_phukien section_laptop">
-                <div class="container">
-                    <div class="white">
-                        <div class="block-title d-flex">
-                            <h2 class="title-module">
-                                <a href="laptop" title="Laptop Xịn">Laptop Xịn</a>
-                            </h2>
-                            <a class="button-more" href="laptop" title="Xem tất cả">Xem tất cả<svg class="icon">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nexticon"></use>
-                                </svg></a>
-                        </div>
-                        <div class="swiper-button relative">
-                            <div class="product-phukien swiper-container swiper-data" data-drag="true" data-xxl="6"
-                                data-xl="6" data-lg="5" data-md="4" data-xs="2.5" data-x="2" data-space="10">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-
-
-                                        <form action="/cart/add" method="post"
-                                            class="variants product-action item_product_main" data-cart-form
-                                            data-id="product-actions-34157147" enctype="multipart/form-data">
-                                            <a class="image_thumb" href="/copy-of-macbook-pro-13in-2020-i7-16gb"
-                                                title="MacBook Air 13.6in 2022 Apple M2">
-                                                <span class="label-sale ">
-                                                    Giảm
-                                                    21%
-
-                                                </span>
-                                                <img width="214" height="214"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                    data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5-32582441-27fc-406b-8199-76ea1f4cb2b6-53eadbe6-b2c6-48ef-961c-7d1eb6f16e60.jpg?v=1704466551023"
-                                                    alt="MacBook Air 13.6in 2022 Apple M2"
-                                                    class="lazyload img-responsive center-block" />
-                                            </a>
-                                            <a href="javascript:;" data-url="/copy-of-macbook-pro-13in-2020-i7-16gb"
-                                                title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-                                                <svg class="icon">
-                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                        xlink:href="#wishlist"></use>
-                                                </svg>
-                                            </a>
-                                            <div class="info-product">
-                                                <h3 class="product-name"><a
-                                                        href="/copy-of-macbook-pro-13in-2020-i7-16gb"
-                                                        title="MacBook Air 13.6in 2022 Apple M2">MacBook Air 13.6in 2022
-                                                        Apple M2</a></h3>
-                                                <div class="price-action">
-                                                    <div class="price-box">
-                                                        <span class="price">26.990.000₫</span>
-                                                        <span class="compare-price">33.990.000₫</span>
-
-                                                    </div>
-                                                    <div class="action-cart">
-                                                        <span class="more-action">
-                                                            <svg class="icon">
-                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                    xlink:href="#plusicon"></use>
-                                                            </svg>
-                                                        </span>
-                                                        <div class="group-action">
-                                                            <a href="?wh=add" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
-                                                                <svg class="icon svg-cart">
-                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        xlink:href="#addcarticon">
-                                                                    </use>
-                                                                </svg>
-                                                            </a>
-                                                            <a class="quick-view btn-views" data-text="Xem nhanh"
-                                                                href="javascript:;" title="Xem nhanh"
-                                                                onclick="onQuickView(this);"
-                                                                data-handle="copy-of-macbook-pro-13in-2020-i7-16gb">
-                                                                <svg class="icon svg-qv">
-                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        xlink:href="#searchicon"></use>
-                                                                </svg>
-                                                            </a>
-
-                                                            <a href="javascript:;"
-                                                                data-url="/copy-of-macbook-pro-13in-2020-i7-16gb"
-                                                                data-text="So sánh" data-type="Máy tính xách tay"
-                                                                data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5-32582441-27fc-406b-8199-76ea1f4cb2b6-53eadbe6-b2c6-48ef-961c-7d1eb6f16e60.jpg?v=1704466551023"
-                                                                data-name="MacBook Air 13.6in 2022 Apple M2"
-                                                                title="So sánh"
-                                                                class="compare-link btn-views d-inline-block">
-                                                                <svg class="icon compa">
-                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        xlink:href="#compareIcon"></use>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="swiper-slide">
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"><svg class="icon">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#previcon"></use>
-                                </svg></div>
-                            <div class="swiper-button-next"><svg class="icon">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nexticon"></use>
-                                </svg></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="margin-bottom:20px;">
-            <div class="section_xuhuong">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-12">
-                            <div class="bg-module">
-                                <div class="block-title">
-                                    <h2 class="lazyload title-background"
-                                        data-src="//bizweb.dktcdn.net/thumb/thumb/100/507/051/themes/936909/assets/seach_icon.png?1731407153286">
-                                        Xu hướng tìm kiếm
-                                    </h2>
-                                </div>
-                                <ul class="return-key">
-
-                                    <li><a href="/search?q=IPhone%2015%20Pro" title="IPhone 15 Pro">Laptop giá rẻ
-                                        </a>
-                                    </li>
-                                    <li><a href="/search?q=Samsung%20S23%20Ultra" title="Samsung S23 Ultra">Laptop tốt nhất 2024
-                                        </a></li>
-                                    <li><a href="/search?q=IPad%20Pro%202023%20Wifi" title="IPad Pro 2023 Wifi">Laptop hiệu năng cao
-                                        </a></li>
-                                    <li><a href="/search?q=Sạc%20nhanh%20iphone" title="Sạc nhanh iphone">Laptop nhẹ
-                                        </a></li>
-                                    <li><a href="/search?q=Quạt%20hơi%20nước" title="Quạt hơi nước">Laptop chơi game
-                                        </a>
-                                    </li>
-                                    <li><a href="/search?q=Iphone%2014%20pro%20max" title="Iphone 14 pro max">Laptop văn phòng
-                                        </a></li>
-                                    <li><a href="/search?q=tai%20nghe%20airpod" title="tai nghe airpod">Laptop RAM 8GB/16GB/32GB
-                                        </a></li>
-                                    <li><a href="/search?q=quạt%20để%20bàn" title="quạt để bàn">Laptop card đồ họa NVIDIA RTX
-                                        </a></li>
-                                    <li><a href="/search?q=laptop%20dell" title="laptop dell">MacBook
-                                        </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section style="margin-bottom:20px;">
             <div class="section_service container">
                 <div class="white">

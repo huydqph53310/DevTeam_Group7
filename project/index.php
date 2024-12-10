@@ -13,6 +13,9 @@ include_once 'app/model/user/ClientModel.php';
 include_once 'app/model/ProductmModel/Product.php';
 include_once 'app/model/ProductmModel/AddCart.php';
 include_once 'app/model/ProductmModel/Carts.php';
+include_once 'app/model/BillModel/BillModel.php';
+include_once 'app/model/BillModel/ChiTietBillModel.php';
+
 include_once 'app/model/User.php';
 include_once 'app/model/Oder.php';
 
@@ -25,6 +28,7 @@ include_once 'app/controller/AdminController/ListProductController.php';
 include_once 'app/controller/AdminController/ListOdersController.php';
 include_once 'app/controller/UsersController/InfoUserController.php';
 include_once 'app/controller/UsersController/Cart.php';
+include_once 'app/controller/UsersController/checkout.php';
 include_once 'app/controller/UsersController/ChangePassController.php';
 include_once 'app/controller/UsersController/RegisterController.php';
 include_once 'app/controller/UsersController/LogoutController.php';
@@ -32,6 +36,7 @@ include_once 'app/controller/UsersController/LoginController.php';
 include_once 'app/controller/UsersController/ListOrders.php';
 include_once 'app/controller/Product/DetailProduct.php';
 include_once 'app/controller/Product/ListProduct.php';
+include_once 'app/controller/Product/Viewpay.php';
 include_once 'log/WriteLog.php';
 // trang này chỉ sử dụng điều hướng không có logic
 /// nhúng các file cần thiết nào đấy
@@ -52,6 +57,9 @@ switch ($router->GETURL()) {
     case "home":
         $router->Trangchu();
         break;
+        case "listlaptop":
+            (new ListProduct())->listLaptop();
+            break;
     case "login":
         (new LoginController())->Login();
         break;
@@ -60,6 +68,9 @@ switch ($router->GETURL()) {
         break;
     case "reg":
         (new RegisterController())->Regsiter();
+        break;
+    case "viewpay":
+        (new Viewpay())->viewpay();
         break;
     case "logout":
         (new LogoutController())->Logout();
@@ -87,7 +98,7 @@ switch ($router->GETURL()) {
         include "app/view/AdminManagner/Add_product.php";
         break;
     case "checkout":
-        include "app/view/user/checkout.php";
+        (new Checkout())->checkout();
         break;
     case "create":
         include "app/view/Product/CreateQr.php";

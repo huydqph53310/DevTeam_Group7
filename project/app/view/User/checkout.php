@@ -22,8 +22,7 @@
         <div class="container mt-4">
             <form class="needs-validation" name="frmthanhtoan" method="post"
                 action="#">
-                <input type="hidden" name="kh_tendangnhap" value="dnpcuong">
-
+                <input type="hidden" name="kh_tendangnhap" value="<?= $data->username ?>">
                 <div class="py-5 text-center">
                     <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
                     <h2>Thanh toán</h2>
@@ -37,30 +36,32 @@
                             <span class="badge badge-secondary badge-pill">2</span>
                         </h4>
                         <ul class="list-group mb-3">
-                            <input type="hidden" name="sanphamgiohang[1][sp_ma]" value="2">
-                            <input type="hidden" name="sanphamgiohang[1][gia]" value="11800000.00">
-                            <input type="hidden" name="sanphamgiohang[1][soluong]" value="2">
-
                             <?php
-                                    $totalQuantity = 0;
-                                    foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) { ?>
-                                    
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0"><?= $items["product_name"]?></h6>
-                                    <small class="text-muted"><?= $items["price"]?> x <?= $items["quantity"]?></small>
-                                </div>
-                                <span class="text-muted">23600000</span>
-                            </li>
-                                    <?php  }?>
-                            
+                            $totalQuantity = 0;
+                            foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
+                                $index++; ?>
+                                <input type="hidden" name="sanphamgiohang[<?= $index ?>][sp_ma]" value="<?= $items['product_id'] ?>">
+                                <input type="hidden" name="sanphamgiohang[<?= $index ?>][gia]" value="<?= $items['price'] ?>">
+                                <input type="hidden" name="sanphamgiohang[<?= $index ?>][soluong]" value="<?= $items['quantity'] ?>">
+                                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0"><?= $items["product_name"] ?></h6>
+                                        <small class="text-muted"><?= number_format($items["price"] * 24000, 0, ',', '.') ?> x <?= $items["quantity"] ?></small>
+                                    </div>
+                                    <span class="text-muted"><?= number_format($items["price"] * 24000 * $items["quantity"], 0, ',', '.') ?>₫</span>
+                                </li>
+                            <?php  } ?>
+                            <?php
+                            foreach ($cart as $item) {
+                                $totalAmount += $item['price'] * $item['quantity'];  // Tính tổng giá trị của từng sản phẩm
+                            }
+                            ?>
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Tổng thành tiền</span>
-                                <strong>143520000</strong>
+                                <input type="hidden" name="thanhtien" value="<?= $totalAmount?>">
+                                <strong><?= number_format($totalAmount * 24000, 0, ',', '.') ?>₫</strong>
                             </li>
                         </ul>
-
-
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Mã khuyến mãi">
                             <div class="input-group-append">
@@ -76,22 +77,22 @@
                             <div class="col-md-12">
                                 <label for="kh_ten">Họ tên</label>
                                 <input type="text" class="form-control" name="kh_ten" id="kh_ten"
-                                    value="Dương Nguyễn Phú Cường" readonly="">
+                                    value="<?= $data->name ?>" readonly="">
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_diachi">Địa chỉ</label>
                                 <input type="text" class="form-control" name="kh_diachi" id="kh_diachi"
-                                    value="130 Xô Viết Nghệ Tỉnh" readonly="">
+                                    value="<?= $data->address ?>" readonly="">
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_dienthoai">Điện thoại</label>
                                 <input type="text" class="form-control" name="kh_dienthoai" id="kh_dienthoai"
-                                    value="0915659223" readonly="">
+                                    value="<?= $data->phone ?>" readonly="">
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_email">Email</label>
                                 <input type="text" class="form-control" name="kh_email" id="kh_email"
-                                    value="phucuong@ctu.edu.vn" readonly="">
+                                    value="<?= $data->email ?>" readonly="">
                             </div>
                         </div>
 
@@ -128,7 +129,9 @@
     <!-- footer -->
     <footer class="footer mt-auto py-3">
         <div class="container">
-            <span>Bản quyền © bởi <a href="https://QUATECH.ID.vn">DEV-TEAM</a> - <script>document.write(new Date().getFullYear());</script>.</span>
+            <span>Bản quyền © bởi <a href="https://QUATECH.ID.vn">DEV-TEAM</a> - <script>
+                    document.write(new Date().getFullYear());
+                </script>.</span>
             <span class="text-muted">FPT POLYTECHNIC- THỰC HỌC THỰC NGHIỆP</span>
         </div>
     </footer>

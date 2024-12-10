@@ -228,7 +228,6 @@
     </script>
 
 </head>
-
 <body>
     <link rel="preload" href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/jquery-plugin.js?1731407153286"
         as="script">
@@ -265,19 +264,19 @@
         <section class="signup page_customer_account">
             <div class="container">
                 <div class="row">
-                    
-                <div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
+
+                    <div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
                         <div class="white">
                             <div class="block-account">
                                 <h5 class="title-account">Trang tài khoản</h5>
                                 <p>Xin chào, <span style="color:#f72c0f;"><?= $data->name ?></span>&nbsp;!</p>
                                 <ul>
                                     <li>
-                                           <a href="?wh=client" class="title-info">Thông tin tài khoản</a>
+                                        <a href="?wh=client" class="title-info">Thông tin tài khoản</a>
                                     </li>
                                     <li>
-                                        <a disabled="disabled" class="title-info active" 
-                                        href="javascript:void(0);">Đơn hàng của bạn</a>
+                                        <a disabled="disabled" class="title-info active"
+                                            href="javascript:void(0);">Đơn hàng của bạn</a>
                                     </li>
                                     <li>
                                         <a class="title-info" href="?wh=changepassword">Đổi mật khẩu</a>
@@ -302,22 +301,69 @@
                                                 <table class="table table-cart table-order" id="my-orders-table">
                                                     <thead class="thead-default">
                                                         <tr>
-                                                            <th>Đơn hàng</th>
-                                                            <th>Ngày</th>
-                                                            <th>Địa chỉ</th>
-                                                            <th>Giá trị đơn hàng</th>
-                                                            <th>TT thanh toán</th>
-                                                            <th>Mua hàng tại</th>
+                                                            <th>Mã Đơn Hàng</th>
+                                                            <th>Ngày Tạo</th>
+                                                            <th>Tổng Tiền</th>
+                                                            <th>Trạng Thái</th>
+                                                            <th>Phương Thức Thanh Toán</th>
+                                                            <th>Địa Chỉ Giao Hàng</th>
+                                                            <th>Ghi Chú</th>
+                                                            <th>Hành Động</th>
                                                         </tr>
+
                                                     </thead>
-
                                                     <tbody>
+                                                    <?php foreach ($orders as $order) { ?>
+    <tr>
+        <td><?= $order["id"] ?></td>
+        <td><?= $order["created_at"] ?></td>
+        <td><?= number_format($order["total_amount"], 2) ?> VNĐ</td>
+        
+        <?php 
+            // Kiểm tra trạng thái và thêm lớp CSS cho nó
+            $statusClass = '';
+            switch(strtolower($order["status"])) {
+                case 'pending':
+                    $statusClass = 'status-pending';
+                    break;
+                case 'paid':
+                    $statusClass = 'status-paid';
+                    break;
+                case 'shipped':
+                    $statusClass = 'status-shipped';
+                    break;
+                case 'completed':
+                    $statusClass = 'status-completed';
+                    break;
+                default:
+                    $statusClass = 'status-default';
+            }
+        ?>
+        <td class="<?= $statusClass ?>"><?= ucfirst($order["status"]) ?></td>
 
-                                                        <tr>
+        <td><?= ucfirst($order["payment_method"]) ?></td>
+        <td><?= $order["shipping_address"] ?></td>
+        <td><?= $order["note"] ?></td>
+
+        <td>
+            <!-- View button -->
+            <a href="?wh=viewpay&id=<?= $order['id'] ?>" class="btn-view">View</a>
+
+            <?php if (strtolower($order["status"]) != 'paid') { ?>
+                <!-- Pay button (only shown if not paid) -->
+                <a href="?wh=viewpay&id=<?= $order['id'] ?>" class="btn-pay">Pay</a>
+            <?php } ?>
+        </td>
+    </tr>
+<?php } ?>
+
+
+
+                                                        <!-- <tr>
                                                             <td colspan="7">
                                                                 <p>Không có đơn hàng nào.</p>
                                                             </td>
-                                                        </tr>
+                                                        </tr> -->
 
                                                     </tbody>
 

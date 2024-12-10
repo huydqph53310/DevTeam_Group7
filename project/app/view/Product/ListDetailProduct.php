@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
@@ -113,8 +112,8 @@ Bộ nhớ Ram
 				addCompareMax: 'Chỉ có thể so sánh tối đa 3 sản phẩm',
 				swatch: true,
 				textQuantam: 'Sản phẩm đang được quan tâm,',
-				liststore: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWqVkCPUwFr8Bz9XMwLFaVKWdH5yBdFnef1WA4wrKcySRkh3AZyTx0ibxhXtF9SPd_M-e8t_ZxC5T5/pub?gid=0&single=true&output=csv',
-				comparePage: 'so-sanh-san-pham',
+				liststore: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSWqVkCPUwFr8Bz9XMwLFaVKWdH5yBdFnef1WA4wrKcySRkh3AZyTx0ibxhXtF9SPd_M-e8t_ZxC5T5/pub?gid=...put=csv',
+comparePage: 'so-sanh-san-pham',
 				useCompare: 'true',
 				useWish: 'true',
 			};
@@ -227,431 +226,6 @@ Bộ nhớ Ram
 		<script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/jquery-plugin.js?1731407153286"></script>
 		<link rel="preload" href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/swiper-plugin.js?1731407153286" as="script">
 		<script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/swiper-plugin.js?1731407153286" ></script>
-
-		<header class="header other">
-	<div class="top-bar d-none d-md-block">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 text-left">
-					<p>
-						<span id="greeting"></span>, Bạn cần thông tin gì hôm nay?
-					</p>
-				</div>
-				<div class="col-md-6  text-right">
-					<div class="item-top-bar d-inline-flex">
-						Email hỗ trợ:&nbsp;
-						<a title="Email" href="mailto:support@sapo.vn">
-							support@sapo.vn
-						</a>
-					</div>
-					<div class="item-top-bar d-inline-flex">
-						
-						<a class="btnx" href="/account" title="Tài khoản">Tài khoản</a>&nbsp;/&nbsp;
-						<a href="/account/logout" title="Đăng xuất">Đăng xuất</a>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="child-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-xl-3 col-md-3  col-logo ">
-					<a title="logo Ego Mobile" href="/" class="logo">	
-						<img width="240" height="56" src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/logo.png?1731407153286" alt="Ego Mobile">
-					</a>
-				</div>
-				<div class="col-md-9 col-lg-9 col-xl-9 group-header-action">
-					<div class="item-header search-group">
-						<form action="/search" id="searchForm" method="get" class="header-search-form " role="search">
-							<input type="text" name="query" id="searchInput" class="search-auto form-control" onkeyup="searchHeader()" placeholder="Nhập tìm kiếm" autocomplete="off" />
-							<button class="btn btn-default" id="submitButton" type="submit" aria-label="Tìm kiếm">
-								<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-							</button>
-							<div id="result-search" class="result-search">
-								<ul class="d-flex d-tab">
-									<li data-tab="#sp" class="current" onclick="showTab(event, '#sp')">Sản phẩm</li>
-									<li data-tab="#tt" onclick="showTab(event, '#tt')">Tin tức</li>
-								</ul>
-								<div id="sp" class="t-ct current">
-									
-								</div>
-								<div id="tt" class="t-ct">
-									
-								</div>
-							</div>	
-						</form>
-					</div>
-					<div class="item-header block-phone">
-						<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phoneicon"></use> </svg>
-						<div class="right-item ">
-							
-							Gọi đặt hàng
-							<a class="phone" title="Gọi ngay" href="tel:19006750">
-								19006750
-							</a>
-						</div>
-					</div>
-					<div class="item-header block-store">
-						<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shopicon"></use> </svg>
-						<div class="right-item">
-							Hệ thống
-							<a title="Xem ngay" class="phone" href="/he-thong-cua-hang">
-								<span>Hơn 12</span> cửa hàng
-							</a>
-						</div>
-					</div>
-					<div class="item-header block-cart d-none d-md-inline-flex">
-						<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
-							<g clip-path="url(#clip0_15_35)">
-								<path d="M5.33331 6H19.8672C20.4687 6 20.9341 6.52718 20.8595 7.12403L20.1095 13.124C20.0469 13.6245 19.6215 14 19.1172 14H16.5555H9.44442H7.99998" stroke="#000000" stroke-linejoin="round"/>
-								<path d="M2 4H4.23362C4.68578 4 5.08169 4.30341 5.19924 4.74003L8.30076 16.26C8.41831 16.6966 8.81422 17 9.26638 17H19" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-								<circle cx="10" cy="20" r="1" stroke="#fff" stroke-linejoin="round"/>
-								<circle cx="17.5" cy="20" r="1" stroke="#fff" stroke-linejoin="round"/>
-							</g>
-							<defs>
-								<clipPath id="clip0_15_35">
-									<rect width="24" height="24" fill="white"/>
-								</clipPath>
-							</defs>
-						</svg>
-						<div class="right-item">
-							Giỏ hàng
-							<a class="cartcount" href="/cart" title="Giỏ hàng">
-								(<span class="count_item_pr">1</span>) sản phẩm
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-12 col-mobile">
-					<div class="navigation-header header_nav_main">
-<div class="navigation-head">
-	
-	<a href="#" id="prevNav"><svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg></a>
-	<a href="#" id="nextNav"><svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg></a>
-	
-	<div class="first-nav d-xl-none d-flex">
-		
-		<div class="block-img-acc lazyload" data-src="https://www.gravatar.com/avatar/8b9fa0764e23df55c8de92347e7045fb?d=mp"></div>
-		<div class="text-left">
-			<a class="btnx" href="/account" title="Tài khoản">Xin chào: <span>do huy</span></a>
-			<a href="/account/logout" title="Đăng xuất">Đăng xuất</a>
-		</div>
-		
-	</div>
-	<nav class="nav-horizontal">
-		<ul class="item_big">
-
-
-			<li class="nav-item  
-					   is-icon lazyload"
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_1.png?1731407153286"
-				>	
-				<a class="a-img" href="/dien-thoai-tablet" title="Điện thoại, tablet">
-					Điện thoại, tablet
-				</a>
-			</li>
-
-
-			<li class="nav-item active  
-					   is-icon lazyload"
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_2.png?1731407153286"
-				>	
-				<span class="tag-style" style="background-color:#ded200;"><span style="background:#ded200;"></span>Nổi bật</span>
-				<a class="a-img" href="/laptop" title="Laptop">
-					Laptop
-				</a>
-			</li>
-
-
-			<li class="nav-item  
-					   is-icon lazyload"
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_3.png?1731407153286"
-				>	
-				<span class="tag-style" style="background-color:#c800eb;"><span style="background:#c800eb;"></span>HOT</span>
-				<a class="a-img" href="/phu-kien" title="Phụ kiện">
-					Phụ kiện
-				</a>
-			</li>
-
-
-			<li class="nav-item  
-					   is-icon lazyload"
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_4.png?1731407153286"
-				>	
-				<a class="a-img" href="/am-thanh" title="Âm thanh">
-					Âm thanh
-				</a>
-			</li>
-
-
-			<li class="nav-item has-child   has-mega 
-					   is-icon lazyload" 
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_5.png?1731407153286"
-				>
-				<span class="tag-style" style="background-color:#00a3ff;"><span style="background:#00a3ff;"></span>NEW</span>
-				<a class="a-img caret-down" href="/collections/all" title="Sản phẩm">
-					Sản phẩm
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-				</a>
-				<i class="icon-down"></i>
-<div class="mega-content">
-	<ul class="level0">
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/dien-thoai-tablet" title="Điện thoại, tablet">Điện thoại, tablet</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/iphone" title="IPhone">IPhone</a> </li>
-				
-				<li class="level2"><a href="/samsung" title="Samsung">Samsung</a> </li>
-				
-				<li class="level2"><a href="/xiaomi" title="Xiaomi">Xiaomi</a> </li>
-				
-				<li class="level2"><a href="/oppo" title="Oppo">Oppo</a> </li>
-				
-				<li class="level2"><a href="/realme" title="Realme">Realme</a> </li>
-				
-				<li class="level2"><a href="/sony" title="Sony">Sony</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/laptop" title="Laptop">Laptop</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/mac" title="Mac">Mac</a> </li>
-				
-				<li class="level2"><a href="/lenovo" title="Lenovo">Lenovo</a> </li>
-				
-				<li class="level2"><a href="/dell" title="Dell">Dell</a> </li>
-				
-				<li class="level2"><a href="/acer" title="Acer">Acer</a> </li>
-				
-				<li class="level2"><a href="/msi" title="Msi">Msi</a> </li>
-				
-				<li class="level2"><a href="/huawei" title="Huawei">Huawei</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/am-thanh" title="Âm thanh">Âm thanh</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/tai-nghe-apple" title="Tai nghe Apple">Tai nghe Apple</a> </li>
-				
-				<li class="level2"><a href="/tai-nghe-sony" title="Tai nghe Sony">Tai nghe Sony</a> </li>
-				
-				<li class="level2"><a href="/tai-nghe-xiaomi" title="Tai nghe Xiaomi">Tai nghe Xiaomi</a> </li>
-				
-				<li class="level2"><a href="/tai-nghe-samsung" title="Tai nghe Samsung">Tai nghe Samsung</a> </li>
-				
-				<li class="level2"><a href="/tai-nghe-soul" title="Tai nghe Soul">Tai nghe Soul</a> </li>
-				
-				<li class="level2"><a href="/tai-nghe-edifer" title="Tai nghe Edifer">Tai nghe Edifer</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/dong-ho-camera" title="Đồng hồ, Camera">Đồng hồ, Camera</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/dong-ho-apple" title="Đồng hồ Apple">Đồng hồ Apple</a> </li>
-				
-				<li class="level2"><a href="/dong-ho-xiaomi" title="Đồng hồ Xiaomi">Đồng hồ Xiaomi</a> </li>
-				
-				<li class="level2"><a href="/dong-ho-huawei" title="Đồng hồ Huawei">Đồng hồ Huawei</a> </li>
-				
-				<li class="level2"><a href="/dong-ho-samsung" title="Đồng hồ Samsung">Đồng hồ Samsung</a> </li>
-				
-				<li class="level2"><a href="/dong-ho-garmi" title="Đồng hồ Garmi">Đồng hồ Garmi</a> </li>
-				
-				<li class="level2"><a href="/dong-ho-coros" title="Đồng hồ Coros">Đồng hồ Coros</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/gia-dung-smart-home" title="Gia dụng, Smart home">Gia dụng, Smart home</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/gia-dung-nha-bep" title="Gia dụng nhà bếp">Gia dụng nhà bếp</a> </li>
-				
-				<li class="level2"><a href="/suc-khoe-lam-dep" title="Sức khỏe làm đẹp">Sức khỏe làm đẹp</a> </li>
-				
-				<li class="level2"><a href="/thiet-bi-gia-dinh" title="Thiết bị gia đình">Thiết bị gia đình</a> </li>
-				
-				<li class="level2"><a href="/may-loc-khong-khi" title="Máy lọc không khí">Máy lọc không khí</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 parent item"> 
-			<h4>
-				<a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-				<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-			</h4> 
-			<ul class="level1">
-				
-				<li class="level2"><a href="/chuot-ban-phim" title="Chuột, bàn phím">Chuột, bàn phím</a> </li>
-				
-				<li class="level2"><a href="/pad-chuot" title="Pad chuột">Pad chuột</a> </li>
-				
-				<li class="level2"><a href="/op-lung-dien-thoai" title="Ốp lưng điện thoại">Ốp lưng điện thoại</a> </li>
-				
-				<li class="level2"><a href="/thiet-bi-phat-song" title="Thiết bị phát sóng">Thiết bị phát sóng</a> </li>
-				
-			</ul>
-		</li>
-		
-		
-		
-		<li class="level1 item"> <h4><a href="/pc-man-hinh" title="Pc, Màn hình">Pc, Màn hình</a></h4> </li>
-		
-		
-		
-		<li class="level1 item"> <h4><a href="/tivi" title="Tivi">Tivi</a></h4> </li>
-		
-		
-	</ul>
-</div>			</li>
-
-
-			<li class="nav-item  
-					   is-icon lazyload"
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_6.png?1731407153286"
-				>	
-				<a class="a-img" href="/pc-man-hinh" title="Pc, Màn hình">
-					Pc, Màn hình
-				</a>
-			</li>
-
-
-			<li class="nav-item has-child   
-					   is-icon lazyload" 
-				data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_7.png?1731407153286"
-				>
-				<a class="a-img caret-down" href="/tin-tuc" title="Tin tức">
-					Tin tức
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-				</a>
-				<i class="icon-down"></i>
-				<ul class="item_small">
-					<li>
-						<a class="caret-down" href="/tin-cong-nghe" title="Tin công nghệ">
-							Tin công nghệ 
-							<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-						</a>
-						<i class="icon-down"><svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg></i>
-						<ul>
-							<li>
-								<a href="/tin-tuc" title="Sản phẩm mới nhất" class="a3">Sản phẩm mới nhất</a>
-							</li>
-							<li>
-								<a href="/tin-tuc" title="Unbox công nghệ" class="a3">Unbox công nghệ</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a class="" href="/tin-reviews" title="Tin reviews">
-							Tin reviews 
-						</a>
-					</li>
-					<li>
-						<a class="" href="/tin-khuyen-mai" title="Tin khuyến mãi">
-							Tin khuyến mãi 
-						</a>
-					</li>
-				</ul>
-			</li>
-
-
-			<li class="nav-item  
-					   "
-				
-				>	
-				<a class="a-img" href="/lien-he" title="Liên hệ">
-					Liên hệ
-				</a>
-			</li>
-
-
-			<li class="nav-item  
-					   "
-				
-				>	
-				<a class="a-img" href="/he-thong-cua-hang" title="Hệ thống cửa hàng">
-					Hệ thống cửa hàng
-				</a>
-			</li>
-
-
-			<li class="nav-item  
-					   "
-				
-				>	
-				<a class="a-img" href="/so-sanh-san-pham" title="So sánh sản phẩm">
-					So sánh sản phẩm
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<div class="last-nav d-xl-none d-flex">
-		<div class="item-header block-phone">
-			<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phoneicon"></use> </svg>
-			<div class="right-item ">
-				Gọi đặt hàng
-				<a class="phone" href="tel:19006750">
-					19006750
-				</a>
-			</div>
-		</div>
-		<div class="item-header block-store">
-			<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shopicon"></use> </svg>
-			<div class="right-item">
-				Hệ thống
-				<a class="phone" href="/he-thong-cua-hang">
-					<span>Hơn 12</span> cửa hàng
-				</a>
-			</div>
-		</div>
-	</div>
-</div>					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
 <script src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/js-search.js?1731407153286"></script>
 		<script type="text/javascript" src="//bizweb.dktcdn.net/assets/themes_support/api.jquery.js" ></script>
 		<script src="//bizweb.dktcdn.net/assets/themes_support/option-selectors.js"></script>
@@ -713,7 +287,7 @@ Bộ nhớ Ram
 						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Lenovo"/>
 					</a>
 					<a class="name-collection" href="/lenovo" title="Lenovo">Lenovo</a>
-				</li>
+</li>
 				<li class="cate-img">
 					<a class="image" href="/dell" title="Dell">
 						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Dell"/>
@@ -774,7 +348,7 @@ Bộ nhớ Ram
 			<a href="javascript:;" onclick="sortby('alpha-desc')" title="Tên Z → A"><i></i>Tên Z-A</a>
 		</li>
 		<li class="btn-quick-sort price-asc">
-			<a href="javascript:;" onclick="sortby('price-asc')" title="Giá thấp → cao"><i></i>Giá thấp đến cao</a>
+<a href="javascript:;" onclick="sortby('price-asc')" title="Giá thấp → cao"><i></i>Giá thấp đến cao</a>
 		</li>
 		<li class="btn-quick-sort price-desc">
 			<a href="javascript:;" onclick="sortby('price-desc')" title="Giá cao → thấp"><i></i>Giá cao xuống thấp</a>
@@ -851,7 +425,7 @@ Bộ nhớ Ram
 				</div>
 				<div class="aside-content margin-top-0 filter-group content_price filter-item--check-box">
 					<div class="d-flex filter-group-price">
-						<div class="winput relative">
+<div class="winput relative">
 							<input class="form-control" type="text" id="startPrice"  placeholder="Từ"  value="">
 						</div>
 						<span class="line">-</span>
@@ -924,7 +498,7 @@ Bộ nhớ Ram
 					<ul>
 						<li class="filter-item filter-item--check-box filter-item--green">
 							<span>
-								<label for="filter-nowship">
+<label for="filter-nowship">
 									<input type="checkbox" id="filter-nowship"  data-group="tagItem3" data-field="tags" data-text="nowship" value="(&#34;nowship&#34;)" data-operator="OR">
 									<i class="fa"></i>
 									<span class="nowship lazyload" data-src="//bizweb.dktcdn.net/thumb/icon/100/507/051/themes/936909/assets/nowship.png?1731407153286" style="background-repeat: no-repeat;
@@ -959,282 +533,67 @@ Bộ nhớ Ram
 						<section class="products-view products-view-grid collection_reponsive">
 	<div class="row">
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34157147" enctype="multipart/form-data">
-	<a class="image_thumb" href="/copy-of-macbook-pro-13in-2020-i7-16gb" title="MacBook Air 13.6in 2022 Apple M2">
-		<span class="label-sale ">
-			 Giảm 
-21% 
-
-		</span>
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5-32582441-27fc-406b-8199-76ea1f4cb2b6-53eadbe6-b2c6-48ef-961c-7d1eb6f16e60.jpg?v=1704466551023"
-			 alt="MacBook Air 13.6in 2022 Apple M2" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/copy-of-macbook-pro-13in-2020-i7-16gb" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/copy-of-macbook-pro-13in-2020-i7-16gb" title="MacBook Air 13.6in 2022 Apple M2">MacBook Air 13.6in 2022 Apple M2</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">26.990.000₫</span>
-				<span class="compare-price">33.990.000₫</span>
-
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107035936" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="copy-of-macbook-pro-13in-2020-i7-16gb">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/copy-of-macbook-pro-13in-2020-i7-16gb" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5-32582441-27fc-406b-8199-76ea1f4cb2b6-53eadbe6-b2c6-48ef-961c-7d1eb6f16e60.jpg?v=1704466551023" data-name="MacBook Air 13.6in 2022 Apple M2" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-</form>
-	
-			</div>
-		</div>			
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34157094" enctype="multipart/form-data">
-	<a class="image_thumb" href="/macbook-pro-13in-2020-i7-16gb" title="MacBook Pro 13in 2020 I7 16GB">
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/20221017-ran3mlsjcr1jmfiptnisw1bq.png?v=1704466420383"
-			 alt="MacBook Pro 13in 2020 I7 16GB" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/macbook-pro-13in-2020-i7-16gb" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/macbook-pro-13in-2020-i7-16gb" title="MacBook Pro 13in 2020 I7 16GB">MacBook Pro 13in 2020 I7 16GB</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">31.490.000₫</span>
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107035860" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="macbook-pro-13in-2020-i7-16gb">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/macbook-pro-13in-2020-i7-16gb" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/20221017-ran3mlsjcr1jmfiptnisw1bq.png?v=1704466420383" data-name="MacBook Pro 13in 2020 I7 16GB" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-</form>
-	
-			</div>
-		</div>			
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34157009" enctype="multipart/form-data">
-	<a class="image_thumb" href="/copy-of-macbook-air-m3-13-inch-2023" title="Apple Macbook Air 13inch 8GB Silver">
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-4a2d404f-76fa-4d49-b4b0-b8a6da9dc99f.jpg?v=1704466056263"
-			 alt="Apple Macbook Air 13inch 8GB Silver" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/copy-of-macbook-air-m3-13-inch-2023" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/copy-of-macbook-air-m3-13-inch-2023" title="Apple Macbook Air 13inch 8GB Silver">Apple Macbook Air 13inch 8GB Silver</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">26.790.000₫</span>
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107035674" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="copy-of-macbook-air-m3-13-inch-2023">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/copy-of-macbook-air-m3-13-inch-2023" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-4a2d404f-76fa-4d49-b4b0-b8a6da9dc99f.jpg?v=1704466056263" data-name="Apple Macbook Air 13inch 8GB Silver" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-</form>
-	
-			</div>
-		</div>			
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34156997" enctype="multipart/form-data">
-	<a class="image_thumb" href="/macbook-air-m3-13-inch-2023" title="MacBook Air M3 13 inch 2023">
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-d06bff9a-0bf3-4a0e-ab06-0e89de3d1abd.jpg?v=1704466124563"
-			 alt="MacBook Air M3 13 inch 2023" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/macbook-air-m3-13-inch-2023" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/macbook-air-m3-13-inch-2023" title="MacBook Air M3 13 inch 2023">MacBook Air M3 13 inch 2023</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">26.790.000₫</span>
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107035603" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="macbook-air-m3-13-inch-2023">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/macbook-air-m3-13-inch-2023" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-d06bff9a-0bf3-4a0e-ab06-0e89de3d1abd.jpg?v=1704466124563" data-name="MacBook Air M3 13 inch 2023" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-</form>
-	
-			</div>
-		</div>			
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34155187" enctype="multipart/form-data">
-	<a class="image_thumb" href="/macbook-pro-m2-pro-14-inch-2022" title="MacBook Pro M2 Pro 14 inch 2022">
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5.jpg?v=1704466183477"
-			 alt="MacBook Pro M2 Pro 14 inch 2022" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/macbook-pro-m2-pro-14-inch-2022" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/macbook-pro-m2-pro-14-inch-2022" title="MacBook Pro M2 Pro 14 inch 2022">MacBook Pro M2 Pro 14 inch 2022</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">39.490.000₫</span>
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107031227" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="macbook-pro-m2-pro-14-inch-2022">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/macbook-pro-m2-pro-14-inch-2022" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-c46a63b6-6303-49d4-b03b-f6920616edb5.jpg?v=1704466183477" data-name="MacBook Pro M2 Pro 14 inch 2022" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-</form>
-	
-			</div>
-		</div>			
 		
-		<div class="col-6 col-md-3 col-lg-2-5 col-xl-2  product-col">
-			<div class="item_product_main">
-				
-
-<form action="/cart/add" method="post" class="variants product-action item_product_main"  data-cart-form data-id="product-actions-34155165" enctype="multipart/form-data">
-	<a class="image_thumb" href="/macbook-pro-m3-pro-14-inch-2023" title="MacBook Pro M3 Pro 14 inch 2023">
-		<img width="214" height="214"  src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="  data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/products/1-02929dac-276d-4680-bd9a-972fcf2768b7.jpg?v=1704450571067"
-			 alt="MacBook Pro M3 Pro 14 inch 2023" class="lazyload img-responsive center-block" />
-	</a>
-	<a href="javascript:;" data-url="/macbook-pro-m3-pro-14-inch-2023" title="Thêm vào yêu thích" class="favorite-link d-inline-block">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist"></use> </svg>
-	</a>
-	<div class="info-product">
-		<h3 class="product-name"><a href="/macbook-pro-m3-pro-14-inch-2023" title="MacBook Pro M3 Pro 14 inch 2023">MacBook Pro M3 Pro 14 inch 2023</a></h3>
-		<div class="price-action">
-			<div class="price-box">
-				<span class="price">39.490.000₫</span>
-			</div>
-			<div class="action-cart">
-				<span class="more-action">
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plusicon"></use> </svg>
-				</span>
-				<div class="group-action">
-					<input type="hidden" name="variantId" data-qty="1000000" value="107031194" />
-					<button data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views add_to_cart " title="Thêm vào giỏ">
-						<svg class="icon svg-cart"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addcarticon"></use> </svg>
-					</button>
-					<a class="quick-view btn-views" data-text="Xem nhanh" href="javascript:;" title="Xem nhanh" onclick="onQuickView(this);" data-handle="macbook-pro-m3-pro-14-inch-2023">
-						<svg class="icon svg-qv"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#searchicon"></use> </svg>
-					</a>
-					
-					<a href="javascript:;" data-url="/macbook-pro-m3-pro-14-inch-2023" data-text="So sánh" data-type="Máy tính xách tay" data-img="//bizweb.dktcdn.net/thumb/thumb/100/507/051/products/1-02929dac-276d-4680-bd9a-972fcf2768b7.jpg?v=1704450571067" data-name="MacBook Pro M3 Pro 14 inch 2023" title="So sánh" class="compare-link btn-views d-inline-block">
-						<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
-					</a>
-				</div>
-			</div>
-		</div>
+		
 
 
-	</div>
-</form>
-	
-			</div>
-		</div>			
+	<?php foreach ($product as $a) { ?>
+                                <div class="col-lg-2-5 col-xl-2 col-md-3 col-6">
+                                    <form action="/cart/add" method="post" class="variants product-action item_product_main"
+                                        data-cart-form data-id="product-actions-34149032" enctype="multipart/form-data">
+                                        <a class="image_thumb" href="?wh=sanpham&id=<?= $a["product_id"] ?>"
+                                            title="<?= $a["product_name"] ?>">
+                                            <span class="label-sale ">
+                                                Giảm
+                                                8%
+                                            </span>
+                                            <img width="214" height="214" style="transform:scale(0.9)"
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
+                                                data-src='public/img/product/<?php echo (new Product())->getBrandNameById($a["brand_id"]) ?>/<?= $a["product_name"] ?>/0.png'
+                                                alt="<?= $a["product_name"] ?>"
+                                                class="lazyload img-responsive center-block" />
+                                            <img width="214" height="214" class="lazyload frame"
+                                                data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/themes/936909/assets/frame1.png?1731407153286"
+alt="<?= $a["product_name"] ?>"
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" />
+                                        </a>
+                                        <a href="javascript:;" data-url="/apple-iphone-14-pro-max-128gb-vn-a"
+                                            title="Thêm vào yêu thích" class="favorite-link d-inline-block">
+                                            <svg class="icon">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wishlist">
+                                                </use>
+                                            </svg>
+                                        </a>
+                                        <div class="info-product">
+                                            <h3 class="product-name"><a href="?wh=sanpham&id=<?= $a["product_id"] ?>"
+                                                    title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><?= $a["product_name"] ?></a></h3>
+                                            <div class="price-action">
+                                                <div class="price-box">
+                                                    <span class="price"><?= number_format($a["price"] * 24000 - 2000000, 0, ',', '.') ?>₫</span>
+                                                    <span class="compare-price"><?= number_format($a["price"] * 24000, 0, ',', '.') ?>₫</span>
+                                                </div>
+                                                <div class="action-cart">
+                                                    <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
+                                                        <svg class="icon svg-cart">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                xlink:href="#addcarticon">
+                                                            </use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="nowship">
+                                                Giao siêu tốc 2H
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            <?php } ?>		
 		
 	</div>
 	<div class="section pagenav d-none">
@@ -1242,7 +601,7 @@ Bộ nhớ Ram
 	<ul class="pagination clearfix">
 
 		<li class="page-item disabled"><a class="page-link" href="#">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
 			</a></li>
 
 		<li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a></li>
@@ -1268,7 +627,7 @@ Bộ nhớ Ram
 								</g>
 							</g>
 							</g></svg>
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0" y="0" viewBox="0 0 492 492" style="enable-background:new 0 0 14 14" xml:space="preserve" class="i-close-white"><g xmlns="http://www.w3.org/2000/svg"><path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" fill="#ffffff" data-original="#000000" style="" class=""></path></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0" y="0" viewBox="0 0 492 492" style="enable-background:new 0 0 14 14" xml:space="preserve" class="i-close-white"><g xmlns="http://www.w3.org/2000/svg"><path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" fill="#ffffff" data-original="#000000" style="" class=""></path></g></svg>
 					</div>
 					<div class="description-collection white d-none">
 						<h1 class="d-flex">Laptop</h1>
@@ -1296,186 +655,7 @@ Bộ nhớ Ram
 
 
 
-<footer class="footer">
-	<div class="first-footer d-flex">
-		<div class="container ">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-12">
-					<h4 class="title-menu-footer">
-						<span>
-							Văn phòng giao dịch 
-						</span>
-					</h4>
-					<ul class="list-menu">
-						
-						<li class="li_menu"><a href="/he-thong-cua-hang" title="Cơ sở chính thức">Cơ sở chính thức</a></li>
-						
-						<li class="li_menu"><a href="/he-thong-cua-hang" title="Địa điểm bán hàng">Địa điểm bán hàng</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Tuyển cộng tác viên">Tuyển cộng tác viên</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Tuyển dụng">Tuyển dụng</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Fanpage trực tuyến">Fanpage trực tuyến</a></li>
-						
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<h4 class="title-menu-footer">
-						<span>
-							Về chúng tôi 
-						</span>
-					</h4>
-					<ul class="list-menu">
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Đôi nét về công ty">Đôi nét về công ty</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Lịch sử hình thành">Lịch sử hình thành</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Giải thưởng cao quý">Giải thưởng cao quý</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Cơ hội cho ai">Cơ hội cho ai</a></li>
-						
-						<li class="li_menu"><a href="/gioi-thieu" title="Thương hiệu số 1">Thương hiệu số 1</a></li>
-						
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<h4 class="title-menu-footer">
-						<span>
-							Chính sách bán hàng 
-						</span>
-					</h4>
-					<ul class="list-menu">
-						
-						<li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách chung">Chính sách chung</a></li>
-						
-						<li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách đổi trả">Chính sách đổi trả</a></li>
-						
-						<li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
-						
-						<li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách thành viên">Chính sách thành viên</a></li>
-						
-						<li class="li_menu"><a href="/chinh-sach-chung" title="Chính sách điểm thưởng">Chính sách điểm thưởng</a></li>
-						
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<h4 class="title-menu-footer">
-						<span>
-							Theo dõi chúng tôi 
-						</span>
-					</h4>
-					<ul class="list-menu">
-						
-						<li class="li_menu"><a href="https://www.facebook.com/" title="Theo dõi trên Fanpage">Theo dõi trên Fanpage</a></li>
-						
-						<li class="li_menu"><a href="https://www.instagram.com/" title="Theo dõi trên Instagram">Theo dõi trên Instagram</a></li>
-						
-						<li class="li_menu"><a href="https://twitter.com/home?lang=vi" title="Theo dõi trên X">Theo dõi trên X</a></li>
-						
-						<li class="li_menu"><a href="/" title="Theo dõi trên Tiktok">Theo dõi trên Tiktok</a></li>
-						
-						<li class="li_menu"><a href="https://www.youtube.com/" title="Theo dõi trên Youtube">Theo dõi trên Youtube</a></li>
-						
-					</ul>
-				</div>
-			</div>
-			<hr>
-		</div>
-	</div>
-	<div class="child-footer d-flex">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-12">
-					<h4 class="title-menu">
-						<span>
-							Thế giới mobile cho mọi người
-						</span>
-					</h4>
-					<ul>
-						<li>Copyright@ 2023 Công ty cổ phần thương mại Ego Mobicon</li>
-						<li>Chứng nhận ĐKKD số: 038828xxxx do sở KH & ĐT TP.Hà Nội cấp</li>
-						<li>Địa chỉ: Xuân Thủy, Hà Nội</li>
-						<li>Điện thoại: <a class="fone" href="tel:19006750">19006750</a> 
-							- Email: <a href="mailto:support@sapo.vn">support@sapo.vn</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-6 col-12">
-					<h4 class="title-menu">
-						<span>
-							Nhận tin khuyến mãi
-						</span>
-					</h4>
-					<div class="mail_footer subscribe formchip-email" id="formchimp">
-						<form id="mc-form" class="newsletter-form" data-toggle="validator"  action="https://gmail.us2.list-manage.com/subscribe/post-json?u=ef7f65e3be67e30ff1c4bd591&id=a7430e9bc5">
-							<div class="input-group">
-								<div class="groupiput">
-									<input aria-label="Địa chỉ Email" type="email" class="form-control" placeholder="Nhập email của bạn" name="EMAIL" required autocomplete="off" />
-								</div>
-								<span class="input-group-append subscribe">
-									<button class="btn btn-default" type="submit" aria-label="Đăng ký" name="subscribe">Đăng ký</button>
-								</span>
-							</div>
-						</form>
-						<div class="mailchimp-alerts">
-							<div class="mailchimp-submitting"></div>
-							<div class="mailchimp-success"></div>
-							<div class="mailchimp-error"></div>
-						</div>
-					</div>
-					
-					<div class="social-footer">
-						<a href="#" title="Facebook">
-							<img class="lazyload" width="32" height="32" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_1.jpg?1731407153286" alt="Facebook"/>
-						</a>
-						<a href="#" title="Tiktok">
-							<img class="lazyload" width="32" height="32" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_2.jpg?1731407153286" alt="Tiktok"/>
-						</a>
-						<a href="#" title="Shopee">
-							<img class="lazyload" width="32" height="32" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_3.jpg?1731407153286" alt="Shopee"/>
-						</a>
-						<a href="#" title="Lazada">
-							<img class="lazyload" width="32" height="32" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/social_4.jpg?1731407153286" alt="Lazada"/>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="copyright d-flex">
-		<div class="container">
-			<div class="inner">
-				<div class="row tablet">
-					<div id="copyright" class="col-lg-6 col-md-6 col-12">
-						<div class="wsp">
-							Bản quyền thuộc về <a href="https://boronco-template.mysapo.net/">Ego Corp</a>
-							<span class="opacity1">
-								Cung cấp bởi 
-								 <a href="javascript:;" rel="noopener">Sapo</a> 
-							</span>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-12 text-right d-none d-lg-block">
-						<ul>
-							
-							<li><a href="/dien-thoai-tablet"  title="Điện thoại, tablet">Điện thoại, tablet</a></li>
-							
-							<li><a href="/laptop"  title="Laptop">Laptop</a></li>
-							
-							<li><a href="/phu-kien"  title="Phụ kiện">Phụ kiện</a></li>
-							
-							<li><a href="/am-thanh"  title="Âm thanh">Âm thanh</a></li>
-							
-							<li><a href="/collections/all"  title="Sản phẩm">Sản phẩm</a></li>
-							
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer><div class="bottom-nav other d-block d-xl-none">
+<div class="bottom-nav other d-block d-xl-none">
 	<div class="container nav-action d-flex ">
 		
 		<div class="item-nav category-action">
@@ -1508,7 +688,7 @@ Bộ nhớ Ram
 			<span class="count_item_pr">1</span>
 			Giỏ hàng
 		</div>
-		<div class="item-nav userIcon" onclick="goCompare()">
+<div class="item-nav userIcon" onclick="goCompare()">
 			<svg class="icon compa"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#compareIcon"></use> </svg>
 			So sánh
 		</div>
@@ -1559,7 +739,7 @@ Bộ nhớ Ram
 								<button type="button" onclick="CartBase.updateCount(this, -1)"  class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
 									-
 								</button>
-								<input type="text" readonly onkeypress="return CartBase.allowOnlyDigits(event)" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+<input type="text" readonly onkeypress="return CartBase.allowOnlyDigits(event)" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
 								<button type="button" onclick="CartBase.updateCount(this, +1)"  class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
 									+							
 								</button>
@@ -1613,7 +793,6 @@ Bộ nhớ Ram
 		</div>
 	</div>
 </div>
-
 <div id="popup-cart-mobi" class="popup-cart mobile">
 	<div class="wp-popup-cart">
 		<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"> <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/> </svg>
@@ -1686,13 +865,13 @@ Bộ nhớ Ram
 </script><div style="visibility:hidden; position: absolute; z-index: -1; bottom: 0; left: 0;">
 	<svg xmlns="http://www.w3.org/2000/svg">
 		<symbol id="loadingicon">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="184px" height="184px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"> <circle cx="84" cy="50" r="10" fill="#e15b64"> <animate attributeName="r" repeatCount="indefinite" dur="0.4629629629629629s" calcMode="spline" keyTimes="0;1" values="3;0" keySplines="0 0.5 0.5 1" begin="0s"/> <animate attributeName="fill" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="discrete" keyTimes="0;0.25;0.5;0.75;1" values="#e15b64;#abbd81;#f8b26a;#f47e60;#e15b64" begin="0s"/> </circle><circle cx="16" cy="50" r="10" fill="#e15b64"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"/> </circle><circle cx="50" cy="50" r="10" fill="#f47e60"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.4629629629629629s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.4629629629629629s"/> </circle><circle cx="84" cy="50" r="10" fill="#f8b26a"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.9259259259259258s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.9259259259259258s"/> </circle><circle cx="16" cy="50" r="10" fill="#abbd81"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.3888888888888888s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.3888888888888888s"/> </circle></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="184px" height="184px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"> <circle cx="84" cy="50" r="10" fill="#e15b64"> <animate attributeName="r" repeatCount="indefinite" dur="0.4629629629629629s" calcMode="spline" keyTimes="0;1" values="3;0" keySplines="0 0.5 0.5 1" begin="0s"/> <animate attributeName="fill" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="discrete" keyTimes="0;0.25;0.5;0.75;1" values="#e15b64;#abbd81;#f8b26a;#f47e60;#e15b64" begin="0s"/> </circle><circle cx="16" cy="50" r="10" fill="#e15b64"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="0s"/> </circle><circle cx="50" cy="50" r="10" fill="#f47e60"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.4629629629629629s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.4629629629629629s"/> </circle><circle cx="84" cy="50" r="10" fill="#f8b26a"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.9259259259259258s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.9259259259259258s"/> </circle><circle cx="16" cy="50" r="10" fill="#abbd81"> <animate attributeName="r" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="0;0;3;3;3" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.3888888888888888s"/> <animate attributeName="cx" repeatCount="indefinite" dur="1.8518518518518516s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" values="16;16;16;50;84" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" begin="-1.3888888888888888s"/> </circle></svg>
 		</symbol>
 		<symbol id="cartEmpty">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"/> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0-3.413-1.529,3.413-3.413    s1.529,3.413,3.413,3.413h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439    s1.739,1.732,2.97,1.732h150.187c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"/> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"/> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"/> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"/> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"/> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"/> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0-3.413-1.529,3.413-3.413    s1.529,3.413,3.413,3.413h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439    s1.739,1.732,2.97,1.732h150.187c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"/> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"/> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"/> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"/> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"/> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"/></svg>
 		</symbol>
 		<symbol id="wishlist">
-			<svg enable-background="new 0 0 412.735 412.735" version="1.1" viewBox="0 0 412.74 412.74" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> <path d="m295.71 35.522c-34.43-0.184-67.161 14.937-89.339 41.273-22.039-26.516-54.861-41.68-89.339-41.273-64.633 0-117.03 52.395-117.03 117.03 0 110.76 193.31 218.91 201.14 223.09 3.162 2.113 7.286 2.113 10.449 0 7.837-4.18 201.14-110.76 201.14-223.09 0-64.633-52.396-117.03-117.03-117.03zm-89.339 319.22c-30.302-17.763-185.47-112.33-185.47-202.19 0-53.091 43.039-96.131 96.131-96.131 32.512-0.427 62.938 15.972 80.457 43.363 3.557 4.905 10.418 5.998 15.323 2.44 0.937-0.68 1.761-1.503 2.44-2.44 29.055-44.435 88.631-56.903 133.07-27.848 27.202 17.787 43.575 48.114 43.521 80.615 1e-3 90.907-155.17 184.95-185.47 202.19z"/> </svg>
+<svg enable-background="new 0 0 412.735 412.735" version="1.1" viewBox="0 0 412.74 412.74" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> <path d="m295.71 35.522c-34.43-0.184-67.161 14.937-89.339 41.273-22.039-26.516-54.861-41.68-89.339-41.273-64.633 0-117.03 52.395-117.03 117.03 0 110.76 193.31 218.91 201.14 223.09 3.162 2.113 7.286 2.113 10.449 0 7.837-4.18 201.14-110.76 201.14-223.09 0-64.633-52.396-117.03-117.03-117.03zm-89.339 319.22c-30.302-17.763-185.47-112.33-185.47-202.19 0-53.091 43.039-96.131 96.131-96.131 32.512-0.427 62.938 15.972 80.457 43.363 3.557 4.905 10.418 5.998 15.323 2.44 0.937-0.68 1.761-1.503 2.44-2.44 29.055-44.435 88.631-56.903 133.07-27.848 27.202 17.787 43.575 48.114 43.521 80.615 1e-3 90.907-155.17 184.95-185.47 202.19z"/> </svg>
 		</symbol>
 		<symbol id="wishlistactive">
 			<svg enable-background="new 0 0 391.837 391.837" version="1.1" viewBox="0 0 391.84 391.84" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> <path d="m285.26 35.528c58.743 0.286 106.29 47.836 106.58 106.58 0 107.62-195.92 214.2-195.92 214.2s-195.92-108.15-195.92-214.2c0-58.862 47.717-106.58 106.58-106.58 36.032-0.281 69.718 17.842 89.339 48.065 19.755-30.076 53.354-48.152 89.338-48.065z" fill="var(--hover)"/> </svg>
@@ -1705,7 +884,7 @@ Bộ nhớ Ram
 		</symbol>
 		<symbol id="hearticon">
 			<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" >
-				<path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM7.00061 16.4209C6.68078 16.1577 6.20813 16.2036 5.94491 16.5234C5.68169 16.8432 5.72758 17.3159 6.04741 17.5791L7.00061 16.4209ZM2.34199 13.4115C2.54074 13.7749 2.99647 13.9084 3.35988 13.7096C3.7233 13.5108 3.85677 13.0551 3.65801 12.6917L2.34199 13.4115ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219ZM9.42605 18.3219C8.63014 17.6945 7.82129 17.0963 7.00061 16.4209L6.04741 17.5791C6.87768 18.2624 7.75472 18.9144 8.49742 19.4999L9.42605 18.3219ZM3.65801 12.6917C3.0968 11.6656 2.75 10.5033 2.75 9.1371H1.25C1.25 10.7746 1.66995 12.1827 2.34199 13.4115L3.65801 12.6917Z"/>
+<path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM7.00061 16.4209C6.68078 16.1577 6.20813 16.2036 5.94491 16.5234C5.68169 16.8432 5.72758 17.3159 6.04741 17.5791L7.00061 16.4209ZM2.34199 13.4115C2.54074 13.7749 2.99647 13.9084 3.35988 13.7096C3.7233 13.5108 3.85677 13.0551 3.65801 12.6917L2.34199 13.4115ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219ZM9.42605 18.3219C8.63014 17.6945 7.82129 17.0963 7.00061 16.4209L6.04741 17.5791C6.87768 18.2624 7.75472 18.9144 8.49742 19.4999L9.42605 18.3219ZM3.65801 12.6917C3.0968 11.6656 2.75 10.5033 2.75 9.1371H1.25C1.25 10.7746 1.66995 12.1827 2.34199 13.4115L3.65801 12.6917Z"/>
 			</svg>
 		</symbol>
 		<symbol id="menuicon">
@@ -1716,7 +895,7 @@ Bộ nhớ Ram
 			</svg>
 		</symbol>
 		<symbol id="homeicon">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 0 21 21" version="1.1"> <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-381.000000, -720.000000)" > <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M339.875,578.013 L336.6875,578.013 L336.6875,574.013 L330.3125,574.013 L330.3125,578.013 L327.125,578.013 L327.125,568.799 L333.489375,562.809 L339.875,568.819 L339.875,578.013 Z M341.94475,568.013 L333.47025,560 L325,567.999 L325,580.013 L332.4375,580.013 L332.4375,576.013 L334.5625,576.013 L334.5625,580.013 L342,580.013 L342,579.983 L342,568.013 L341.94475,568.013 Z" > </path> </g> </g> </g> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 0 21 21" version="1.1"> <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-381.000000, -720.000000)" > <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M339.875,578.013 L336.6875,578.013 L336.6875,574.013 L330.3125,574.013 L330.3125,578.013 L327.125,578.013 L327.125,568.799 L333.489375,562.809 L339.875,568.819 L339.875,578.013 Z M341.94475,568.013 L333.47025,560 L325,567.999 L325,580.013 L332.4375,580.013 L332.4375,576.013 L334.5625,576.013 L334.5625,580.013 L342,580.013 L342,579.983 L342,568.013 L341.94475,568.013 Z" > </path> </g> </g> </g> </svg>
 		</symbol>
 		<symbol id="usericon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -1735,7 +914,7 @@ Bộ nhớ Ram
 				<circle style="fill:#CEE8FA;" cx="102.371" cy="134.884" r="87.817"/>
 				<g>
 					<path style="fill:#2D527C;" d="M102.374,237.263C45.924,237.263,0,191.338,0,134.89C0,78.44,45.924,32.515,102.374,32.515   S204.748,78.44,204.748,134.89C204.75,191.338,158.824,237.263,102.374,237.263z M102.374,61.622   c-40.4,0-73.267,32.868-73.267,73.268s32.867,73.267,73.267,73.267s73.267-32.867,73.267-73.267S142.774,61.622,102.374,61.622z"/>
-					<path style="fill:#2D527C;" d="M497.446,117.535H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h243.122   c8.037,0,14.554,6.517,14.554,14.554S505.483,117.535,497.446,117.535z"/>
+<path style="fill:#2D527C;" d="M497.446,117.535H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h243.122   c8.037,0,14.554,6.517,14.554,14.554S505.483,117.535,497.446,117.535z"/>
 					<path style="fill:#2D527C;" d="M406.276,181.35H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h151.951   c8.037,0,14.554,6.517,14.554,14.554S414.314,181.35,406.276,181.35z"/>
 				</g>
 			</svg>
@@ -1757,7 +936,7 @@ Bộ nhớ Ram
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"> <path d="M19.159 16.767l0.754-0.754-6.035-6.035-0.754 0.754 5.281 5.281-5.256 5.256 0.754 0.754 3.013-3.013z"> </path> </svg>
 		</symbol>
 		<symbol id="previcon">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"> <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" > </path> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"> <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" > </path> </svg>
 		</symbol>
 		<symbol id="optionicon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z"/></svg>
@@ -1777,7 +956,7 @@ Bộ nhớ Ram
 			</svg>
 		</symbol>
 		<symbol id="plusiconregular">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg>
 		</symbol>
 		<symbol id="minusicon">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
@@ -1792,7 +971,7 @@ Bộ nhớ Ram
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>	
 		</symbol>
 		<symbol id="phoneicon">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 32 32" version="1.1"><path d="M19.949 7.75h4.252v4.251c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-4.251h4.25c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-4.25v-4.251c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 4.251h-4.252c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0zM30.637 23.15c-0.109-0.675-0.334-1.281-0.654-1.823l0.013 0.024c-0.114-0.186-0.301-0.317-0.521-0.353l-0.004-0.001-8.969-1.424c-0.035-0.006-0.076-0.009-0.117-0.009-0.207 0-0.395 0.083-0.531 0.218l0-0c-0.676 0.68-1.194 1.516-1.496 2.451l-0.012 0.044c-4.016-1.64-7.141-4.765-8.742-8.675l-0.038-0.105c0.978-0.314 1.814-0.833 2.493-1.509l-0 0c0.136-0.136 0.22-0.324 0.22-0.531 0-0.041-0.003-0.081-0.010-0.12l0.001 0.004-1.425-8.969c-0.036-0.224-0.167-0.412-0.35-0.524l-0.003-0.002c-0.505-0.301-1.094-0.522-1.724-0.626l-0.029-0.004c-0.315-0.070-0.677-0.111-1.048-0.111-0.025 0-0.050 0-0.075 0.001l0.004-0h-0.006c-3.497 0.024-6.326 2.855-6.347 6.351v0.002c0.015 12.761 10.355 23.102 23.115 23.117h0.002c3.5-0.023 6.331-2.854 6.354-6.351v-0.002c0-0.020 0-0.044 0-0.068 0-0.356-0.036-0.703-0.106-1.038l0.006 0.033zM24.383 29.076c-11.933-0.014-21.602-9.684-21.616-21.616v-0.001c0.019-2.673 2.182-4.835 4.854-4.853h0.002c0.016-0 0.036-0 0.055-0 0.272 0 0.537 0.030 0.793 0.086l-0.024-0.005c0.366 0.060 0.695 0.161 1.003 0.3l-0.025-0.010 1.302 8.202c-0.628 0.528-1.404 0.901-2.257 1.050l-0.029 0.004c-0.355 0.064-0.62 0.37-0.62 0.739 0 0.088 0.015 0.172 0.043 0.25l-0.002-0.005c1.772 5.072 5.695 8.994 10.646 10.729l0.121 0.037c0.073 0.026 0.157 0.041 0.245 0.041 0.368 0 0.674-0.265 0.737-0.615l0.001-0.005c0.153-0.882 0.526-1.658 1.061-2.295l-0.006 0.007 8.201 1.303c0.133 0.294 0.237 0.636 0.296 0.994l0.003 0.024c0.046 0.219 0.073 0.471 0.073 0.729 0 0.018-0 0.035-0 0.053l0-0.003c-0.016 2.675-2.179 4.84-4.852 4.859h-0.002z"/> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 32 32" version="1.1"><path d="M19.949 7.75h4.252v4.251c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-4.251h4.25c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-4.25v-4.251c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 4.251h-4.252c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0zM30.637 23.15c-0.109-0.675-0.334-1.281-0.654-1.823l0.013 0.024c-0.114-0.186-0.301-0.317-0.521-0.353l-0.004-0.001-8.969-1.424c-0.035-0.006-0.076-0.009-0.117-0.009-0.207 0-0.395 0.083-0.531 0.218l0-0c-0.676 0.68-1.194 1.516-1.496 2.451l-0.012 0.044c-4.016-1.64-7.141-4.765-8.742-8.675l-0.038-0.105c0.978-0.314 1.814-0.833 2.493-1.509l-0 0c0.136-0.136 0.22-0.324 0.22-0.531 0-0.041-0.003-0.081-0.010-0.12l0.001 0.004-1.425-8.969c-0.036-0.224-0.167-0.412-0.35-0.524l-0.003-0.002c-0.505-0.301-1.094-0.522-1.724-0.626l-0.029-0.004c-0.315-0.070-0.677-0.111-1.048-0.111-0.025 0-0.050 0-0.075 0.001l0.004-0h-0.006c-3.497 0.024-6.326 2.855-6.347 6.351v0.002c0.015 12.761 10.355 23.102 23.115 23.117h0.002c3.5-0.023 6.331-2.854 6.354-6.351v-0.002c0-0.020 0-0.044 0-0.068 0-0.356-0.036-0.703-0.106-1.038l0.006 0.033zM24.383 29.076c-11.933-0.014-21.602-9.684-21.616-21.616v-0.001c0.019-2.673 2.182-4.835 4.854-4.853h0.002c0.016-0 0.036-0 0.055-0 0.272 0 0.537 0.030 0.793 0.086l-0.024-0.005c0.366 0.060 0.695 0.161 1.003 0.3l-0.025-0.010 1.302 8.202c-0.628 0.528-1.404 0.901-2.257 1.050l-0.029 0.004c-0.355 0.064-0.62 0.37-0.62 0.739 0 0.088 0.015 0.172 0.043 0.25l-0.002-0.005c1.772 5.072 5.695 8.994 10.646 10.729l0.121 0.037c0.073 0.026 0.157 0.041 0.245 0.041 0.368 0 0.674-0.265 0.737-0.615l0.001-0.005c0.153-0.882 0.526-1.658 1.061-2.295l-0.006 0.007 8.201 1.303c0.133 0.294 0.237 0.636 0.296 0.994l0.003 0.024c0.046 0.219 0.073 0.471 0.073 0.729 0 0.018-0 0.035-0 0.053l0-0.003c-0.016 2.675-2.179 4.84-4.852 4.859h-0.002z"/> </svg>
 		</symbol>
 		<symbol id="playicon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M17.2839 11.134C17.9506 11.5189 17.9506 12.4811 17.2839 12.866L6.71601 18.9674C6.04934 19.3523 5.21601 18.8712 5.21601 18.1014L5.21601 5.8986C5.21601 5.1288 6.04934 4.64768 6.71601 5.03258L17.2839 11.134Z" /> </svg>
@@ -1801,7 +980,7 @@ Bộ nhớ Ram
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
 		</symbol>
 		<symbol id="emailchip">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 417.1c-16.38 0-32.88-4.1-46.88-15.12L0 250.9v213.1C0 490.5 21.5 512 48 512h416c26.5 0 48-21.5 48-47.1V250.9l-209.1 151.1C288.9 412 272.4 417.1 256 417.1zM493.6 163C484.8 156 476.4 149.5 464 140.1v-44.12c0-26.5-21.5-48-48-48l-77.5 .0016c-3.125-2.25-5.875-4.25-9.125-6.5C312.6 29.13 279.3-.3732 256 .0018C232.8-.3732 199.4 29.13 182.6 41.5c-3.25 2.25-6 4.25-9.125 6.5L96 48c-26.5 0-48 21.5-48 48v44.12C35.63 149.5 27.25 156 18.38 163C6.75 172 0 186 0 200.8v10.62l96 69.37V96h320v184.7l96-69.37V200.8C512 186 505.3 172 493.6 163zM176 255.1h160c8.836 0 16-7.164 16-15.1c0-8.838-7.164-16-16-16h-160c-8.836 0-16 7.162-16 16C160 248.8 167.2 255.1 176 255.1zM176 191.1h160c8.836 0 16-7.164 16-16c0-8.838-7.164-15.1-16-15.1h-160c-8.836 0-16 7.162-16 15.1C160 184.8 167.2 191.1 176 191.1z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 417.1c-16.38 0-32.88-4.1-46.88-15.12L0 250.9v213.1C0 490.5 21.5 512 48 512h416c26.5 0 48-21.5 48-47.1V250.9l-209.1 151.1C288.9 412 272.4 417.1 256 417.1zM493.6 163C484.8 156 476.4 149.5 464 140.1v-44.12c0-26.5-21.5-48-48-48l-77.5 .0016c-3.125-2.25-5.875-4.25-9.125-6.5C312.6 29.13 279.3-.3732 256 .0018C232.8-.3732 199.4 29.13 182.6 41.5c-3.25 2.25-6 4.25-9.125 6.5L96 48c-26.5 0-48 21.5-48 48v44.12C35.63 149.5 27.25 156 18.38 163C6.75 172 0 186 0 200.8v10.62l96 69.37V96h320v184.7l96-69.37V200.8C512 186 505.3 172 493.6 163zM176 255.1h160c8.836 0 16-7.164 16-15.1c0-8.838-7.164-16-16-16h-160c-8.836 0-16 7.162-16 16C160 248.8 167.2 255.1 176 255.1zM176 191.1h160c8.836 0 16-7.164 16-16c0-8.838-7.164-15.1-16-15.1h-160c-8.836 0-16 7.162-16 15.1C160 184.8 167.2 191.1 176 191.1z"/></svg>
 		</symbol>
 		<symbol id="navchild">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM64 256C64 238.3 78.33 224 96 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H96C78.33 288 64 273.7 64 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
@@ -1810,7 +989,7 @@ Bộ nhớ Ram
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M73.733,92.002c-0.001,0-0.002,0-0.003,0C57.5,92.001,39.091,75.379,31.93,68.233C24.096,60.416,6.099,40.416,8.162,23.57  c0.776-6.333,4.295-11.421,10.46-15.123c0.496-0.298,1.063-0.449,1.685-0.449c4.849,0,14.412,11.319,18.283,16.8  c5.533,7.835,4.749,10.046,4.454,10.878c-0.938,2.644-2.683,4.186-4.222,5.545c-1.347,1.19-2.51,2.217-3.103,3.888  c-0.082,0.406,0.456,2.598,3.97,6.917c5.522,6.787,12.798,12.252,15.141,12.252c1.729-0.592,2.758-1.755,3.947-3.102  c1.36-1.539,2.901-3.283,5.546-4.222c0.372-0.132,0.784-0.199,1.224-0.199c5.575,0,21.702,13.226,25.487,19.907  c0.401,0.709,1.623,2.867,0.517,4.712C87.324,88.427,81.328,92.002,73.733,92.002z M20.446,12.02  c-4.976,3.057-7.696,6.997-8.313,12.036c-1.283,10.473,7.174,25.93,22.622,41.345c6.81,6.795,24.238,22.6,38.977,22.601  c0,0,0.001,0,0.002,0c6.097,0,10.761-2.767,14.249-8.456c-0.66-3.953-18.215-18.726-22.408-18.79  c-1.618,0.602-2.631,1.747-3.799,3.069c-1.361,1.54-2.903,3.285-5.549,4.224c-0.428,0.152-0.897,0.229-1.396,0.229  c-5.299,0-15.411-9.53-20.045-16.092c-2.608-3.692-3.536-6.444-2.836-8.415c0.938-2.646,2.684-4.188,4.223-5.548  c1.324-1.169,2.47-2.183,3.071-3.804c0.022-1.441-3.24-7.22-9.33-14.125C24.913,14.623,21.556,12.27,20.446,12.02z"></path></svg> 
 		</symbol>
 		<symbol id="mailfooter">
-			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 122.88 85.57"><title>mail</title><path d="M3.8,0,62.48,47.85,118.65,0ZM0,80.52,41.8,38.61,0,4.53v76ZM46.41,42.37,3.31,85.57h115.9L78,42.37,64.44,53.94h0a3,3,0,0,1-3.78.05L46.41,42.37Zm36.12-3.84,40.35,42.33V4.16L82.53,38.53Z"></path></svg> 
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 122.88 85.57"><title>mail</title><path d="M3.8,0,62.48,47.85,118.65,0ZM0,80.52,41.8,38.61,0,4.53v76ZM46.41,42.37,3.31,85.57h115.9L78,42.37,64.44,53.94h0a3,3,0,0,1-3.78.05L46.41,42.37Zm36.12-3.84,40.35,42.33V4.16L82.53,38.53Z"></path></svg> 
 		</symbol>
 		<symbol id="shopicon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="3" stroke="#fff" fill="none"><path d="M52,27.18V52.76a2.92,2.92,0,0,1-3,2.84H15a2.92,2.92,0,0,1-3-2.84V27.17"/><polyline points="26.26 55.52 26.26 38.45 37.84 38.45 37.84 55.52"/><path d="M8.44,19.18s-1.1,7.76,6.45,8.94a7.17,7.17,0,0,0,6.1-2A7.43,7.43,0,0,0,32,26a7.4,7.4,0,0,0,5,2.49,11.82,11.82,0,0,0,5.9-2.15,6.66,6.66,0,0,0,4.67,2.15,8,8,0,0,0,7.93-9.3L50.78,9.05a1,1,0,0,0-.94-.65H14a1,1,0,0,0-.94.66Z"/><line x1="8.44" y1="19.18" x2="55.54" y2="19.18"/><line x1="21.04" y1="19.18" x2="21.04" y2="8.4"/><line x1="32.05" y1="19.18" x2="32.05" y2="8.4"/><line x1="43.01" y1="19.18" x2="43.01" y2="8.4"/></svg>
@@ -1830,19 +1009,20 @@ Bộ nhớ Ram
 		</symbol>
 		<symbol id="compareIcon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.29289C13.3166 0.902369 12.6834 0.902369 12.2929 1.29289L9.29289 4.29289C8.90237 4.68342 8.90237 5.31658 9.29289 5.70711L12.2929 8.70711C12.6834 9.09763 13.3166 9.09763 13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289L12.4142 6H14C16.2091 6 18 7.79086 18 10V16.1707C16.8348 16.5825 16 17.6938 16 19C16 20.6569 17.3431 22 19 22C20.6569 22 22 20.6569 22 19C22 17.6938 21.1652 16.5825 20 16.1707V10C20 6.68629 17.3137 4 14 4H12.4142L13.7071 2.70711C14.0976 2.31658 14.0976 1.68342 13.7071 1.29289ZM19 18C18.4477 18 18 18.4477 18 19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18ZM5 6C5.55228 6 6 5.55228 6 5C6 4.44772 5.55228 4 5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6ZM6 7.82929C7.16519 7.41746 8 6.30622 8 5C8 3.34315 6.65685 2 5 2C3.34315 2 2 3.34315 2 5C2 6.30622 2.83481 7.41746 4 7.82929V14C4 17.3137 6.68629 20 10 20H11.5858L10.2929 21.2929C9.90237 21.6834 9.90237 22.3166 10.2929 22.7071C10.6834 23.0976 11.3166 23.0976 11.7071 22.7071L14.7071 19.7071C15.0976 19.3166 15.0976 18.6834 14.7071 18.2929L11.7071 15.2929C11.3166 14.9024 10.6834 14.9024 10.2929 15.2929C9.90237 15.6834 9.90237 16.3166 10.2929 16.7071L11.5858 18H10C7.79086 18 6 16.2091 6 14V7.82929Z" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.29289C13.3166 0.902369 12.6834 0.902369 12.2929 1.29289L9.29289 4.29289C8.90237 4.68342 8.90237 5.31658 9.29289 5.70711L12.2929 8.70711C12.6834 9.09763 13.3166 9.09763 13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289L12.4142 6H14C16.2091 6 18 7.79086 18 10V16.1707C16.8348 16.5825 16 17.6938 16 19C16 20.6569 17.3431 22 19 22C20.6569 22 22 20.6569 22 19C22 17.6938 21.1652 16.5825 20 16.1707V10C20 6.68629 17.3137 4 14 4H12.4142L13.7071 2.70711C14.0976 2.31658 14.0976 1.68342 13.7071 1.29289ZM19 18C18.4477 18 18 18.4477 18 19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18ZM5 6C5.55228 6 6 5.55228 6 5C6 4.44772 5.55228 4 5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6ZM6 7.82929C7.16519 7.41746 8 6.30622 8 5C8 3.34315 6.65685 2 5 2C3.34315 2 2 3.34315 2 5C2 6.30622 2.83481 7.41746 4 7.82929V14C4 17.3137 6.68629 20 10 20H11.5858L10.2929 21.2929C9.90237 21.6834 9.90237 22.3166 10.2929 22.7071C10.6834 23.0976 11.3166 23.0976 11.7071 22.7071L14.7071 19.7071C15.0976 19.3166 15.0976 18.6834 14.7071 18.2929L11.7071 15.2929C11.3166 14.9024 10.6834 14.9024 10.2929 15.2929C9.90237 15.6834 9.90237 16.3166 10.2929 16.7071L11.5858 18H10C7.79086 18 6 16.2091 6 14V7.82929Z" />
 			</svg>
 		</symbol>
 		<symbol id="compareminiicon">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h9v1H3v15h8v1H2zm10 19h1V2h-1zM8.283 10.283l-.566-.566L4.934 12.5l2.783 2.783.566-.566L6.566 13H11v-1H6.566zM14 12h4.08l-1.54-1.54.92-.92 2.96 2.96-2.96 2.96-.92-.92L18.08 13H14v8h9V4h-9z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
 		</symbol>
 		<symbol id="zaloicon">
-			<svg xmlns="http://www.w3.org/2000/svg" height="30" id="Layer_1c" viewBox="0 0 460.1 436.6" width="30"><style>.st0{fill:#fdfefe}.st1{fill:#0180c7}.st2{fill:#0172b1}.st3{fill:none;stroke:#0180c7;stroke-width:2;stroke-miterlimit:10}</style><title/><path class="st0" d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z"/><path class="st1" d="M139.5 436.2c-27.3 0-54.7.9-82-.1-32.3-1.3-57-28.4-57-60.7 0-104.3.2-208.6 0-313C.5 26.7 28.4 1.8 60.5.9c33.6-.9 67.3-.2 101-.2.6 0 1.4-.3 1.7.7-.2 1.8-2 2-3.1 2.7-19.8 11.6-37.9 25.5-53.1 42.7-25.1 28.4-42.5 61-48.4 98.9-10.4 66.9 10.5 123.7 57.8 171.1 8.4 8.5 9.5 15.1 2.8 26.5-8.1 13.7-20.4 23-33.5 31.5-1.4.8-2.8 1.8-4.2 2.7-2.1 1.8-.8 2.7 1 3.5.4.9.9 1.7 1.5 2.5 11.5 10.2 22.4 21.1 33.7 31.5 5.3 4.9 10.6 10 15.7 15.1 2.1 1.9 5.6 2.5 6.1 6.1z"/><path class="st2" d="M139.5 436.2c-.5-3.5-4-4.1-6.1-6.2-5.1-5.2-10.4-10.2-15.7-15.1-11.3-10.4-22.2-21.3-33.7-31.5-.6-.8-1.1-1.6-1.5-2.5 25.5 5 50.4 1.6 74.9-5.9 8.3-2.5 16.6-5 25-7.1 5.7-1.5 11.7-1.2 17.2.8 63.4 21.8 126 19.8 187.6-7.2 25.1-11.1 48-26.7 67.4-46.2 1-1 1.7-2.5 3.5-2.6.9 1.4.4 2.9.4 4.4v58.5c.2 33.4-26.6 60.6-60 60.9h-.5c-36 .2-72 0-108 0H145.5c-2-.2-4-.3-6-.3z"/><path class="st1" d="M155.1 212.4c15.1 0 29.3-.1 43.4 0 7.9.1 12.2 3.4 13 9.7.9 7.9-3.7 13.2-12.3 13.3-16.2.2-32.3.1-48.5.1-4.7 0-9.3.2-14-.1-5.8-.3-11.5-1.5-14.3-7.5s-.8-11.4 3-16.3c15.4-19.6 30.9-39.3 46.4-58.9.9-1.2 1.8-2.4 2.7-3.5-1-1.7-2.4-.9-3.6-1-10.8-.1-21.7 0-32.5-.1-2.5 0-5-.3-7.4-.8-5.7-1.3-9.2-7-7.9-12.6.9-3.8 3.9-6.9 7.7-7.8 2.4-.6 4.9-.9 7.4-.9 17.8-.1 35.7-.1 53.5 0 3.2-.1 6.3.3 9.4 1.1 6.8 2.3 9.7 8.6 7 15.2-2.4 5.7-6.2 10.6-10 15.5-13.1 16.7-26.2 33.3-39.3 49.8-1.1 1.3-2.1 2.6-3.7 4.8z"/><path class="st1" d="M271.1 159.8c2.4-3.1 4.9-6 9-6.8 7.9-1.6 15.3 3.5 15.4 11.5.3 20 .2 40 0 60 0 5.2-3.4 9.8-8.3 11.3-5 1.9-10.7.4-14-3.9-1.7-2.1-2.4-2.5-4.8-.6-9.1 7.4-19.4 8.7-30.5 5.1-17.8-5.8-25.1-19.7-27.1-36.6-2.1-18.3 4-33.9 20.4-43.5 13.6-8.1 27.4-7.4 39.9 3.5zm-35.4 36.5c.2 4.4 1.6 8.6 4.2 12.1 5.4 7.2 15.7 8.7 23 3.3 1.2-.9 2.3-2 3.3-3.3 5.6-7.6 5.6-20.1 0-27.7-2.8-3.9-7.2-6.2-11.9-6.3-11-.7-18.7 7.8-18.6 21.9zM340.4 196.9c-.8-25.7 16.1-44.9 40.1-45.6 25.5-.8 44.1 16.3 44.9 41.3.8 25.3-14.7 43.2-38.6 45.6-26.1 2.6-46.8-16.3-46.4-41.3zm25.1-2.4c-.2 5 1.3 9.9 4.3 14 5.5 7.2 15.8 8.6 23 3 1.1-.8 2-1.8 2.9-2.8 5.8-7.6 5.8-20.4.1-28-2.8-3.8-7.2-6.2-11.9-6.3-10.8-.6-18.4 7.6-18.4 20.1zM331.6 177c0 15.5.1 31 0 46.5.1 7.1-5.5 13-12.6 13.2-1.2 0-2.5-.1-3.7-.4-5-1.3-8.8-6.6-8.8-12.9v-79.5c0-4.7-.1-9.3 0-14 .1-7.7 5-12.7 12.4-12.7 7.6-.1 12.7 4.9 12.7 12.9.1 15.6 0 31.3 0 46.9z"/><path class="st0" d="M235.7 196.3c-.1-14.1 7.6-22.6 18.5-22 4.7.2 9.1 2.5 11.9 6.4 5.6 7.5 5.6 20.1 0 27.7-5.4 7.2-15.7 8.7-23 3.3-1.2-.9-2.3-2-3.3-3.3-2.5-3.5-3.9-7.7-4.1-12.1zM365.5 194.5c0-12.4 7.6-20.7 18.4-20.1 4.7.1 9.1 2.5 11.9 6.3 5.7 7.6 5.7 20.5-.1 28-5.6 7.1-16 8.3-23.1 2.7-1.1-.8-2-1.8-2.8-2.9-3-4.1-4.4-9-4.3-14z"/><path class="st3" d="M66 1h328.1c35.9 0 65 29.1 65 65v303c0 35.9-29.1 65-65 65H66c-35.9 0-65-29.1-65-65V66C1 30.1 30.1 1 66 1z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="30" id="Layer_1c" viewBox="0 0 460.1 436.6" width="30"><style>.st0{fill:#fdfefe}.st1{fill:#0180c7}.st2{fill:#0172b1}.st3{fill:none;stroke:#0180c7;stroke-width:2;stroke-miterlimit:10}</style><title/><path class="st0" d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z"/><path class="st1" d="M139.5 436.2c-27.3 0-54.7.9-82-.1-32.3-1.3-57-28.4-57-60.7 0-104.3.2-208.6 0-313C.5 26.7 28.4 1.8 60.5.9c33.6-.9 67.3-.2 101-.2.6 0 1.4-.3 1.7.7-.2 1.8-2 2-3.1 2.7-19.8 11.6-37.9 25.5-53.1 42.7-25.1 28.4-42.5 61-48.4 98.9-10.4 66.9 10.5 123.7 57.8 171.1 8.4 8.5 9.5 15.1 2.8 26.5-8.1 13.7-20.4 23-33.5 31.5-1.4.8-2.8 1.8-4.2 2.7-2.1 1.8-.8 2.7 1 3.5.4.9.9 1.7 1.5 2.5 11.5 10.2 22.4 21.1 33.7 31.5 5.3 4.9 10.6 10 15.7 15.1 2.1 1.9 5.6 2.5 6.1 6.1z"/><path class="st2" d="M139.5 436.2c-.5-3.5-4-4.1-6.1-6.2-5.1-5.2-10.4-10.2-15.7-15.1-11.3-10.4-22.2-21.3-33.7-31.5-.6-.8-1.1-1.6-1.5-2.5 25.5 5 50.4 1.6 74.9-5.9 8.3-2.5 16.6-5 25-7.1 5.7-1.5 11.7-1.2 17.2.8 63.4 21.8 126 19.8 187.6-7.2 25.1-11.1 48-26.7 67.4-46.2 1-1 1.7-2.5 3.5-2.6.9 1.4.4 2.9.4 4.4v58.5c.2 33.4-26.6 60.6-60 60.9h-.5c-36 .2-72 0-108 0H145.5c-2-.2-4-.3-6-.3z"/><path class="st1" d="M155.1 212.4c15.1 0 29.3-.1 43.4 0 7.9.1 12.2 3.4 13 9.7.9 7.9-3.7 13.2-12.3 13.3-16.2.2-32.3.1-48.5.1-4.7 0-9.3.2-14-.1-5.8-.3-11.5-1.5-14.3-7.5s-.8-11.4 3-16.3c15.4-19.6 30.9-39.3 46.4-58.9.9-1.2 1.8-2.4
+2.7-3.5-1-1.7-2.4-.9-3.6-1-10.8-.1-21.7 0-32.5-.1-2.5 0-5-.3-7.4-.8-5.7-1.3-9.2-7-7.9-12.6.9-3.8 3.9-6.9 7.7-7.8 2.4-.6 4.9-.9 7.4-.9 17.8-.1 35.7-.1 53.5 0 3.2-.1 6.3.3 9.4 1.1 6.8 2.3 9.7 8.6 7 15.2-2.4 5.7-6.2 10.6-10 15.5-13.1 16.7-26.2 33.3-39.3 49.8-1.1 1.3-2.1 2.6-3.7 4.8z"/><path class="st1" d="M271.1 159.8c2.4-3.1 4.9-6 9-6.8 7.9-1.6 15.3 3.5 15.4 11.5.3 20 .2 40 0 60 0 5.2-3.4 9.8-8.3 11.3-5 1.9-10.7.4-14-3.9-1.7-2.1-2.4-2.5-4.8-.6-9.1 7.4-19.4 8.7-30.5 5.1-17.8-5.8-25.1-19.7-27.1-36.6-2.1-18.3 4-33.9 20.4-43.5 13.6-8.1 27.4-7.4 39.9 3.5zm-35.4 36.5c.2 4.4 1.6 8.6 4.2 12.1 5.4 7.2 15.7 8.7 23 3.3 1.2-.9 2.3-2 3.3-3.3 5.6-7.6 5.6-20.1 0-27.7-2.8-3.9-7.2-6.2-11.9-6.3-11-.7-18.7 7.8-18.6 21.9zM340.4 196.9c-.8-25.7 16.1-44.9 40.1-45.6 25.5-.8 44.1 16.3 44.9 41.3.8 25.3-14.7 43.2-38.6 45.6-26.1 2.6-46.8-16.3-46.4-41.3zm25.1-2.4c-.2 5 1.3 9.9 4.3 14 5.5 7.2 15.8 8.6 23 3 1.1-.8 2-1.8 2.9-2.8 5.8-7.6 5.8-20.4.1-28-2.8-3.8-7.2-6.2-11.9-6.3-10.8-.6-18.4 7.6-18.4 20.1zM331.6 177c0 15.5.1 31 0 46.5.1 7.1-5.5 13-12.6 13.2-1.2 0-2.5-.1-3.7-.4-5-1.3-8.8-6.6-8.8-12.9v-79.5c0-4.7-.1-9.3 0-14 .1-7.7 5-12.7 12.4-12.7 7.6-.1 12.7 4.9 12.7 12.9.1 15.6 0 31.3 0 46.9z"/><path class="st0" d="M235.7 196.3c-.1-14.1 7.6-22.6 18.5-22 4.7.2 9.1 2.5 11.9 6.4 5.6 7.5 5.6 20.1 0 27.7-5.4 7.2-15.7 8.7-23 3.3-1.2-.9-2.3-2-3.3-3.3-2.5-3.5-3.9-7.7-4.1-12.1zM365.5 194.5c0-12.4 7.6-20.7 18.4-20.1 4.7.1 9.1 2.5 11.9 6.3 5.7 7.6 5.7 20.5-.1 28-5.6 7.1-16 8.3-23.1 2.7-1.1-.8-2-1.8-2.8-2.9-3-4.1-4.4-9-4.3-14z"/><path class="st3" d="M66 1h328.1c35.9 0 65 29.1 65 65v303c0 35.9-29.1 65-65 65H66c-35.9 0-65-29.1-65-65V66C1 30.1 30.1 1 66 1z"/></svg>
 		</symbol>
 		<symbol id="phonecircle">
 			<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="34">
 				<circle cx="22" cy="22" r="22" fill="url(#paint2_linear)"></circle>
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0087 9.35552C14.1581 9.40663 14.3885 9.52591 14.5208 9.61114C15.3315 10.148 17.5888 13.0324 18.3271 14.4726C18.7495 15.2949 18.8903 15.9041 18.758 16.3558C18.6214 16.8415 18.3953 17.0971 17.384 17.9109C16.9786 18.239 16.5988 18.5756 16.5391 18.6651C16.3855 18.8866 16.2617 19.3212 16.2617 19.628C16.266 20.3395 16.7269 21.6305 17.3328 22.6232C17.8021 23.3944 18.6428 24.3828 19.4749 25.1413C20.452 26.0361 21.314 26.6453 22.2869 27.1268C23.5372 27.7488 24.301 27.9064 24.86 27.6466C25.0008 27.5826 25.1501 27.4974 25.1971 27.4591C25.2397 27.4208 25.5683 27.0202 25.9268 26.5772C26.618 25.7079 26.7759 25.5674 27.2496 25.4055C27.8513 25.201 28.4657 25.2563 29.0844 25.5716C29.5538 25.8145 30.5779 26.4493 31.2393 26.9095C32.1098 27.5187 33.9703 29.0355 34.2221 29.3381C34.6658 29.8834 34.7427 30.5821 34.4439 31.3534C34.1281 32.1671 32.8992 33.6925 32.0415 34.3444C31.2649 34.9323 30.7145 35.1581 29.9891 35.1922C29.3917 35.222 29.1442 35.1709 28.3804 34.8556C22.3893 32.3887 17.6059 28.7075 13.8081 23.65C11.8239 21.0084 10.3134 18.2688 9.28067 15.427C8.67905 13.7696 8.64921 13.0495 9.14413 12.2017C9.35753 11.8438 10.2664 10.9575 10.9278 10.4633C12.0288 9.64524 12.5365 9.34273 12.9419 9.25754C13.2193 9.19787 13.7014 9.24473 14.0087 9.35552Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.0087 9.35552C14.1581 9.40663 14.3885 9.52591 14.5208 9.61114C15.3315 10.148 17.5888 13.0324 18.3271 14.4726C18.7495 15.2949 18.8903 15.9041 18.758 16.3558C18.6214 16.8415 18.3953 17.0971 17.384 17.9109C16.9786 18.239 16.5988 18.5756 16.5391 18.6651C16.3855 18.8866 16.2617 19.3212 16.2617 19.628C16.266 20.3395 16.7269 21.6305 17.3328 22.6232C17.8021 23.3944 18.6428 24.3828 19.4749 25.1413C20.452 26.0361 21.314 26.6453 22.2869 27.1268C23.5372 27.7488 24.301 27.9064 24.86 27.6466C25.0008 27.5826 25.1501 27.4974 25.1971 27.4591C25.2397 27.4208 25.5683 27.0202 25.9268 26.5772C26.618 25.7079 26.7759 25.5674 27.2496 25.4055C27.8513 25.201 28.4657 25.2563 29.0844 25.5716C29.5538 25.8145 30.5779 26.4493 31.2393 26.9095C32.1098 27.5187 33.9703 29.0355 34.2221 29.3381C34.6658 29.8834 34.7427 30.5821 34.4439 31.3534C34.1281 32.1671 32.8992 33.6925 32.0415 34.3444C31.2649 34.9323 30.7145 35.1581 29.9891 35.1922C29.3917 35.222 29.1442 35.1709 28.3804 34.8556C22.3893 32.3887 17.6059 28.7075 13.8081 23.65C11.8239 21.0084 10.3134 18.2688 9.28067 15.427C8.67905 13.7696 8.64921 13.0495 9.14413 12.2017C9.35753 11.8438 10.2664 10.9575 10.9278 10.4633C12.0288 9.64524 12.5365 9.34273 12.9419 9.25754C13.2193 9.19787 13.7014 9.24473 14.0087 9.35552Z" fill="white"></path>
 				<defs>
 					<linearGradient id="paint2_linear" x1="22" y1="-7.26346e-09" x2="22.1219" y2="40.5458" gradientUnits="userSpaceOnUse">
 						<stop offset="50%" stop-color="#e8434c"></stop>

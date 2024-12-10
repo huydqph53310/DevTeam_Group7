@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 09, 2024 at 09:33 AM
+-- Generation Time: Dec 10, 2024 at 03:15 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -38,6 +38,21 @@ CREATE TABLE `bill` (
   `shipping_address` varchar(255) DEFAULT NULL,
   `note` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `bill`
+--
+
+INSERT INTO `bill` (`id`, `users_id`, `total_amount`, `status`, `created_at`, `updated_at`, `payment_method`, `shipping_address`, `note`) VALUES
+(3, 26, '1499.99', 'pending', '2024-12-10 17:58:58', '2024-12-10 17:58:58', 'online', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(4, 26, '1499.99', 'pending', '2024-12-10 18:01:25', '2024-12-10 18:01:25', 'online', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(5, 26, '2799.98', 'pending', '2024-12-10 18:08:14', '2024-12-10 18:08:14', 'cash', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(6, 26, '2799.98', 'pending', '2024-12-10 18:37:57', '2024-12-10 18:37:57', 'cash', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(7, 26, '2799.98', 'pending', '2024-12-10 18:42:16', '2024-12-10 18:42:16', 'cash', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(8, 26, '2799.98', 'pending', '2024-12-10 18:47:37', '2024-12-10 18:47:37', 'cash', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(9, 26, '2799.98', 'pending', '2024-12-10 18:49:36', '2024-12-10 18:49:36', 'cash', 'Thanh Phong - Thanh Liêm - Hà Nam', ''),
+(10, 28, '1299.99', 'pending', '2024-12-10 19:52:57', '2024-12-10 19:52:57', 'online', 'Thanh Thủy - Thanh Liêm - Hà Nam', ''),
+(11, 28, '17599.86', 'pending', '2024-12-10 20:14:29', '2024-12-10 20:14:29', 'online', 'Thanh Thủy - Thanh Liêm - Hà Nam', '');
 
 -- --------------------------------------------------------
 
@@ -85,6 +100,14 @@ CREATE TABLE `carts` (
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`cart_id`, `user_id`, `created_at`) VALUES
+(3, 26, '2024-12-10 10:30:26'),
+(4, 28, '2024-12-10 12:52:49');
+
 -- --------------------------------------------------------
 
 --
@@ -100,6 +123,19 @@ CREATE TABLE `cart_items` (
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `cart_items`
+--
+
+INSERT INTO `cart_items` (`cart_item_id`, `cart_id`, `product_id`, `quantity`, `price`, `created_at`) VALUES
+(11, 3, 210, 1, '1499.99', '2024-12-10 10:30:26'),
+(12, 3, 215, 2, '1299.99', NULL),
+(13, 4, 215, 9, '1299.99', NULL),
+(14, 4, 214, 4, '1399.99', NULL),
+(15, 4, 205, 3, '999.99', NULL),
+(16, 4, 224, 1, '1499.99', NULL),
+(17, 4, 213, 3, '1099.99', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -110,32 +146,16 @@ CREATE TABLE `client` (
   `id` int NOT NULL,
   `users_id` int NOT NULL,
   `diachi` varchar(255) DEFAULT NULL,
-  `SDT` varchar(10) NOT NULL,
-  `GioHang` varchar(255) NOT NULL DEFAULT '[]',
-  `binhluan` int NOT NULL,
-  `danhgia` int NOT NULL
+  `SDT` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `client`
 --
 
-INSERT INTO `client` (`id`, `users_id`, `diachi`, `SDT`, `GioHang`, `binhluan`, `danhgia`) VALUES
-(1, 1, 'Phúc Lai, Thanh Phong, Thanh Liêm, Hà Nam', '0977675028', '[]', 0, 0),
-(2, 4, 'Thôn Phúc Nhị - Xã Thanh Phong - Huyện Thanh Liêm - Tỉnh Hà Nam', '0977675028', '[]', 0, 0),
-(3, 11, 'Hà Nam', '0342346036', '[]', 0, 0),
-(5, 13, 'Hà Nam', '0865720862', '[]', 0, 0),
-(6, 14, 'Hà Nam', '0865720862', '[]', 0, 0),
-(7, 15, 'Hà Nam', '0865720862', '[]', 0, 0),
-(8, 16, 'Hà Nam', '0865720863', '[]', 0, 0),
-(9, 17, 'Thanh Phong - Thanh Liêm - Hà Nam', '0342346036', '[]', 0, 0),
-(10, 20, 'Nhật Tân - Tây Hồ - Hà Nội', '865720862', '[]', 0, 0),
-(11, 21, 'Giao Tiến - Giao Thủy - Nam Định', '0342346036', '[]', 0, 0),
-(12, 22, 'Tiêu Động - Bình Lục - Hà Nam', '0342346036', '[]', 0, 0),
-(13, 23, 'Không tìm thấy Xã - Không tìm thấy Huyện - Không tìm thấy Tỉnh', '0342346036', '[]', 0, 0),
-(14, 24, 'Định Hóa - Kim Sơn - Ninh Bình', '0865720862', '[]', 0, 0),
-(15, 25, 'Thi Sơn - Kim Bảng - Hà Nam', '0342346036', '[]', 0, 0),
-(16, 26, 'Thanh Phong - Thanh Liêm - Hà Nam', '0865720863', '[]', 0, 0);
+INSERT INTO `client` (`id`, `users_id`, `diachi`, `SDT`) VALUES
+(16, 26, 'Thanh Phong - Thanh Liêm - Hà Nam', '0865720863'),
+(17, 28, 'Thanh Thủy - Thanh Liêm - Hà Nam', '0865720862');
 
 -- --------------------------------------------------------
 
@@ -148,9 +168,32 @@ CREATE TABLE `detailbill` (
   `bill_id` int NOT NULL,
   `product_id` int NOT NULL,
   `quantity` int NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `subtotal` decimal(10,2) GENERATED ALWAYS AS ((`quantity` * `price`)) STORED
+  `price` int NOT NULL,
+  `subtotal` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `detailbill`
+--
+
+INSERT INTO `detailbill` (`id`, `bill_id`, `product_id`, `quantity`, `price`, `subtotal`) VALUES
+(1, 4, 210, 1, 1500, NULL),
+(2, 5, 210, 1, 1500, NULL),
+(3, 5, 215, 1, 1300, NULL),
+(4, 6, 210, 1, 1500, NULL),
+(5, 6, 215, 1, 1300, NULL),
+(6, 7, 210, 1, 1500, NULL),
+(7, 7, 215, 1, 1300, NULL),
+(8, 8, 210, 1, 1500, NULL),
+(9, 8, 215, 1, 1300, NULL),
+(10, 9, 210, 1, 1500, NULL),
+(11, 9, 215, 1, 1300, NULL),
+(12, 10, 215, 1, 1300, NULL),
+(13, 11, 215, 4, 1300, NULL),
+(14, 11, 214, 4, 1400, NULL),
+(15, 11, 205, 2, 1000, NULL),
+(16, 11, 224, 1, 1500, NULL),
+(17, 11, 213, 3, 1100, NULL);
 
 -- --------------------------------------------------------
 
@@ -313,29 +356,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`users_id`, `name`, `username`, `password`, `email`, `phone`, `action`, `ban`, `premium`, `ngaythamgia`, `point`) VALUES
-(1, 'doquochuy', 'huydz', 'huyde', 'huydqph53310@gmail.com', '0123456789', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(2, 'doquochuy', 'huydz', 'huydz', '123', '0123456789', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(3, 'doquochuy', 'huydz', 'huyde', 'huydqph53310@gmail.com', '0123456789', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(4, 'doquochuy', 'Admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(5, 'Bảo Hiểm', 'Nguyen Quoc Anh', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(6, 'Đỗ Quốc Huy', 'Admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(7, 'Đỗ Quốc Huy', 'Admin1', '12345', 'Admin.runsytem.mod@huydev.id.vn', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(8, 'Đỗ Quốc Huy', 'Admin1', '123456', '1.a@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(9, 'Đỗ Quốc Huy', 'Đỗ Quốc Huy', '123123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(10, 'doquochuy', 'Nguyen Quoc Anh', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-10-26 00:46:33', 0),
-(11, 'doquochuy', 'huyd35427', '123', '1.a@gmail.com', '0342346036', 0, 0, 0, '2024-11-12 15:13:44', 0),
-(13, 'doquochuy', 'admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-11-13 01:13:38', 0),
-(14, 'doquochuy', 'admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-11-13 01:18:22', 0),
-(15, 'doquochuy', 'admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-11-13 01:28:29', 0),
-(16, 'Đỗ Quốc Huy', 'huyd35427', '123', '1123.a@gmail.com', '0865720863', 0, 0, 0, '2024-11-13 13:21:02', 0),
-(17, 'Đỗ Quốc Huy', 'huyd354271', '123', '2.a@gmail.com', '0342346036', 0, 0, 0, '2024-11-13 13:26:41', 0),
-(20, 'Đỗ Quốc Huy', 'huyd354271', '123123', '1123.a@gmail.com', '865720862', 0, 0, 0, '2024-11-13 13:29:23', 0),
-(21, 'Nguyễn Quốc Anh', 'adminlo', '123', 'Admin.runsytem.mod@huydev.id.vn', '0342346036', 0, 0, 0, '2024-11-13 13:41:59', 0),
-(22, 'Đỗ Quốc Huy', 'admin1', '123123', 'Admin.runsytem.mod@huydev.id.vn', '0342346036', 0, 0, 0, '2024-11-13 13:43:34', 0),
-(23, 'Đỗ Quốc Huy', 'admin', '123', 'Admin.runsytem.mod@huydev.id.vn', '0342346036', 0, 0, 0, '2024-11-13 17:23:24', 0),
-(24, 'Đỗ Quốc Huy', 'nguyen quoc anh', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-11-13 18:31:30', 0),
-(25, 'Đỗ Quốc Huy', 'huykhanh', '123456', 'Admin.runsytem.mod@huydev.id.vn', '0342346036', 0, 0, 0, '2024-11-14 00:58:07', 0),
-(26, 'Đỗ Quốc Huy', 'huy2222', '111', '1231.a@gmail.com', '0865720863', 0, 0, 0, '2024-11-15 10:12:40', 0);
+(26, 'Đỗ Quốc Huy', 'huy2222', '111', '1231.a@gmail.com', '0865720863', 1, 0, 0, '2024-11-15 10:12:40', 0),
+(28, 'Đỗ Quốc Huy', 'admin', '123', 'huy02112004@gmail.com', '0865720862', 0, 0, 0, '2024-12-10 19:47:58', 0);
 
 --
 -- Indexes for dumped tables
@@ -421,7 +443,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `brand`
@@ -433,25 +455,25 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `cart_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `cart_item_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_item_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `detailbill`
 --
 ALTER TABLE `detailbill`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `hardware_configurations`
@@ -475,7 +497,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `users_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `users_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables

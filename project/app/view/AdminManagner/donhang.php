@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins...700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,298 +40,272 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
-      <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="public/assets/img/logo.png" alt="" />
-          <span class="d-none d-lg-block">F-MCHINE</span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-      </div>
-      <!-- Kết thúc Logo -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="public/assets/img/logo.png" alt="" />
+        <span class="d-none d-lg-block">F-MCHINE</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- Kết thúc Logo -->
 
-      <div class="search-bar">
-        <form
-          class="search-form d-flex align-items-center"
-          method="POST"
-          action="#"
-        >
-          <input
-            type="text"
-            name="query"
-            placeholder="Tìm kiếm"
-            title="Nhập từ khóa tìm kiếm"
-          />
-          <button type="submit" title="Tìm kiếm">
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
-      </div>
-      <!-- Kết thúc Thanh Tìm Kiếm -->
+    <div class="search-bar">
+      <form
+        class="search-form d-flex align-items-center"
+        method="POST"
+        action="#">
+        <input
+          type="text"
+          name="query"
+          placeholder="Tìm kiếm"
+          title="Nhập từ khóa tìm kiếm" />
+        <button type="submit" title="Tìm kiếm">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Kết thúc Thanh Tìm Kiếm -->
 
-      <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-          <li class="nav-item d-block d-lg-none">
-            <a class="nav-link nav-icon search-bar-toggle" href="#">
-              <i class="bi bi-search"></i>
-            </a>
-          </li>
-          <!-- Kết thúc Biểu Tượng Tìm Kiếm -->
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle" href="#">
+<i class="bi bi-search"></i>
+          </a>
+        </li>
+        <!-- Kết thúc Biểu Tượng Tìm Kiếm -->
 
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-bell"></i>
-              <span class="badge bg-primary badge-number">4</span> </a
-            ><!-- Kết thúc Biểu Tượng Thông Báo -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span> </a><!-- Kết thúc Biểu Tượng Thông Báo -->
 
-            <ul
-              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications"
-            >
-              <li class="dropdown-header">
-                Bạn có 4 thông báo mới
-                <a href="#"
-                  ><span class="badge rounded-pill bg-primary p-2 ms-2"
-                    >Xem tất cả</span
-                  ></a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              Bạn có 4 thông báo mới
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-              <li class="notification-item">
-                <i class="bi bi-exclamation-circle text-warning"></i>
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 phút trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Xem tất cả thông báo</a>
+            </li>
+          </ul>
+          <!-- Kết thúc Mục Dropdown Thông Báo -->
+        </li>
+        <!-- Kết thúc Mục Thông Báo -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span> </a><!-- Kết thúc Biểu Tượng Tin Nhắn -->
+
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+<li class="dropdown-header">
+              Bạn có 3 tin nhắn mới
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img
+                  src="public/assets/img/messages-1.jpg"
+                  alt=""
+                  class="rounded-circle" />
                 <div>
-                  <h4>Lorem Ipsum</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>30 phút trước</p>
-                </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-x-circle text-danger"></i>
-                <div>
-                  <h4>Atque rerum nesciunt</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>1 giờ trước</p>
-                </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-check-circle text-success"></i>
-                <div>
-                  <h4>Sit rerum fuga</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>2 giờ trước</p>
-                </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-info-circle text-primary"></i>
-                <div>
-                  <h4>Dicta reprehenderit</h4>
-                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <h4>Maria Hudson</h4>
+                  <p>
+                    Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...
+                  </p>
                   <p>4 giờ trước</p>
                 </div>
-              </li>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li class="dropdown-footer">
-                <a href="#">Xem tất cả thông báo</a>
-              </li>
-            </ul>
-            <!-- Kết thúc Mục Dropdown Thông Báo -->
-          </li>
-          <!-- Kết thúc Mục Thông Báo -->
+            <li class="message-item">
+              <a href="#">
+                <img
+                  src="public/assets/img/messages-2.jpg"
+                  alt=""
+                  class="rounded-circle" />
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>
+                    Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...
+                  </p>
+                  <p>6 giờ trước</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-chat-left-text"></i>
-              <span class="badge bg-success badge-number">3</span> </a
-            ><!-- Kết thúc Biểu Tượng Tin Nhắn -->
+            <li class="message-item">
+              <a href="#">
+                <img
+                  src="public/assets/img/messages-3.jpg"
+                  alt=""
+                  class="rounded-circle" />
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>
+                    Velit asperiores et ducimus soluta repudiandae labore
+                    officia est ut...
+                  </p>
+                  <p>8 giờ trước</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-            <ul
-              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages"
-            >
-              <li class="dropdown-header">
-                Bạn có 3 tin nhắn mới
-                <a href="#"
-                  ><span class="badge rounded-pill bg-primary p-2 ms-2"
-                    >Xem tất cả</span
-                  ></a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+            <li class="dropdown-footer">
+              <a href="#">Xem tất cả tin nhắn</a>
+            </li>
+          </ul>
+          <!-- Kết thúc Mục Dropdown Tin Nhắn -->
+        </li>
+        <!-- Kết thúc Mục Tin Nhắn -->
 
-              <li class="message-item">
-                <a href="#">
-                  <img
-                    src="public/assets/img/messages-1.jpg"
-                    alt=""
-                    class="rounded-circle"
-                  />
-                  <div>
-                    <h4>Maria Hudson</h4>
-                    <p>
-                      Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...
-                    </p>
-                    <p>4 giờ trước</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+        <li class="nav-item dropdown pe-3">
+          <a
+            class="nav-link nav-profile d-flex align-items-center pe-0"
+            href="#"
+            data-bs-toggle="dropdown">
+            <img
+              src="public/assets/img/avata.png"
+              alt="Profile"
+              class="rounded-circle" />
+            <span class="d-none d-md-block dropdown-toggle ps-2">ADMIN</span> </a><!-- Kết thúc Biểu Tượng Hồ Sơ -->
 
-              <li class="message-item">
-                <a href="#">
-                  <img
-                    src="public/assets/img/messages-2.jpg"
-                    alt=""
-                    class="rounded-circle"
-                  />
-                  <div>
-                    <h4>Anna Nelson</h4>
-                    <p>
-                      Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...
-                    </p>
-                    <p>6 giờ trước</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+<h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-              <li class="message-item">
-                <a href="#">
-                  <img
-                    src="public/assets/img/messages-3.jpg"
-                    alt=""
-                    class="rounded-circle"
-                  />
-                  <div>
-                    <h4>David Muldon</h4>
-                    <p>
-                      Velit asperiores et ducimus soluta repudiandae labore
-                      officia est ut...
-                    </p>
-                    <p>8 giờ trước</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="Profile_user.html">
+                <i class="bi bi-person"></i>
+                <span>Hồ Sơ Của Tôi</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-              <li class="dropdown-footer">
-                <a href="#">Xem tất cả tin nhắn</a>
-              </li>
-            </ul>
-            <!-- Kết thúc Mục Dropdown Tin Nhắn -->
-          </li>
-          <!-- Kết thúc Mục Tin Nhắn -->
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="Profile_user.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài Đặt Tài Khoản</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-          <li class="nav-item dropdown pe-3">
-            <a
-              class="nav-link nav-profile d-flex align-items-center pe-0"
-              href="#"
-              data-bs-toggle="dropdown"
-            >
-              <img
-                src="public/assets/img/avata.png"
-                alt="Profile"
-                class="rounded-circle"
-              />
-              <span class="d-none d-md-block dropdown-toggle ps-2"
-                >ADMIN</span
-              > </a
-            ><!-- Kết thúc Biểu Tượng Hồ Sơ -->
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="Profile_user.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Cần Giúp Đỡ?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
 
-            <ul
-              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
-            >
-              <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="Profile_user.html"
-                >
-                  <i class="bi bi-person"></i>
-                  <span>Hồ Sơ Của Tôi</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="Profile_user.html"
-                >
-                  <i class="bi bi-gear"></i>
-                  <span>Cài Đặt Tài Khoản</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="Profile_user.html"
-                >
-                  <i class="bi bi-question-circle"></i>
-                  <span>Cần Giúp Đỡ?</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Đăng Xuất</span>
-                </a>
-              </li>
-            </ul>
-            <!-- Kết thúc Mục Dropdown Hồ Sơ -->
-          </li>
-          <!-- Kết thúc Mục Hồ Sơ -->
-        </ul>
-      </nav>
-      <!-- Kết thúc Điều Hướng Biểu Tượng -->
-    </header>
-    <!-- Kết thúc Header -->
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng Xuất</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Kết thúc Mục Dropdown Hồ Sơ -->
+        </li>
+        <!-- Kết thúc Mục Hồ Sơ -->
+      </ul>
+    </nav>
+    <!-- Kết thúc Điều Hướng Biểu Tượng -->
+  </header>
+  <!-- Kết thúc Header -->
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -348,16 +322,13 @@
           class="nav-link collapsed"
           data-bs-target="#forms-nav"
           data-bs-toggle="collapse"
-          href="#"
-        >
-          <i class="bi bi-journal-text"></i><span>Biểu Mẫu</span
-          ><i class="bi bi-chevron-down ms-auto"></i>
+          href="#">
+          <i class="bi bi-journal-text"></i><span>Biểu Mẫu</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul
           id="forms-nav"
           class="nav-content collapse"
-          data-bs-parent="#sidebar-nav"
-        >
+          data-bs-parent="#sidebar-nav">
           <li>
             <a href="Add_product.html">
               <i class="bi bi-circle"></i><span>Thêm sản phẩm</span>
@@ -376,23 +347,20 @@
 
         </ul>
       </li>
-      <!-- End Forms Nav -->
+<!-- End Forms Nav -->
 
       <li class="nav-item">
         <a
           class="nav-link "
           data-bs-target="#tables-nav"
           data-bs-toggle="collapse"
-          href="#"
-        >
-          <i class="bi bi-layout-text-window-reverse"></i><span>Bảng</span
-          ><i class="bi bi-chevron-down ms-auto"></i>
+          href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Bảng</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul
           id="tables-nav"
           class="nav-content collapse"
-          data-bs-parent="#sidebar-nav"
-        >
+          data-bs-parent="#sidebar-nav">
           <li>
             <a href="?wh=listAcc" class="active">
               <i class="bi bi-circle"></i><span>Danh Sách Tài khoản</span>
@@ -422,7 +390,7 @@
       <!-- End Profile Page Nav -->
     </ul>
   </aside>
-   <!-- ======= End Sidebar ======= -->
+  <!-- ======= End Sidebar ======= -->
 
   <main id="main" class="main">
 
@@ -438,62 +406,65 @@
     </div><!-- End Page Title -->
 
     <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">ID Đơn Hàng</th>
-                <th scope="col">Tên khách hàng</th>
-                <th scope="col">Số tiền</th>
-                <th scope="col">Trạng thái Đơn hàng</th>
-                <th scope="col">Hành động</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th scope="col">ID Đơn Hàng</th>
+          <th scope="col">Tên khách hàng</th>
+          <th scope="col">Số tiền</th>
+          <th scope="col">Trạng thái Đơn hàng</th>
+          <th scope="col">Thời gian tạo</th>
+          <th scope="col">Thời gian cập nhật</th>
+          <th scope="col">Phương thức thanh toán</th>
+          <th scope="col">Địa chỉ</th>
+          <th scope="col">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
         <?php foreach ($oders as $order): ?>
-
-            <tr>
-                <td><?=$order['id']?></td>
-                <td><?=$order['users_id']?></td>
-                <td><?=$order['total_amount']?></td>
-                <td>
-                <select class="form-control" onchange="updateOrderStatus(this, <?= htmlspecialchars($order['id']) ?>)">
-                    <option <?= $order['status'] == 'Chưa xử lý' ? 'selected' : '' ?>>Chưa xử lý</option>
-                    <option <?= $order['status'] == 'Đang xử lý' ? 'selected' : '' ?>>Đang xử lý</option>
-                    <option <?= $order['status'] == 'Hoàn thành' ? 'selected' : '' ?>>Hoàn thành</option>
-                    <option <?= $order['status'] == 'Đã hủy' ? 'selected' : '' ?>>Đã hủy</option>
+          <tr> 
+            <form action="" method="post">
+              <td><?= $order['id'] ?></td>
+              <td><?= $order['users_id'] ?></td>
+              <td><?= $order['total_amount'] ?></td>
+              <td>
+                <select class="form-control" name="status">
+                  <option <?= $order['status'] == 'pending' ? 'selected' : '' ?>>Đang xử lý</option>
+                  <option <?= $order['status'] == 'paid' ? 'selected' : '' ?>>Hoàn thành</option>
+                  <option <?= $order['status'] == 'cancelled' ? 'selected' : '' ?>>Đã hủy</option>
                 </select>
-                </td>
-                <td><?= htmlspecialchars($order['created_at']) ?></td>
-            <td><?= htmlspecialchars($order['updated_at']) ?></td>
-            <td><?= htmlspecialchars($order['payment_method']) ?></td>
-            <td><?= htmlspecialchars($order['shipping_address']) ?></td>
-            <td><?= htmlspecialchars($order['note']) ?></td>
-            <td>
-                <button class="btn btn-primary" onclick="submitOrderStatus(<?= htmlspecialchars($order['id']) ?>)">Cập nhật trạng thái</button>
-            </td>
-                  </tr>
-                  <?php endforeach; ?>
+              </td>
+              <td><?= htmlspecialchars($order['created_at']) ?></td>
+              <td><?= htmlspecialchars($order['updated_at']) ?></td>
+              <td><?= htmlspecialchars($order['payment_method']) ?></td>
+              <td><?= htmlspecialchars($order['shipping_address']) ?></td>
+              <td>
+                <input type="hidden" name="id" value="<?= $order['id'] ?>">
+                <input type="submit" class="btn btn-primary" name="smf" value="Cập nhật trạng thái">
+              </td> 
+              </form> 
+          </tr>
+        <?php endforeach; ?>
 
-        </tbody>
+      </tbody>
     </table>
-    
+
 
   </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-      <div class="copyright">
-        &copy; Bản quyền <strong><span>Dev-Team</span></strong
-        >. Tất cả quyền lợi được bảo lưu.
-      </div>
-      <div class="credits">
-        <!-- Tất cả các liên kết trong footer nên được giữ nguyên. -->
-        <!-- Bạn có thể xóa các liên kết chỉ khi bạn đã mua phiên bản trả phí. -->
-        <!-- Thông tin giấy phép: https://bootstrapmade.com/license/ -->
-        <!-- Mua phiên bản trả phí với form liên hệ PHP/AJAX hoạt động: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Thiết kế bởi <a href="index.html">Dev Team</a>
-      </div>
-    </footer>
-    <!-- End Footer -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Bản quyền <strong><span>Dev-Team</span></strong>. Tất cả quyền lợi được bảo lưu.
+    </div>
+    <div class="credits">
+      <!-- Tất cả các liên kết trong footer nên được giữ nguyên. -->
+      <!-- Bạn có thể xóa các liên kết chỉ khi bạn đã mua phiên bản trả phí. -->
+      <!-- Thông tin giấy phép: https://bootstrapmade.com/license/ -->
+      <!-- Mua phiên bản trả phí với form liên hệ PHP/AJAX hoạt động: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Thiết kế bởi <a href="index.html">Dev Team</a>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
