@@ -359,17 +359,17 @@
           data-bs-parent="#sidebar-nav"
         >
           <li>
-            <a href="Add_product.html">
+            <a href="?wh=CreateItem">
               <i class="bi bi-circle"></i><span>Thêm sản phẩm</span>
             </a>
           </li>
           <li>
-            <a href="Add_post.html">
+            <a href="?wh=AddPost">
               <i class="bi bi-circle"></i><span>Thêm bài viết</span>
             </a>
           </li>
           <li>
-            <a href="Add_user.html" class="active">
+            <a href="?wh=addaccount" class="active">
               <i class="bi bi-circle"></i><span>Tạo tài khoản</span>
             </a>
           </li>
@@ -394,17 +394,17 @@
           data-bs-parent="#sidebar-nav"
         >
           <li>
-            <a href="Show_user.html">
+            <a href="?wh=listAcc">
               <i class="bi bi-circle"></i><span>Danh Sách Tài khoản</span>
             </a>
           </li>
           <li>
-            <a href="Show_product.html">
+            <a href="?wh=listProduct">
               <i class="bi bi-circle"></i><span>Danh sách sản phẩm</span>
             </a>
           </li>
           <li>
-            <a href="donhang.html">
+            <a href="?wh=ListOders">
               <i class="bi bi-circle"></i><span>Danh sách đơn hàng</span>
             </a>
           </li>

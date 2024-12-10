@@ -172,7 +172,8 @@
                                     <?php } ?>
                                 </div>
                                 <ul class="d-flex acction-link">
-                                    <li>
+                                <?php if(isset($_SESSION["username"])) { ?>
+                                <li>
                                         <?php
                                         $totalQuantity = 0;
                                         foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
@@ -196,6 +197,7 @@
                                         <span class="compareCount">0</span>
                                         <a href="so-sanh-san-pham" title="So sánh">Đã Mua</a>
                                     </li>
+                                <?php }?>
                                 </ul>
                                 <div class="list-social d-flex">
                                     <a href="#" title="Facebook">

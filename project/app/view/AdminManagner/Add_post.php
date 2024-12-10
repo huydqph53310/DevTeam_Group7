@@ -364,7 +364,7 @@
               </a>
             </li>
             <li>
-              <a href="?wh=post" class="active">
+              <a href="?wh=AddPost" class="active">
                 <i class="bi bi-circle"></i><span>Thêm bài viết</span>
               </a>
             </li>

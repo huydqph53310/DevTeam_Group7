@@ -228,6 +228,7 @@
     </script>
 
 </head>
+
 <body>
     <link rel="preload" href="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/jquery-plugin.js?1731407153286"
         as="script">
@@ -288,6 +289,57 @@
                             </div>
                         </div>
                     </div>
+                    <style>
+                        /* Trạng thái đơn hàng chỉ đổi màu chữ */
+.status-pending {
+    color: #ffcc00; /* Màu vàng cho trạng thái "pending" */
+}
+
+.status-paid {
+    color: #4caf50; /* Màu xanh lá cho trạng thái "paid" */
+}
+
+.status-Cancelled {
+    color: #F44336; /* Màu xanh dương cho trạng thái "shipped" */
+}
+
+.status-completed {
+    color: #9e9e9e; /* Màu xám cho trạng thái "completed" */
+}
+
+.status-default {
+    color: #e0e0e0; /* Màu xám nhạt cho trạng thái mặc định */
+}
+
+/* Nút thanh toán */
+.btn-pay {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-pay:hover {
+    background-color: #d32f2f;
+}
+
+/* Nút xem */
+.btn-view {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-view:hover {
+    background-color: #1976d2;
+}
+
+                    </style>
                     <div class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
                         <div class="white">
                             <h1 class="title-head margin-top-0">Đơn hàng của bạn</h1>
@@ -313,57 +365,49 @@
 
                                                     </thead>
                                                     <tbody>
-                                                    <?php foreach ($orders as $order) { ?>
-    <tr>
-        <td><?= $order["id"] ?></td>
-        <td><?= $order["created_at"] ?></td>
-        <td><?= number_format($order["total_amount"], 2) ?> VNĐ</td>
-        
-        <?php 
-            // Kiểm tra trạng thái và thêm lớp CSS cho nó
-            $statusClass = '';
-            switch(strtolower($order["status"])) {
-                case 'pending':
-                    $statusClass = 'status-pending';
-                    break;
-                case 'paid':
-                    $statusClass = 'status-paid';
-                    break;
-                case 'shipped':
-                    $statusClass = 'status-shipped';
-                    break;
-                case 'completed':
-                    $statusClass = 'status-completed';
-                    break;
-                default:
-                    $statusClass = 'status-default';
-            }
-        ?>
-        <td class="<?= $statusClass ?>"><?= ucfirst($order["status"]) ?></td>
+                                                        <?php if($orders  !== null) {?>
+                                                            <?php foreach ($orders as $order) { ?>
+                                                            <tr>
+                                                                <td><?= $order["id"] ?></td>
+                                                                <td><?= $order["created_at"] ?></td>
+                                                                <td><?= number_format($order["total_amount"], 2) ?> VNĐ</td>
+                                                                <?php
+                                                                // Kiểm tra trạng thái và thêm lớp CSS cho nó
+                                                                $statusClass = '';
+                                                                switch (strtolower($order["status"])) {
+                                                                    case 'pending':
+                                                                        $statusClass = 'status-pending';
+                                                                        break;
+                                                                    case 'paid':
+                                                                        $statusClass = 'status-paid';
+                                                                        break;
+                                                                    case 'cancelled':
+                                                                        $statusClass = 'status-Cancelled';
+                                                                        break;
+                                                                    default:
+                                                                        $statusClass = 'status-default';
+                                                                }
+                                                                ?>
+                                                                <td class="<?= $statusClass ?>"><?= ucfirst($order["status"]) ?></td>
+                                                                <td><?= ucfirst($order["payment_method"]) ?></td>
+                                                                <td><?= $order["shipping_address"] ?></td>
+                                                                <td><?= $order["note"] ?></td>
 
-        <td><?= ucfirst($order["payment_method"]) ?></td>
-        <td><?= $order["shipping_address"] ?></td>
-        <td><?= $order["note"] ?></td>
-
-        <td>
-            <!-- View button -->
-            <a href="?wh=viewpay&id=<?= $order['id'] ?>" class="btn-view">View</a>
-
-            <?php if (strtolower($order["status"]) != 'paid') { ?>
-                <!-- Pay button (only shown if not paid) -->
-                <a href="?wh=viewpay&id=<?= $order['id'] ?>" class="btn-pay">Pay</a>
-            <?php } ?>
-        </td>
-    </tr>
-<?php } ?>
-
-
-
-                                                        <!-- <tr>
+                                                                <td>
+                                                                    <?php if (strtolower($order["status"]) != 'paid') { ?>
+                                                                        <a href="?wh=viewpay&id=<?= $order['id'] ?>" class="btn-pay">Pay</a>
+                                                                    <?php } ?>
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
+                                                            <?php } else {?>
+                                                        <tr>
                                                             <td colspan="7">
                                                                 <p>Không có đơn hàng nào.</p>
                                                             </td>
-                                                        </tr> -->
+                                                        </tr>
+
+                                                        <?php }?>
 
                                                     </tbody>
 

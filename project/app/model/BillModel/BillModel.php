@@ -82,15 +82,24 @@ class BillModel extends ConnectDatabase
 
     // Lấy danh sách của toàn bộ hóa đơn
 
-    public function getBills()
-    {
-        try {
-            //code...
-        } catch (Exception $err) {
-            //throw $th;
-        }
-    }
+   public function getOrderById($orderId) {
+    // Kết nối đến cơ sở dữ liệu
+    // Chuẩn bị câu truy vấn SQL
+    $sql = "SELECT * FROM bill WHERE id = :id";
+    $stmt = $this->connect->prepare($sql);
 
+    // Bind giá trị cho tham số :id
+    $stmt->bindParam(':id', $orderId, PDO::PARAM_INT);
+
+    // Thực thi câu truy vấn
+    $stmt->execute();
+
+    // Lấy dữ liệu từ câu truy vấn
+    $order = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+    return $order;
+}
     // lấy danh sách hóa đơn theo ngày
 
     public function getbillsByDate($id, $data)
