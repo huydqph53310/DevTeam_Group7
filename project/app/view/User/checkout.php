@@ -47,8 +47,8 @@
                                     
                                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">Apple Ipad 4 Wifi 16GB</h6>
-                                    <small class="text-muted">11800000.00 x 2</small>
+                                    <h6 class="my-0"><?= $items["product_name"]?></h6>
+                                    <small class="text-muted"><?= $items["price"]?> x <?= $items["quantity"]?></small>
                                 </div>
                                 <span class="text-muted">23600000</span>
                             </li>
