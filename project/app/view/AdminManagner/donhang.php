@@ -448,62 +448,31 @@
             </tr>
         </thead>
         <tbody>
+        <?php foreach ($oders as $order): ?>
+
             <tr>
-                <td>TRX001</td>
-                <td>Nguyễn Văn A</td>
-                <td>10,000,000 VND</td>
+                <td><?=$order['id']?></td>
+                <td><?=$order['users_id']?></td>
+                <td><?=$order['total_amount']?></td>
                 <td>
-                    <select class="form-control" onchange="updateOrderStatus(this)">
-                        <option>Chưa xử lý</option>
-                        <option>Đang xử lý</option>
-                        <option>Hoàn thành</option>
-                        <option>Đã hủy</option>
-                    </select>
+                <select class="form-control" onchange="updateOrderStatus(this, <?= htmlspecialchars($order['id']) ?>)">
+                    <option <?= $order['status'] == 'Chưa xử lý' ? 'selected' : '' ?>>Chưa xử lý</option>
+                    <option <?= $order['status'] == 'Đang xử lý' ? 'selected' : '' ?>>Đang xử lý</option>
+                    <option <?= $order['status'] == 'Hoàn thành' ? 'selected' : '' ?>>Hoàn thành</option>
+                    <option <?= $order['status'] == 'Đã hủy' ? 'selected' : '' ?>>Đã hủy</option>
+                </select>
                 </td>
-                <td><button class="btn btn-primary" onclick="submitOrderStatus()">Cập nhật trạng thái</button></td>
-            </tr>
-            <tr>
-                <td>TRX002</td>
-                <td>Trần Thị B</td>
-                <td>15,000,000 VND</td>
-                <td>
-                    <select class="form-control" onchange="updateOrderStatus(this)">
-                        <option>Chưa xử lý</option>
-                        <option>Đang xử lý</option>
-                        <option>Hoàn thành</option>
-                        <option>Đã hủy</option>
-                    </select>
-                </td>
-                <td><button class="btn btn-primary" onclick="submitOrderStatus()">Cập nhật trạng thái</button></td>
-            </tr>
-            <tr>
-                <td>TRX003</td>
-                <td>Nguyễn Văn A</td>
-                <td>10,000,000 VND</td>
-                <td>
-                    <select class="form-control" onchange="updateOrderStatus(this)">
-                        <option>Chưa xử lý</option>
-                        <option>Đang xử lý</option>
-                        <option>Hoàn thành</option>
-                        <option>Đã hủy</option>
-                    </select>
-                </td>
-                <td><button class="btn btn-primary" onclick="submitOrderStatus()">Cập nhật trạng thái</button></td>
-            </tr>
-            <tr>
-                <td>TRX004</td>
-                <td>Trần Thị B</td>
-                <td>10,000,000 VND</td>
-                <td>
-                    <select class="form-control" onchange="updateOrderStatus(this)">
-                        <option>Chưa xử lý</option>
-                        <option>Đang xử lý</option>
-                        <option>Hoàn thành</option>
-                        <option>Đã hủy</option>
-                    </select>
-                </td>
-                <td><button class="btn btn-primary" onclick="submitOrderStatus()">Cập nhật trạng thái</button></td>
-            </tr>
+                <td><?= htmlspecialchars($order['created_at']) ?></td>
+            <td><?= htmlspecialchars($order['updated_at']) ?></td>
+            <td><?= htmlspecialchars($order['payment_method']) ?></td>
+            <td><?= htmlspecialchars($order['shipping_address']) ?></td>
+            <td><?= htmlspecialchars($order['note']) ?></td>
+            <td>
+                <button class="btn btn-primary" onclick="submitOrderStatus(<?= htmlspecialchars($order['id']) ?>)">Cập nhật trạng thái</button>
+            </td>
+                  </tr>
+                  <?php endforeach; ?>
+
         </tbody>
     </table>
     

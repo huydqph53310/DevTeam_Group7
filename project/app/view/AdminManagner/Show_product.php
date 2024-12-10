@@ -454,133 +454,26 @@
                     </th>
                     <th>Gía</th>
                     <th>Số lượng</th>
-                    <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
+                    <!-- <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
                     <th>Tình trạng</th>
-                    <th>Hành động</th>
+                    <th>Hành động</th> -->
                   </tr>
                 </thead>
                 <tbody>
+                <?php foreach ($products as $product): ?>
                   <tr>
-                    <td>Laptop Dell PRS234</td>
-                    <td>10.000.000</td>
-                    <td>10</td>
-                    <td>2005/02/11</td>
+                    <td><?=$product['product_name']?></td>
+                    <td><?=$product['price']?></td>
+                    <td><?=$product['Quantity']?></td>
+                    <!-- <td>2005/02/11</td>
                     <td>Còn hàng</td>
                     <td>
                         <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(1)">Sửa</button>
                         <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(1)">Tình trạng</button>
-                    </td>
+                    </td> -->
                 </tr>
-                <tr>
-                    <td>Máy tính xách tay HP Pavilion</td>
-                    <td>15.000.000</td>
-                    <td>5</td>
-                    <td>2015/07/19</td>
-                    <td>Hết hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(2)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(2)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MacBook Pro 2021</td>
-                    <td>30.000.000</td>
-                    <td>3</td>
-                    <td>2021/11/12</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(3)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(3)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Asus ROG Strix</td>
-                    <td>25.000.000</td>
-                    <td>8</td>
-                    <td>2019/05/03</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(4)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(4)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lenovo ThinkPad X1 Carbon</td>
-                    <td>28.000.000</td>
-                    <td>12</td>
-                    <td>2020/10/15</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(5)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(5)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Acer Aspire 7</td>
-                    <td>12.000.000</td>
-                    <td>20</td>
-                    <td>2022/03/11</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(6)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(6)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MSI GF65 Thin</td>
-                    <td>18.500.000</td>
-                    <td>15</td>
-                    <td>2023/06/18</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(7)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(7)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Razer Blade 15</td>
-                    <td>45.000.000</td>
-                    <td>7</td>
-                    <td>2021/12/22</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(8)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(8)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>HP Spectre x360</td>
-                    <td>32.000.000</td>
-                    <td>9</td>
-                    <td>2020/09/09</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(9)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(9)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Microsoft Surface Laptop 4</td>
-                    <td>22.000.000</td>
-                    <td>6</td>
-                    <td>2022/05/10</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(10)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(10)">Tình trạng</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Gigabyte AORUS 15</td>
-                    <td>26.000.000</td>
-                    <td>4</td>
-                    <td>2019/08/20</td>
-                    <td>Còn hàng</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#editProductModal" onclick="editProduct(11)">Sửa</button>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteProductModal" onclick="deleteProduct(11)">Tình trạng</button>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
+
                 <!-- Add 14 more rows in the same format -->
                 
                 
