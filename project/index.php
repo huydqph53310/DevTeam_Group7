@@ -80,8 +80,8 @@ switch ($router->GETURL()) {
     case "CreateItem":
         include "app/view/AdminManagner/Add_product.php";
         break;
-    case "mua":
-        include "app/view/Product/Checkout.php";
+    case "checkout":
+        include "app/view/user/checkout.php";
         break;
     case "create":
         include "app/view/Product/CreateQr.php";
