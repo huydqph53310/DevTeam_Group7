@@ -459,8 +459,8 @@
                           <td><?=$account['users_id']?></td>
                           <td><?=$account['username']?></td>
                           <td><?=$account['email']?></td>
-                          <td>Khách hàng</td>
-                          <td>Đang hoạt động</td>
+                          <td><?=$account['action']==0?'Khách hàng':'Admin'?></td>
+                          <td><?=$account['ban']==0?'Đang hoạt động':'Đã bị khóa'?></td>
                           <td>
                               <button class="btn btn-warning" onclick="openRoleModal(1)">Phân quyền</button>
                               <button class="btn btn-danger" data-toggle="modal" data-target="#lockUserModal">Khóa</button>
