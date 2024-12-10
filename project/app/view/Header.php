@@ -241,12 +241,6 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                             support@sapo.vn
                         </a>
                     </div>
-                    <div class="item-top-bar d-inline-flex">
-
-                        <a class="btnx" href="?wh=login" title="Đăng nhập">Đăng nhập</a>&nbsp;/&nbsp;
-                        <a href="?wh=reg" title="Đăng ký">Đăng ký</a>
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -317,7 +311,15 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                         <div class="right-item">
                             Giỏ hàng
                             <a class="cartcount" href="?wh=cart" title="Giỏ hàng">
-                                (<span class="count_item_pr">1</span>) sản phẩm
+                                (<span class="count_item_pr">
+                                    <?php
+                                    $totalQuantity = 0;
+                                    foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
+                                        $totalQuantity += $items['quantity'];  // Tính tổng giá trị của từng sản phẩm
+                                    }
+                                    echo  $totalQuantity
+                                    ?>
+                                </span>) sản phẩm
                             </a>
                         </div>
                     </div>

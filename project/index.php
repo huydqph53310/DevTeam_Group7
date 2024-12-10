@@ -73,7 +73,7 @@ switch ($router->GETURL()) {
         break;
     case "add":
         (new AddCart())->AddCart($_SESSION["id"],$router->getId(), 1);
-        header("location: ?wh=home&i=false");
+        header("location: ?wh=home&i=false&id=1");
         break;
     case "admin":
         include "app/view/AdminManagner/HomeAdmin.php";

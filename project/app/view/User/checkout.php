@@ -41,24 +41,15 @@
                             <input type="hidden" name="sanphamgiohang[1][gia]" value="11800000.00">
                             <input type="hidden" name="sanphamgiohang[1][soluong]" value="2">
 
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">Apple Ipad 4 Wifi 16GB</h6>
-                                    <small class="text-muted">11800000.00 x 2</small>
-                                </div>
-                                <span class="text-muted">23600000</span>
-                            </li>
-                            <input type="hidden" name="sanphamgiohang[2][sp_ma]" value="4">
-                            <input type="hidden" name="sanphamgiohang[2][gia]" value="14990000.00">
-                            <input type="hidden" name="sanphamgiohang[2][soluong]" value="8">
-
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">Apple iPhone 5 16GB White</h6>
-                                    <small class="text-muted">14990000.00 x 8</small>
-                                </div>
-                                <span class="text-muted">119920000</span>
-                            </li>
+                            <?php
+                                    $totalQuantity = 0;
+                                    foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
+                                        $totalQuantity += $items['quantity'];  // Tính tổng giá trị của từng sản phẩm
+                                    }
+                                    echo  $totalQuantity
+                                    
+                            ?>
+                            
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Tổng thành tiền</span>
                                 <strong>143520000</strong>
