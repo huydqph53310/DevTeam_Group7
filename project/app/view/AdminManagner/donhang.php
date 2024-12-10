@@ -394,17 +394,17 @@
           data-bs-parent="#sidebar-nav"
         >
           <li>
-            <a href="Show_user.html" class="active">
+            <a href="?wh=listAcc" class="active">
               <i class="bi bi-circle"></i><span>Danh Sách Tài khoản</span>
             </a>
           </li>
           <li>
-            <a href="Show_product.html">
+            <a href="?wh=listProduct">
               <i class="bi bi-circle"></i><span>Danh sách sản phẩm</span>
             </a>
           </li>
           <li>
-            <a href="donhang.html">
+            <a href="?wh=ListOders">
               <i class="bi bi-circle"></i><span>Danh sách đơn hàng</span>
             </a>
           </li>

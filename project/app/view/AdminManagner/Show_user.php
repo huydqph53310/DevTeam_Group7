@@ -440,7 +440,6 @@
     <section class="section">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Table with stripped rows</h5>
               <!-- Table with stripped rows -->
               <table class="table table-striped">
                 <table class="table">
@@ -455,10 +454,11 @@
                       </tr>
                   </thead>
                   <tbody>
+                  <?php foreach($accounts as $account): ?>
                       <tr>
-                          <td>1</td>
-                          <td>Nguyễn Văn A</td>
-                          <td>nguyenvana@email.com</td>
+                          <td><?=$account['users_id']?></td>
+                          <td><?=$account['username']?></td>
+                          <td><?=$account['email']?></td>
                           <td>Khách hàng</td>
                           <td>Đang hoạt động</td>
                           <td>
@@ -466,17 +466,8 @@
                               <button class="btn btn-danger" data-toggle="modal" data-target="#lockUserModal">Khóa</button>
                           </td>
                       </tr>
-                      <tr>
-                          <td>2</td>
-                          <td>Trần Thị B</td>
-                          <td>tranthib@email.com</td>
-                          <td>Admin</td>
-                          <td>Đang hoạt động</td>
-                          <td>
-                              <button class="btn btn-warning" onclick="openRoleModal(2)">Phân quyền</button>
-                              <button class="btn btn-danger" data-toggle="modal" data-target="#lockUserModal">Khóa</button>
-                          </td>
-                      </tr>
+                      <?php endforeach;?>
+
                   </tbody>
               </table>
               </table>

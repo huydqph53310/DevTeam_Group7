@@ -1,0 +1,106 @@
+[
+    {
+        "brand_id": 1,
+        "name": "Apple",
+        "country": "USA",
+        "founded_year": 1976,
+        "description": "Apple Inc. is an American multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 2,
+        "name": "Dell",
+        "country": "USA",
+        "founded_year": 1984,
+        "description": "Dell Technologies is a global leader in IT, technology solutions, and services.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 3,
+        "name": "HP",
+        "country": "USA",
+        "founded_year": 1939,
+        "description": "Hewlett-Packard, commonly referred to as HP, is a multinational information technology company that provides hardware, software, and services.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 4,
+        "name": "Lenovo",
+        "country": "China",
+        "founded_year": 1984,
+        "description": "Lenovo Group is a Chinese multinational technology company that designs, manufactures, and sells consumer electronics, personal computers, and related services.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 5,
+        "name": "Acer",
+        "country": "Taiwan",
+        "founded_year": 1976,
+        "description": "Acer Inc. is a Taiwanese multinational hardware and electronics corporation that specializes in advanced electronics technology, including computers and peripherals.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 6,
+        "name": "Asus",
+        "country": "Taiwan",
+        "founded_year": 1989,
+        "description": "ASUS is a Taiwanese multinational computer and phone hardware and electronics company known for its high-performance computing solutions.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 7,
+        "name": "Microsoft",
+        "country": "USA",
+        "founded_year": 1975,
+        "description": "Microsoft Corporation is an American multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, and personal computers and services.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 8,
+        "name": "Razer",
+        "country": "Singapore",
+        "founded_year": 2005,
+        "description": "Razer Inc. is a global gaming hardware manufacturing company known for its gaming laptops, accessories, and peripherals.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 9,
+        "name": "Samsung",
+        "country": "South Korea",
+        "founded_year": 1938,
+        "description": "Samsung Electronics is a South Korean multinational conglomerate that manufactures consumer electronics, semiconductors, and telecommunications equipment.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 10,
+        "name": "Sony",
+        "country": "Japan",
+        "founded_year": 1946,
+        "description": "Sony Corporation is a Japanese multinational conglomerate corporation that designs and manufactures consumer and professional electronics, gaming, and entertainment products.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 11,
+        "name": "Huawei",
+        "country": "China",
+        "founded_year": 1987,
+        "description": "Huawei Technologies Co., Ltd. is a Chinese multinational technology company that designs and manufactures telecommunications equipment and consumer electronics.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 12,
+        "name": "Toshiba",
+        "country": "Japan",
+        "founded_year": 1939,
+        "description": "Toshiba Corporation is a Japanese multinational conglomerate known for its products in various sectors, including electronics, energy, and industrial systems.",
+        "created_at": "2024-12-01 23:21:32"
+    },
+    {
+        "brand_id": 13,
+        "name": "MSI",
+        "country": "Taiwan",
+        "founded_year": 1986,
+        "description": "Micro-Star International Co., Ltd. is a Taiwanese multinational information technology corporation that manufactures computer hardware, laptops, and consumer electronics.",
+        "created_at": "2024-12-01 23:21:32"
+    }
+]

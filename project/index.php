@@ -13,11 +13,16 @@ include_once 'app/model/user/ClientModel.php';
 include_once 'app/model/ProductmModel/Product.php';
 include_once 'app/model/ProductmModel/AddCart.php';
 include_once 'app/model/ProductmModel/Carts.php';
+include_once 'app/model/User.php';
+include_once 'app/model/Oder.php';
 
 
 // controller
 // include_once 'app/controller/AdminController/AdminController.php';
 include_once 'app/controller/RouterController.php';
+include_once 'app/controller/AdminController/ListAccountController.php';
+include_once 'app/controller/AdminController/ListProductController.php';
+include_once 'app/controller/AdminController/ListOdersController.php';
 include_once 'app/controller/UsersController/InfoUserController.php';
 include_once 'app/controller/UsersController/Cart.php';
 include_once 'app/controller/UsersController/ChangePassController.php';
@@ -104,6 +109,15 @@ switch ($router->GETURL()) {
         break;
     case "disconnect":
         include "app/view/Disconnect.php";
+        break;
+    case "listAcc":
+        (new ListAccountController())->GetListAccount();
+        break;
+    case "listProduct":
+        (new ListProductController())->GetListProduct();
+        break;
+    case "ListOders":
+        (new ListOdersController())->GetListOder();
         break;
     default:
         include "app/view/404.php";
