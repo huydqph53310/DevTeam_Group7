@@ -43,12 +43,16 @@
 
                             <?php
                                     $totalQuantity = 0;
-                                    foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) {
-                                        $totalQuantity += $items['quantity'];  // Tính tổng giá trị của từng sản phẩm
-                                    }
-                                    echo  $totalQuantity
+                                    foreach ((new Carts())->getListProductByIdUser($_SESSION["id"]) as $items) { ?>
                                     
-                            ?>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Apple Ipad 4 Wifi 16GB</h6>
+                                    <small class="text-muted">11800000.00 x 2</small>
+                                </div>
+                                <span class="text-muted">23600000</span>
+                            </li>
+                                    <?php  }?>
                             
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Tổng thành tiền</span>
