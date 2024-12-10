@@ -255,7 +255,7 @@
 								<div class="content-r">
 									Địa chỉ:
 									<p>
-										Xuân Thủy, Hà Nội
+										13 Trịnh Văn Bô, Hà Nội
 									</p>
 								</div>
 							</div>

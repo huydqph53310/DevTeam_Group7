@@ -112,11 +112,11 @@
                         </span>
                     </h4>
                     <ul>
-                        <li>Copyright@ 2023 Công ty cổ phần thương mại Ego Mobicon</li>
+                        <li>Copyright@ 2023 Công ty cổ phần thương mại F-Mchine</li>
                         <li>Chứng nhận ĐKKD số: 038828xxxx do sở KH & ĐT TP.Hà Nội cấp</li>
-                        <li>Địa chỉ: Xuân Thủy, Hà Nội</li>
+                        <li>Địa chỉ: 13 Trịnh Văn Bô - Xuân Phương - Nam Từ Liêm - Hà Nội</li>
                         <li>Điện thoại: <a class="fone" href="tel:19006750">19006750</a>
-                            - Email: <a href="mailto:support@sapo.vn">support@sapo.vn</a></li>
+                            - Email: <a href="mailto:support@sapo.vn">support@devteam.vn</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -182,26 +182,20 @@
                 <div class="row tablet">
                     <div id="copyright" class="col-lg-6 col-md-6 col-12">
                         <div class="wsp">
-                            Bản quyền thuộc về <a href="https://boronco-template.mysapo.net/">Ego Corp</a>
+                            Bản quyền thuộc về <a href="https://boronco-template.mysapo.net/">F-Mchine</a>
                             <span class="opacity1">
                                 Cung cấp bởi
                                 <a href="https://www.sapo.vn/?utm_campaign=cpn:kho_theme-plm:footer&utm_source=Tu_nhien&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=kho_theme-sapo"
-                                    rel="noopener" title="Sapo" target="_blank">Sapo</a>
+                                    rel="noopener" title="Sapo" target="_blank">Fpoly</a>
                             </span>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 text-right d-none d-lg-block">
                         <ul>
 
-                            <li><a href="/dien-thoai-tablet" title="Điện thoại, tablet">Điện thoại, tablet</a></li>
+                            <li><a href="/dien-thoai-tablet" title="Điện thoại, tablet">Phụ Kiện</a></li>
 
                             <li><a href="/laptop" title="Laptop">Laptop</a></li>
-
-                            <li><a href="/phu-kien" title="Phụ kiện">Phụ kiện</a></li>
-
-                            <li><a href="/am-thanh" title="Âm thanh">Âm thanh</a></li>
-
-                            <li><a href="/collections/all" title="Sản phẩm">Sản phẩm</a></li>
 
                         </ul>
                     </div>
