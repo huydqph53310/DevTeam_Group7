@@ -240,24 +240,24 @@
 					
 					<div class="CartPageContainer cart-container">
 						<div class="row">
+							
 							<div class="col-lg-9 col-12">
-								<form action="/cart" method="post" novalidate class="cart ajaxcart cart-mobile cartpage">
-									<div class="cart-header-info">
+							<div class="cart-header-info">
 										<div>Thông tin sản phẩm</div><div>Đơn giá</div><div>Số lượng</div><div>Thành tiền</div>
 									</div>
+									<?php foreach ($cart as $item) {?>
+								<form action="" method="post" novalidate class="cart ajaxcart cart-mobile cartpage">	
 									<div id="cart-content" class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body body-cart-page items">
-
-										<div class="ajaxcart__product cart_product" data-qty="1000000" data-variant="106946027" data-url="/apple-iphone-14-pro-max-128gb-vn-a" data-line="1">
-											<a href="/apple-iphone-14-pro-max-128gb-vn-a" class="ajaxcart__product-image cart_image" title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><img src="//bizweb.dktcdn.net/thumb/compact/100/507/051/products/1.jpg?v=1704424297997" alt=""></a>
+										<div class="ajaxcart__product cart_product" data-qty="1000000" data-variant="106946027" data-url="public/img/product/<?php echo (new Product())->getBrandNameById($item["brand_id"]) ?>/<?= $item["product_name"] ?>/0.png" data-line="1">
+											<a href="?wh=sanpham&id=<?= $item["product_id"]?>" class="ajaxcart__product-image cart_image" title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><img src="public/img/product/<?php echo (new Product())->getBrandNameById($item["brand_id"]) ?>/<?= $item["product_name"] ?>/0.png" alt=""></a>
 												<div class="grid__item cart_info">
 													<div class="ajaxcart__product-name-wrapper cart_name">
-														<a href="/apple-iphone-14-pro-max-128gb-vn-a" class="ajaxcart__product-name h4" title="Apple iPhone 14 Pro Max 128Gb (VN/A)">Apple iPhone 14 Pro Max 128Gb (VN/A)</a>
-													
+														<a href="?wh=sanpham&id=<?= $item["product_id"]?>" class="ajaxcart__product-name h4" title="<?=  $item['product_name']?>"><?=  $item['product_name']?></a>
 														<a onclick="CartBase.removeItemCart(this);" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-alias="/apple-iphone-14-pro-max-128gb-vn-a" data-line="1" title="Xóa">Xóa</a>
 													</div>
 													<div class="grid">
 														<div class="grid__item one-half text-right cart_prices">
-															<span class="cart-price">27.000.000₫</span>
+															<span class="cart-price"><?= number_format($item['price'] * 24000, 0, ',', '.') . ''?>₫</span>
 															<span class="cart-price-compare"></span>
 														</div>
 													</div>
@@ -265,30 +265,27 @@
 														<div class="grid__item one-half cart_select">
                                                         <div
                                                                 class="custom custom-btn-numbers clearfix input_number_product">
-                                                                <button
-                                                                    onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty) & qty > 1 ) result.value--;return false;"
-                                                                    class="btn-minus btn-cts" type="button">–</button>
+																<input type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>">
+                                                                <button class="btn-minus btn-cts" type="submit" name="downQuantity">–</button>
                                                                 <input aria-label="Số lượng" readonly type="text"
                                                                     class="qty input-text" id="qty" name="quantity"
-                                                                    size="4" value="1" maxlength="3"
-                                                                    onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-                                                                    onchange="if(this.value == 0)this.value=1;" />
-                                                                <button
-                                                                    onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;"
-                                                                    class="btn-plus btn-cts" type="button">+</button>
+                                                                    size="4" value="<?php echo $item['quantity']?>" maxlength="3"
+                                                                    onchange="if(this.value == 0)this.value=<?php echo $item['quantity']?>;" />
+																<button class="btn-minus btn-cts" type="submit" name="upQuantity">+</button>
                                                             </div>
 														</div>
 													</div>
 													<div class="grid line-price">
 														<div class="grid__item one-half text-right cart_prices">
-															<span class="cart-price">27.000.000 ₫</span>
+															<span class="cart-price"><?= number_format($item['price'] * 24000, 0, ',', '.') . ''?>₫</span>
 														</div>
 													</div>
 												</div>
 											</div>
-
 									</div>
+								
 								</form>
+								<?php }?>
 							</div>
 							<div class="col-lg-3 col-12">
 								<div class="wrap-vat colrightvat">
@@ -359,11 +356,18 @@
 									</form>
 									<div class="cart__subtotal">
 										<div class="cart__col-6">Tổng tiền:</div>
-										<div class="text-right cart__totle"><span class="total-price">27.000.000₫</span></div>
+										<?php 
+										
+										foreach ($cart as $items) {
+											$totalAmount += $items['price'] * $items['quantity'];  // Tính tổng giá trị của từng sản phẩm
+										}
+										?>
+										<div class="text-right cart__totle"><span class="total-price"><?= number_format($totalAmount * 24000 , 0, ',', '.') . ''?>₫</span></div>
 									</div>
 
 									<div class="cart__btn-proceed-checkout-dt">
-										<button type="button" onclick='goToCheckout(event)' class="button btn btn-checkout button-default cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+										<a href="?wh=checkout"><button type="button" class="button btn btn-checkout button-default" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button></a>
+										
 									</div>
 								</div>
 							</div>

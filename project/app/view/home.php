@@ -6,8 +6,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7); /* Làm tối với độ mờ */
-        z-index: 1000; /* Đặt lên trên các nội dung khác */
+        background: rgba(0, 0, 0, 0.7);
+        /* Làm tối với độ mờ */
+        z-index: 1000;
+        /* Đặt lên trên các nội dung khác */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,8 +18,10 @@
     /* Nội dung của popup */
     #popupContent {
         background: white;
-        width: 70%; /* Chiếm 70% chiều rộng màn hình */
-        height: 70%; /* Chiếm 70% chiều cao màn hình */
+        width: 70%;
+        /* Chiếm 70% chiều rộng màn hình */
+        height: 80%;
+        /* Chiếm 70% chiều cao màn hình */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -28,19 +32,19 @@
     /* Nút đóng */
     #popupContent button {
         position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
         border: none;
-        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
         cursor: pointer;
+        outline: none;
     }
 
     #popupContent button:hover {
-        background-color: #0056b3;
+        color: #e74c3c;
     }
 </style>
 
@@ -56,25 +60,36 @@
     <script type="text/javascript" src="//bizweb.dktcdn.net/assets/themes_support/api.jquery.js"></script>
     <script src="//bizweb.dktcdn.net/assets/themes_support/option-selectors.js"></script>
     <main>
-    <script>
-    // Hiển thị popup khi tải trang
-    window.onload = function () {
-        document.getElementById("popup").style.display = "flex";
-    };
+        <script>
+            // Hiển thị popup khi tải trang
+            window.onload = function() {
+                document.getElementById("popup").style.display = "flex";
+            };
 
-    // Đóng popup
-    function closePopup() {
-        document.getElementById("popup").style.display = "none";
-    }
-</script>
-<div id="popup" style="display: none;">
-    <div id="popupContent">
-        <h2>Thông báo khuyến mãi</h2>
-        <p>Giảm giá lên đến 50% cho tất cả các sản phẩm! Nhanh tay đặt hàng ngay!</p>
-        <button onclick="closePopup()">Đóng</button>
-    </div>
-</div>
-        <h1 class="d-none">Ego Mobile - Thế giới mobile cho mọi nhà</h1>
+            // Đóng popup
+            function closePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+        </script>
+        <div id="popup" style="display: none;">
+            <div id="popupContent">
+                <h2>Thông báo khuyến mãi</h2>
+                <p>Giảm giá lên đến 50% cho tất cả các sản phẩm! Nhanh tay đặt hàng ngay!</p>
+                <picture>
+                    <source media="(min-width: 1200px)"
+                        srcset="public/img/banner/2.png">
+                    <source media="(min-width: 992px)"
+                        srcset="public/img/banner/2.png">
+                    <source media="(min-width: 569px)"
+                        srcset="public/img/banner/2.png">
+                    <source media="(max-width: 480px)"
+                        srcset="//bizweb.dktcdn.net/thumb/large/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286">
+                    <img src="/public/img/banner/2.png"
+                        alt="Sale lớn chào hè" class="img-responsive center-block" />
+                </picture>
+                <button onclick="closePopup()">ⓧ</button>
+            </div>
+        </div>
         <section style="margin-bottom:20px;">
             <div class="section-slide-banner">
                 <div class="container">
@@ -88,28 +103,28 @@
                                         <a href="#" class="clearfix swiper-slide" title="Sale lớn chào hè">
                                             <picture>
                                                 <source media="(min-width: 1200px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286">
+                                                    srcset="public/img/banner/2.png">
                                                 <source media="(min-width: 992px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286">
+                                                    srcset="public/img/banner/2.png">
                                                 <source media="(min-width: 569px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286">
+                                                    srcset="public/img/banner/2.png">
                                                 <source media="(max-width: 480px)"
                                                     srcset="//bizweb.dktcdn.net/thumb/large/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286">
-                                                <img src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_1.jpg?1731407153286"
+                                                <img src="/public/img/banner/2.png"
                                                     alt="Sale lớn chào hè" class="img-responsive center-block" />
                                             </picture>
                                         </a>
                                         <a href="#" class="clearfix swiper-slide" title="Cuối tuần XẢ VÍ">
                                             <picture>
                                                 <source media="(min-width: 1200px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_2.jpg?1731407153286">
+                                                    srcset="public/img/banner/1.png">
                                                 <source media="(min-width: 992px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_2.jpg?1731407153286">
+                                                    srcset="public/img/banner/1.png">
                                                 <source media="(min-width: 569px)"
-                                                    srcset="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_2.jpg?1731407153286">
+                                                    srcset="public/img/banner/1.png">
                                                 <source media="(max-width: 480px)"
-                                                    srcset="//bizweb.dktcdn.net/thumb/large/100/507/051/themes/936909/assets/slider_2.jpg?1731407153286">
-                                                <img src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/slider_2.jpg?1731407153286"
+                                                    srcset="public/img/banner/1.png">
+                                                <img src="public/img/banner/1.png"
                                                     alt="Cuối tuần XẢ VÍ" class="img-responsive center-block" />
                                             </picture>
                                         </a>
@@ -246,16 +261,16 @@
                                                             class="variants product-action item_product_main" data-cart-form
                                                             data-id="product-actions-34149032"
                                                             enctype="multipart/form-data">
-                                                            <a class="image_thumb" href="?wh=sanpham&id=<?= $b["product_id"]?>"
-                                                                title="<?= $b["product_name"]?>">
+                                                            <a class="image_thumb" href="?wh=sanpham&id=<?= $b["product_id"] ?>"
+                                                                title="<?= $b["product_name"] ?>">
                                                                 <span class="label-sale ">
                                                                     Giảm
                                                                     5%
                                                                 </span>
                                                                 <img width="214" height="214" style="transform:scale(0.9)"
-                                                                    src='public/img/product/Asus/<?= $b["product_name"]?>/0.png'
-                                                                    data-src='public/img/product/<?php echo (new Product())->getBrandNameById($b["brand_id"])?>/<?= $b["product_name"]?>/0.png'
-                                                                    alt="<?= $b["product_name"]?>"
+                                                                    src='public/img/product/Asus/<?= $b["product_name"] ?>/0.png'
+                                                                    data-src='public/img/product/<?php echo (new Product())->getBrandNameById($b["brand_id"]) ?>/<?= $b["product_name"] ?>/0.png'
+                                                                    alt="<?= $b["product_name"] ?>"
                                                                     class="lazyload img-responsive center-block" />
                                                                 <img width="214" height="214" class="lazyload frame"
                                                                     data-src="//bizweb.dktcdn.net/thumb/medium/100/507/051/themes/936909/assets/frame1.png?1731407153286"
@@ -275,32 +290,22 @@
                                                             <div class="info-product">
                                                                 <h3 class="product-name"><a
                                                                         href="/"
-                                                                        title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><?= $b["product_name"]?></a></h3>
+                                                                        title="Apple iPhone 14 Pro Max 128Gb (VN/A)"><?= $b["product_name"] ?></a></h3>
                                                                 <div class="price-action">
                                                                     <div class="price-box">
                                                                         <span class="price"><?= number_format($b["price"] * 24000 - 2400000, 0, ',', '.') ?>₫</span>
                                                                         <span class="compare-price"><?= number_format($b["price"] * 24000, 0, ',', '.') ?>₫</span>
                                                                     </div>
                                                                     <div class="action-cart">
-                                                                        <span class="more-action">
-                                                                            <svg class="icon">
+                                                                        <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
+                                                                            <svg class="icon svg-cart">
                                                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                    xlink:href="#plusicon"></use>
+                                                                                    xlink:href="#addcarticon">
+                                                                                </use>
                                                                             </svg>
-                                                                        </span>
-                                                                        <div class="group-action">
-                                                                            <input type="hidden" name="variantId"
-                                                                                data-qty="1000000" value="106946027" />
-                                                                            <button data-text="Thêm vào giỏ"
-                                                                                class="btn-buy btn-left btn-views add_to_cart "
-                                                                                title="Thêm vào giỏ">
-                                                                                <svg class="icon svg-cart">
-                                                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                                        xlink:href="#addcarticon"></use>
-                                                                                </svg>
-                                                                            </button>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
+
                                                                 </div>
                                                                 <div class="quantity_sale" style="display:none">
                                                                     <div class="titlecount">
@@ -365,9 +370,9 @@
                                 <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">Sản phẩm nổi bật</a>
                             </h2>
                             <ul class="nav-bar-menu">
-                                <?php foreach($topBrand as $a) {?>
-                                <li><a href="?wh=brand&id=<?= $a["name"]?>" title="<?= $a["name"]?>"><?= $a["name"]?></a></li>
-                                <?php }?>
+                                <?php foreach ($topBrand as $a) { ?>
+                                    <li><a href="?wh=brand&id=<?= $a["name"] ?>" title="<?= $a["name"] ?>"><?= $a["name"] ?></a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                         <div class="row">
@@ -384,7 +389,7 @@
                                             </span>
                                             <img width="214" height="214" style="transform:scale(0.9)"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
-                                                data-src='public/img/product/<?php echo (new Product())->getBrandNameById($a["brand_id"])?>/<?= $a["product_name"]?>/0.png'
+                                                data-src='public/img/product/<?php echo (new Product())->getBrandNameById($a["brand_id"]) ?>/<?= $a["product_name"] ?>/0.png'
                                                 alt="<?= $a["product_name"] ?>"
                                                 class="lazyload img-responsive center-block" />
                                             <img width="214" height="214" class="lazyload frame"
@@ -408,24 +413,13 @@
                                                     <span class="compare-price"><?= number_format($a["price"] * 24000, 0, ',', '.') ?>₫</span>
                                                 </div>
                                                 <div class="action-cart">
-                                                    <span class="more-action">
-                                                        <svg class="icon">
+                                                    <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
+                                                        <svg class="icon svg-cart">
                                                             <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#plusicon"></use>
+                                                                xlink:href="#addcarticon">
+                                                            </use>
                                                         </svg>
-                                                    </span>
-                                                    <div class="group-action">
-                                                        <input type="hidden" name="variantId" data-qty="1000000"
-                                                            value="106946027" />
-                                                        <button data-text="Thêm vào giỏ"
-                                                            class="btn-buy btn-left btn-views add_to_cart "
-                                                            title="Thêm vào giỏ">
-                                                            <svg class="icon svg-cart">
-                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                    xlink:href="#addcarticon"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="nowship">
@@ -509,16 +503,13 @@
                                                             </svg>
                                                         </span>
                                                         <div class="group-action">
-                                                            <input type="hidden" name="variantId" data-qty="1000000"
-                                                                value="107035936" />
-                                                            <button data-text="Thêm vào giỏ"
-                                                                class="btn-buy btn-left btn-views add_to_cart "
-                                                                title="Thêm vào giỏ">
+                                                            <a href="?wh=add" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
                                                                 <svg class="icon svg-cart">
                                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        xlink:href="#addcarticon"></use>
+                                                                        xlink:href="#addcarticon">
+                                                                    </use>
                                                                 </svg>
-                                                            </button>
+                                                            </a>
                                                             <a class="quick-view btn-views" data-text="Xem nhanh"
                                                                 href="javascript:;" title="Xem nhanh"
                                                                 onclick="onQuickView(this);"

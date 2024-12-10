@@ -11,6 +11,10 @@ include_once 'config/ConnectDatabase.php';
 // model
 include_once 'app/model/user/ClientModel.php';
 include_once 'app/model/ProductmModel/Product.php';
+include_once 'app/model/ProductmModel/AddCart.php';
+include_once 'app/model/ProductmModel/Carts.php';
+
+
 // controller
 // include_once 'app/controller/AdminController/AdminController.php';
 include_once 'app/controller/RouterController.php';
@@ -66,6 +70,9 @@ switch ($router->GETURL()) {
         break;
     case "cart":
         (new Cart())->Cart();
+        break;
+    case "add":
+        (new AddCart())->AddCart($_SESSION["id"],$router->getId(), 1 );
         break;
     case "admin":
         include "app/view/AdminManagner/HomeAdmin.php";

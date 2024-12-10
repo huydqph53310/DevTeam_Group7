@@ -257,7 +257,7 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
                 <div class="col-lg-3 col-xl-3 col-md-3  col-logo ">
                     <a title="logo Ego Mobile" href="?wh=home" class="logo">
                         <img width="240" height="56"
-                            src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/logo.png?1731407153286"
+                            src="public/img/Logo/0.png"
                             alt="Fmachine">
                     </a>
                 </div>

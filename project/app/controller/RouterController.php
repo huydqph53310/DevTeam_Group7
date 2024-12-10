@@ -4,6 +4,9 @@ class RouterController extends ConnectDatabase
     public $connect;
     public function Trangchu()
     {
+        if(isset($_POST["Addtocard"])){
+            var_dump($_POST);
+        }
         $product = (new Product())->TopListProductPriceDESC(12);
         $allProduct = (new Product())->ListProduct();
         $allCountCllick = (new Product())->TopProductCountClickDESC();
@@ -38,6 +41,15 @@ class RouterController extends ConnectDatabase
         if (isset($_GET["id"])) {
             $id = $_GET["id"];
             return $id;
+        }
+    }
+    
+    public function getparams()
+    {
+        $i = "";
+        if (isset($_GET["i"])) {
+            $i = $_GET["i"];
+            return $i;
         }
     }
 }
