@@ -253,7 +253,7 @@
 												<div class="grid__item cart_info">
 													<div class="ajaxcart__product-name-wrapper cart_name">
 														<a href="?wh=sanpham&id=<?= $item["product_id"]?>" class="ajaxcart__product-name h4" title="<?=  $item['product_name']?>"><?=  $item['product_name']?></a>
-														<a onclick="CartBase.removeItemCart(this);" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-alias="/apple-iphone-14-pro-max-128gb-vn-a" data-line="1" title="Xóa">Xóa</a>
+														<a onclick="CartBase.removeItemCart(this);" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" title="Xóa">Xóa</a>
 													</div>
 													<div class="grid">
 														<div class="grid__item one-half text-right cart_prices">
@@ -277,7 +277,7 @@
 													</div>
 													<div class="grid line-price">
 														<div class="grid__item one-half text-right cart_prices">
-															<span class="cart-price"><?= number_format($item['price'] * 24000, 0, ',', '.') . ''?>₫</span>
+															<span class="cart-price"><?= number_format($item['price'] * $item["quantity"] * 24000, 0, ',', '.') . ''?>₫</span>
 														</div>
 													</div>
 												</div>
