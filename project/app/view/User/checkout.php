@@ -8,12 +8,12 @@
     <title>Thanh Toán F-MCHINE</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="public/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="public/assets/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Custom css - Các file css do chúng ta tự viết -->
-    <link rel="stylesheet" href="../assets/css/app.css" type="text/css">
+    <link rel="stylesheet" href="public/assets/css/app.css" type="text/css">
 </head>
 
 <body>
@@ -141,12 +141,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/popperjs/popper.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="public/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="public/assets/vendor/popperjs/popper.min.js"></script>
+    <script src="public/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom script - Các file js do mình tự viết -->
-    <script src="../assets/js/app.js"></script>
+    <script src="public/assets/assets/js/app.js"></script>
 
 </body>
 
