@@ -311,7 +311,7 @@
                                                                         <span class="compare-price"><?= number_format($b["price"] * 24000, 0, ',', '.') ?>₫</span>
                                                                     </div>
                                                                     <div class="action-cart">
-                                                                        <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
+                                                                        <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ" onclick="alert('Thêm sản phẩm thành công')">
                                                                             <svg class="icon svg-cart">
                                                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                                                     xlink:href="#addcarticon">
@@ -427,7 +427,7 @@
                                                     <span class="compare-price"><?= number_format($a["price"] * 24000, 0, ',', '.') ?>₫</span>
                                                 </div>
                                                 <div class="action-cart">
-                                                    <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
+                                                    <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ" onclick="alert('Thêm sản phẩm thành công')">
                                                         <svg class="icon svg-cart">
                                                             <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                                 xlink:href="#addcarticon">

@@ -38,6 +38,17 @@ class Product extends ConnectDatabase
         }
     }
 
+    public function LocSanPhamTheoIDBrand($id)
+    {
+        try {
+            $stmt = $this->connect->prepare("SELECT * FROM `products` WHERE `brand_id` = $id");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (Throwable $th) {
+            //throw $th;
+        }
+    }
+
     // đọc số ảnh trong file
     function countImagesByNamePattern($directory) {
         if (!is_dir($directory)) {

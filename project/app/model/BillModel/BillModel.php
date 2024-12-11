@@ -18,29 +18,32 @@ class BillModel extends ConnectDatabase
 
     public function createBill($userId, $totalAmount, $status, $paymentMethod, $shippingAddress, $note)
     {
-        $sql = "INSERT INTO bill (users_id, total_amount, status, created_at, payment_method, shipping_address, note) 
-                VALUES (:users_id, :total_amount, :status, NOW(), :payment_method, :shipping_address, :note)";
-        $stmt = $this->connect->prepare($sql);
-
-        // Thay giá trị nếu cần chuyển đổi kiểu
-        if (is_numeric($status)) {
-            $status = (string)$status; // Chuyển số thành chuỗi nếu cần
+        try {
+            $sql = "INSERT INTO bill (users_id, total_amount, status, created_at, payment_method, shipping_address, note, payment_status) 
+                    VALUES (:users_id, :total_amount, :status, NOW(), :payment_method, :shipping_address, :note)";
+            $stmt = $this->connect->prepare($sql);
+    
+            // Ràng buộc giá trị cho câu lệnh SQL
+            $stmt->bindParam(':users_id', $userId, PDO::PARAM_INT);
+            $stmt->bindParam(':total_amount', $totalAmount, PDO::PARAM_STR);
+            $stmt->bindParam(':status', $status, PDO::PARAM_STR);
+            $stmt->bindParam(':payment_method', $paymentMethod, PDO::PARAM_STR);
+            $stmt->bindParam(':shipping_address', $shippingAddress, PDO::PARAM_STR);
+            $stmt->bindParam(':note', $note, PDO::PARAM_STR);
+    
+            // Thực thi câu lệnh SQL
+            if ($stmt->execute()) {
+                return $this->connect->lastInsertId(); // Trả về ID hóa đơn vừa được tạo
+            }
+    
+            // Nếu thêm thất bại, trả về false
+            return false;
+    
+        } catch (PDOException $e) {
+            // Ghi log hoặc thông báo lỗi khi có ngoại lệ
+            error_log("Lỗi khi thêm hóa đơn: " . $e->getMessage());
+            return false;
         }
-
-        if (is_numeric($paymentMethod)) {
-            $paymentMethod = (string)$paymentMethod; // Chuyển số thành chuỗi nếu cần
-        }
-        $stmt->bindParam(':users_id', $userId, PDO::PARAM_INT);
-        $stmt->bindParam(':total_amount', $totalAmount, PDO::PARAM_STR);
-        $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-        $stmt->bindParam(':payment_method', $paymentMethod, PDO::PARAM_STR);
-        $stmt->bindParam(':shipping_address', $shippingAddress, PDO::PARAM_STR);
-        $stmt->bindParam(':note', $note, PDO::PARAM_STR);
-
-        if ($stmt->execute()) {
-            return $this->connect->lastInsertId(); // Trả về ID hóa đơn vừa được tạo
-        }
-        return false; // Trả về false nếu thêm thất bại
     }
 
     public function addDetailBill($billId, $productId, $quantity, $price)
@@ -82,24 +85,25 @@ class BillModel extends ConnectDatabase
 
     // Lấy danh sách của toàn bộ hóa đơn
 
-   public function getOrderById($orderId) {
-    // Kết nối đến cơ sở dữ liệu
-    // Chuẩn bị câu truy vấn SQL
-    $sql = "SELECT * FROM bill WHERE id = :id";
-    $stmt = $this->connect->prepare($sql);
+    public function getOrderById($orderId)
+    {
+        // Kết nối đến cơ sở dữ liệu
+        // Chuẩn bị câu truy vấn SQL
+        $sql = "SELECT * FROM bill WHERE id = :id";
+        $stmt = $this->connect->prepare($sql);
 
-    // Bind giá trị cho tham số :id
-    $stmt->bindParam(':id', $orderId, PDO::PARAM_INT);
+        // Bind giá trị cho tham số :id
+        $stmt->bindParam(':id', $orderId, PDO::PARAM_INT);
 
-    // Thực thi câu truy vấn
-    $stmt->execute();
+        // Thực thi câu truy vấn
+        $stmt->execute();
 
-    // Lấy dữ liệu từ câu truy vấn
-    $order = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Lấy dữ liệu từ câu truy vấn
+        $order = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-    return $order;
-}
+        return $order;
+    }
     // lấy danh sách hóa đơn theo ngày
 
     public function getbillsByDate($id, $data)
@@ -111,6 +115,25 @@ class BillModel extends ConnectDatabase
         }
     }
 
+    public function DelItem($id)
+    {
+        try {
+            $sql = "DELETE FROM cart_items WHERE cart_item_id = :id";
+            $stmt = $this->connect->prepare($sql);
+
+            // Liên kết giá trị vào tham số
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+            // Thực thi câu lệnh
+            if ($stmt->execute()) {
+                echo "Sản phẩm đã được xóa khỏi giỏ hàng.";
+            } else {
+                echo "Có lỗi khi xóa sản phẩm.";
+            }
+        } catch (Exception $err) {
+            echo $err->getMessage();
+        }
+    }
 
     // Gửi dữ liệu tính toán tổng doanh thu tất cả các hóa đơn
     public function getTotalRevenue()
@@ -120,7 +143,7 @@ class BillModel extends ConnectDatabase
             $stmt = $this->connect->prepare($query);
             $stmt->execute(['user_id' => $_SESSION['id']]); // Giả sử user_id lưu trong session         
             // Kiểm tra xem có dữ liệu hay không
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);          
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             // Nếu có dữ liệu thì trả về dữ liệu, nếu không thì trả về null
             if (count($result) > 0) {
                 return $result; // Trả về dữ liệu

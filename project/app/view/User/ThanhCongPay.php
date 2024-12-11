@@ -95,11 +95,10 @@ ul li {
 <body>
     <div class="container">
         <div class="order-success">
-            <h1 class="success-title">Đặt Hàng Thành Công!</h1>
+            <h1 class="success-title">Thanh Toán Thành Công!</h1>
             <p class="success-message">Cảm ơn bạn đã đặt hàng tại cửa hàng của chúng tôi. Đơn hàng của bạn đã được xác nhận và sẽ được xử lý sớm nhất!</p>
             <div class="next-steps">
-                <p>Vui lòng kiểm tra email của bạn để nhận thông tin về đơn hàng và vận chuyển.</p>
-                <a href="http://127.0.0.1/duan1/project/?wh=orders" class="btn-back-home">Tiếp tục mua sắm</a>
+                <a href="http://127.0.0.1/duan1/project/?wh=orders" class="btn-back-home">Quay Lại đơn hàng</a>
             </div>
         </div>
     </div>

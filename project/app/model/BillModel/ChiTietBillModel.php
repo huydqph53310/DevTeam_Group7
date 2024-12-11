@@ -31,6 +31,17 @@ class ChiTietBillModel
             echo $err->getMessage();
         }
     }
+
+    public function updatePaystatuslBills($id, $data)
+    {
+        try {
+            $sql = "UPDATE `bill` SET `payment_status`='$data' WHERE id = $id";
+            $stmt = (new ConnectDatabase())->connect->prepare($sql)->execute();
+            return $stmt;
+        } catch (Exception $err) {
+            echo $err->getMessage();
+        }
+    }
     // Xóa
     public function deleteDetailBills($id)
     {

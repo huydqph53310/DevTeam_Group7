@@ -272,55 +272,12 @@ comparePage: 'so-sanh-san-pham',
 		<div class="swiper-button-next"><svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#nexticon"></use> </svg></div>
 	</div>
 </div>
-	<div class="category-collection white">
-		
-		<div class="wrap-cate-icon">
-			<ul class="catelist">
-				<li class="cate-img">
-					<a class="image" href="/mac" title="Mac">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Mac"/>
-					</a>
-					<a class="name-collection" href="/mac" title="Mac">Mac</a>
-				</li>
-				<li class="cate-img">
-					<a class="image" href="/lenovo" title="Lenovo">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Lenovo"/>
-					</a>
-					<a class="name-collection" href="/lenovo" title="Lenovo">Lenovo</a>
-</li>
-				<li class="cate-img">
-					<a class="image" href="/dell" title="Dell">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Dell"/>
-					</a>
-					<a class="name-collection" href="/dell" title="Dell">Dell</a>
-				</li>
-				<li class="cate-img">
-					<a class="image" href="/acer" title="Acer">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Acer"/>
-					</a>
-					<a class="name-collection" href="/acer" title="Acer">Acer</a>
-				</li>
-				<li class="cate-img">
-					<a class="image" href="/msi" title="Msi">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Msi"/>
-					</a>
-					<a class="name-collection" href="/msi" title="Msi">Msi</a>
-				</li>
-				<li class="cate-img">
-					<a class="image" href="/huawei" title="Huawei">
-						<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" data-src="//bizweb.dktcdn.net/thumb/compact/100/507/051/themes/936909/assets/default-logo.png?1731407153286" alt="Huawei"/>
-					</a>
-					<a class="name-collection" href="/huawei" title="Huawei">Huawei</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
 		BaseGlobal.navMenuScrollId('prevCate', 'nextCate', 'ul.catelist');
 	})
-</script>		<aside class="filter-sidebar sidebar left-content">
+</script>		
+<aside class="filter-sidebar sidebar left-content">
 			<div class="filter-content aside-filter">
 	<div class="filter-container">	
 		<div class="filter-container__selected-filter " style="display: none;">
@@ -331,197 +288,6 @@ comparePage: 'so-sanh-san-pham',
 			<div class="filter-container__selected-filter-list">
 				<ul></ul>
 			</div>
-		</div>
-		<div class="white filter-module">
-			<aside class="aside-item aside-itemxx filter-sort filter-dropdowns">
-<div class="sortPagiBar">
-	<div class="d-inline-flex sort-title">
-		<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sorticon"></use> </svg>
-		<span class="sort-valuer">Sắp xếp</span>
-		<span class="count--filter">0</span>
-	</div>
-	<ul>
-		<li class="btn-quick-sort alpha-asc">
-			<a href="javascript:;" onclick="sortby('alpha-asc')" title="Tên A → Z"><i></i>Tên A-Z</a>
-		</li>
-		<li class="btn-quick-sort alpha-desc">
-			<a href="javascript:;" onclick="sortby('alpha-desc')" title="Tên Z → A"><i></i>Tên Z-A</a>
-		</li>
-		<li class="btn-quick-sort price-asc">
-<a href="javascript:;" onclick="sortby('price-asc')" title="Giá thấp → cao"><i></i>Giá thấp đến cao</a>
-		</li>
-		<li class="btn-quick-sort price-desc">
-			<a href="javascript:;" onclick="sortby('price-desc')" title="Giá cao → thấp"><i></i>Giá cao xuống thấp</a>
-		</li>
-		<li class="btn-quick-sort created-desc">
-			<a href="javascript:;" onclick="sortby('created-desc')" title="Mới nhất"><i></i>Mới nhất</a>
-		</li>
-		<li class="btn-quick-sort created-asc">
-			<a href="javascript:;" onclick="sortby('created-asc')" title="Cũ nhất"><i></i>Cũ nhất</a>
-		</li>
-	</ul>
-</div>			</aside>
-
-																		
-			
-
-
-			
-						<aside class="aside-item aside-itemxx filter-type filter-dropdowns">
-				<div class="block-title">
-					<h2 class="title-module ">Bộ nhớ Ram</h2>
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-					<span class="count--filter">0</span>
-				</div>
-				<div class="aside-content filter-group">
-					<ul>
-						 
-																								<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-8gb">
-									<input type="checkbox" id="filter-8gb"  data-group="tagItem2" data-field="tags" data-text="8GB" value="(&#34;8GB&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									8GB
-								</label>
-							</span>
-						</li>
-																		<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-16gb">
-									<input type="checkbox" id="filter-16gb"  data-group="tagItem2" data-field="tags" data-text="16GB" value="(&#34;16GB&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									16GB
-								</label>
-							</span>
-						</li>
-																		<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-32gb">
-									<input type="checkbox" id="filter-32gb"  data-group="tagItem2" data-field="tags" data-text="32GB" value="(&#34;32GB&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									32GB
-								</label>
-							</span>
-						</li>
-																		<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-64gb">
-									<input type="checkbox" id="filter-64gb"  data-group="tagItem2" data-field="tags" data-text="64GB" value="(&#34;64GB&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									64GB
-								</label>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</aside>
-									
-			
-			<aside class="aside-item filter-price f-left filter-dropdowns">
-				<div class="block-title">
-					<h2 class="title-module ">Theo khoảng giá</h2>
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-					<span class="count--filter">0</span>
-				</div>
-				<div class="aside-content margin-top-0 filter-group content_price filter-item--check-box">
-					<div class="d-flex filter-group-price">
-<div class="winput relative">
-							<input class="form-control" type="text" id="startPrice"  placeholder="Từ"  value="">
-						</div>
-						<span class="line">-</span>
-						<div class="winput relative">
-							<input class="form-control" type="text" id="endPrice" placeholder="Đến" value="">
-						</div>
-					</div>
-					<div class="error price-error d-none">Vui lòng đặt khoảng giá phù hợp</div>
-					<label for="filter-prices">
-						<input type="checkbox" id="filter-prices" data-group="Khoảng giá" data-field="price_min" data-text="Giá" value="(>=1000 AND <=100000)" data-operator="OR">
-						<span class="nameprice"></span>
-					</label>
-					<button class="submitPrice button-default" id="filter-value">
-						ÁP DỤNG GIÁ
-					</button>
-				</div>
-			</aside>
-			<!-- Lọc Thương hiệu -->
-			<aside class="aside-item filter-vendor f-left filter-dropdowns">
-				<div class="block-title">
-					<h2 class="title-module ">Thương hiệu</h2>
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-					<span class="count--filter">0</span>
-				</div>
-				<div class="aside-content margin-top-0 filter-group">
-					<ul>
-						<li class="filter-item filter-item--check-box filter-item--green vendorxxx">
-							<span>
-								<label for="filter-appleds">
-									<input type="checkbox" id="filter-appleds" data-group="Hãng" data-field="vendor" data-text="Apple" value="(Apple)" data-operator="OR">
-									<i class="fa"></i>
-									<span>Apple</span>
-								</label>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</aside>
-
-			<!-- End Lọc Thương hiệu -->
-			<!-- Lọc Loại -->
-			<aside class="aside-item aside-itemxx filter-type filter-dropdowns">
-				<div class="block-title">
-					<h2 class="title-module ">Tìm theo loại</h2>
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-					<span class="count--filter">0</span>
-				</div>
-				<div class="aside-content filter-group">
-					<ul>
-						<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-may-tinh-xach-tay">
-									<input type="checkbox" id="filter-may-tinh-xach-tay"  data-group="PRODUCT_TYPE" data-field="product_type.filter_key" data-text="" value="(&#34;Máy tính xách tay&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									Máy tính xách tay
-								</label>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</aside>
-			<!-- End Lọc Loại -->
-			<aside class="aside-item aside-itemxx filter-ship filter-dropdowns">
-				<div class="block-title">
-					<h2 class="title-module ">Hình thức vận chuyển</h2>
-					<svg class="icon"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown"></use> </svg>
-					<span class="count--filter">0</span>
-				</div>
-				<div class="aside-content filter-group">
-					<ul>
-						<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-<label for="filter-nowship">
-									<input type="checkbox" id="filter-nowship"  data-group="tagItem3" data-field="tags" data-text="nowship" value="(&#34;nowship&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									<span class="nowship lazyload" data-src="//bizweb.dktcdn.net/thumb/icon/100/507/051/themes/936909/assets/nowship.png?1731407153286" style="background-repeat: no-repeat;
-																																	 padding-left: 35px; margin-top:-5px; display: inline-block;">
-										Siêu tốc tốc 2H
-									</span>
-								</label>
-							</span>
-						</li>
-						<li class="filter-item filter-item--check-box filter-item--green">
-							<span>
-								<label for="filter-shipdate-2">
-									<input type="checkbox" id="filter-shipdate-2"  data-group="tagItem3" data-field="tags" data-text="shipdate_2" value="(&#34;shipdate_2&#34;)" data-operator="OR">
-									<i class="fa"></i>
-									<span>
-										Giao trong 2 ngày
-									</span>
-								</label>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</aside>
 		</div>
 	</div>
 </div>
@@ -577,14 +343,14 @@ alt="<?= $a["product_name"] ?>"
                                                     <span class="compare-price"><?= number_format($a["price"] * 24000, 0, ',', '.') ?>₫</span>
                                                 </div>
                                                 <div class="action-cart">
-                                                    <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ">
-                                                        <svg class="icon svg-cart">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#addcarticon">
-                                                            </use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
+                                                                        <a href="?wh=add&id=<?= $b["product_id"] ?>" data-text="Thêm vào giỏ" class="btn-buy btn-left btn-views" title="Thêm vào giỏ" onclick="alert('Thêm sản phẩm thành công')">
+                                                                            <svg class="icon svg-cart">
+                                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                    xlink:href="#addcarticon">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
                                             </div>
                                             <div class="nowship">
                                                 Giao siêu tốc 2H

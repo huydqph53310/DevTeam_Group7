@@ -58,7 +58,7 @@
                             ?>
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Tổng thành tiền</span>
-                                <input type="hidden" name="thanhtien" value="<?= $totalAmount?>">
+                                <input type="hidden" name="thanhtien" value="<?= $totalAmount ?>">
                                 <strong><?= number_format($totalAmount * 24000, 0, ',', '.') ?>₫</strong>
                             </li>
                         </ul>
@@ -100,24 +100,25 @@
 
                         <div class="d-block my-3">
                             <div class="custom-control custom-radio">
-                                <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required=""
-                                    value="1">
+                                <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required="" value="1" onclick="togglePayButton()">
                                 <label class="custom-control-label" for="httt-1">Tiền mặt</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required=""
-                                    value="2">
+                                <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required="" value="2" onclick="togglePayButton()">
                                 <label class="custom-control-label" for="httt-2">Chuyển khoản</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input id="httt-3" name="httt_ma" type="radio" class="custom-control-input" required=""
-                                    value="3">
+                                <input id="httt-3" name="httt_ma" type="radio" class="custom-control-input" required="" value="3" onclick="togglePayButton()">
                                 <label class="custom-control-label" for="httt-3">Ship COD</label>
                             </div>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang">Đặt
-                            hàng</button>
+                        <button type="button" class="btn btn-success btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#qrModal" id="payButton" style="display: none;">Thanh Toán</button>
+                        <!-- Nút Thanh Toán -->
+                        <!-- <button class="btn btn-success btn-lg btn-block" type="submit" name="pay" id="payButton" style="display: none;">Thanh Toán</button> -->
+
+                        <!-- Nút Đặt Hàng -->
+                        <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang">Đặt hàng</button>
                     </div>
                 </div>
             </form>
@@ -125,7 +126,72 @@
         </div>
         <!-- End block content -->
     </main>
+    <script>
+        // Hàm kiểm tra và hiển thị/ẩn nút Thanh Toán
+        function togglePayButton() {
+            // Lấy tất cả radio buttons
+            const paymentMethods = document.querySelectorAll('input[name="httt_ma"]');
+            let isTransferSelected = false;
 
+            // Kiểm tra xem có radio nào có giá trị "2" (Chuyển khoản) được chọn không
+            paymentMethods.forEach(function(radio) {
+                if (radio.value == "2" && radio.checked) {
+                    isTransferSelected = true;
+                }
+            });
+
+            // Hiển thị nút Thanh Toán nếu chọn "Chuyển khoản", ẩn nếu không
+            const payButton = document.getElementById('payButton');
+            if (isTransferSelected) {
+                payButton.style.display = 'inline-block'; // Hiện nút Thanh Toán
+            } else {
+                payButton.style.display = 'none'; // Ẩn nút Thanh Toán
+            }
+        }
+    </script>
+    <!-- Modal -->
+     <form action="" method="post">
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md"> <!-- Thêm modal-dialog-centered -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrModalLabel">Thanh Toán</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="color: #8ddadf;"><strong>Quét mã QR bên dưới để thanh toán:</strong></p>
+                    <img src="public/img/qr.png" alt="QR Code" class="img-fluid" style="max-width: 300px; height: auto;">
+
+                    <p style="color: red;">Nhà hàng chỉ nhận thanh toán trực tuyến khi đặt hàng trên Website</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-info" data-bs-dismiss="modal" name="pay" value="paid">Đã Thanh Toán</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <script>
+        // Lấy các phần tử cần dùng
+        const modalOverlay = document.getElementById("modalOverlay");
+        const payButtons = document.querySelectorAll(".btn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+
+        // Hiển thị modal khi nhấn "Thanh Toán"
+        payButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                modalOverlay.style.display = "flex"; // Hiển thị modal
+            });
+        });
+
+        // Ẩn modal khi nhấn "Đóng"
+        closeModalBtn.addEventListener("click", () => {
+            modalOverlay.style.display = "none"; // Ẩn modal
+        });
+    </script>
     <!-- footer -->
     <footer class="footer mt-auto py-3">
         <div class="container">

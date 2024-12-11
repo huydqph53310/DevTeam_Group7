@@ -544,7 +544,7 @@
                                                                     onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN(qty) & qty > 1 ) result.value--;return false;"
                                                                     class="btn-minus btn-cts" type="button">–</button>
                                                                 <input aria-label="Số lượng" readonly type="text"
-                                                                    class="qty input-text" id="qty" name="quantity"
+                                                                    class="qty input-text" id="qty" name="quantity" 
                                                                     size="4" value="1" maxlength="3"
                                                                     onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
                                                                     onchange="if(this.value == 0)this.value=1;" />
@@ -561,7 +561,7 @@
                                                                 class="btn btn-lg btn-gray btn-tragop">Mua trả
                                                                 góp<span>Duyệt hồ sơ trong 5 phút</span></button>
                                                             <button type="submit" name="addtocart"
-                                                                class="btn btn-lg btn-gray btn-cart">Thêm
+                                                                class="btn btn-lg btn-gray btn-cart" onclick="alert('Thêm sản phẩm thành công')" >Thêm
                                                                 vào giỏ<span>Thêm trước thanh toán sau</span></button>
                                                         </div>
                                                     </div>

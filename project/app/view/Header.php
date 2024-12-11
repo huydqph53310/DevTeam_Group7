@@ -356,23 +356,11 @@ $fix = (new RouterController())->getUrl() === "home" ? "index" : "other";
 Laptop
                                         </a>
                                     </li>
-
-
-                                    <li class="nav-item  
-					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_3.png?1731407153286">
-                                        <span class="tag-style" style="background-color:#c800eb;"><span
-                                                style="background:#c800eb;"></span>HOT</span>
-                                        <a class="a-img" href="/phu-kien" title="Phụ kiện">
-                                            Phụ kiện
-                                        </a>
-                                    </li>
-
-
                                     <li class="nav-item has-child   has-mega 
 					   is-icon lazyload" data-src="//bizweb.dktcdn.net/100/507/051/themes/936909/assets/tag_image_menu_5.png?1731407153286">
                                         <span class="tag-style" style="background-color:#00a3ff;"><span
                                                 style="background:#00a3ff;"></span>NEW</span>
-                                        <a class="a-img caret-down" href="/collections/all" title="Sản phẩm">
+                                        <a class="a-img caret-down" href="?wh=listlaptop" title="Sản phẩm">
                                             Sản phẩm
                                             <svg class="icon">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icondown">
@@ -388,65 +376,17 @@ Laptop
 
                                                 <li class="level1 parent item">
                                                     <h4>
-                                                        <a href="/laptop" title="Laptop">Laptop</a>
+                                                        <a href="?wh=listlaptop" title="Laptop">Laptop</a>
                                                         <svg class="icon">
                                                             <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                                 xlink:href="#icondown"></use>
                                                         </svg>
                                                     </h4>
                                                     <ul class="level1">
-
-                                                        <li class="level2"><a href="/mac" title="Mac">Mac</a> </li>
-
-                                                        <li class="level2"><a href="/lenovo" title="Lenovo">Lenovo</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/dell" title="Dell">Dell</a>
-</li>
-
-                                                        <li class="level2"><a href="/acer" title="Acer">Acer</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/msi" title="Msi">Msi</a> </li>
-
-                                                        <li class="level2"><a href="/huawei" title="Huawei">Huawei</a>
-                                                        </li>
-
+                                                    <?php foreach ($topBrand as $a) { ?>
+                                                        <li><a href="?wh=listlaptop&id=<?= $a["brand_id"] ?>" title="<?= $a["name"] ?>"><?= $a["name"]?></a></li>
+                                                    <?php } ?>
                                                     </ul>
-                                                </li>
-
-                                                <li class="level1 parent item">
-                                                    <h4>
-                                                        <a href="/phu-kien" title="Phụ kiện">Phụ kiện</a>
-                                                        <svg class="icon">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                xlink:href="#icondown"></use>
-                                                        </svg>
-                                                    </h4>
-                                                    <ul class="level1">
-
-                                                        <li class="level2"><a href="/chuot-ban-phim"
-                                                                title="Chuột, bàn phím">Chuột, bàn phím</a> </li>
-
-                                                        <li class="level2"><a href="/pad-chuot" title="Pad chuột">Pad
-                                                                chuột</a> </li>
-
-                                                        <li class="level2"><a href="/op-lung-dien-thoai"
-                                                                title="Ốp lưng điện thoại">Ốp lưng điện thoại</a>
-                                                        </li>
-
-                                                        <li class="level2"><a href="/thiet-bi-phat-song"
-                                                                title="Thiết bị phát sóng">Thiết bị phát sóng</a>
-                                                        </li>
-
-                                                    </ul>
-                                                </li>
-
-
-
-                                                <li class="level1 item">
-                                                    <h4><a href="/pc-man-hinh" title="Pc, Màn hình">Pc, Màn hình</a>
-                                                    </h4>
                                                 </li>
                                             </ul>
                                         </div>

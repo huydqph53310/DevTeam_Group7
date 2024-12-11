@@ -160,42 +160,39 @@ strong {
 <body>
 <!-- Modal Thanh Toán Thành Công -->
 <div class="modal fade" id="paymentSuccessModal" tabindex="-1" role="dialog" aria-labelledby="paymentSuccessModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="paymentSuccessModalLabel">Thanh Toán Thành Công</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Cảm ơn bạn đã thực hiện thanh toán. Đơn hàng của bạn đã được xử lý thành công.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="goBackToHomePage()">Trở về Trang Chủ</button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentSuccessModalLabel">Thanh Toán Thành Công</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Cảm ơn bạn đã thực hiện thanh toán. Đơn hàng của bạn đã được xử lý thành công.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="redirectToHome()">Trở về Trang Chủ</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+<script>
+        // Hàm xử lý khi form được submit
+        function handlePayment(event) {
+            event.preventDefault(); // Ngăn chặn form gửi ngay lập tức
 
-    <script>
-        // JavaScript để hiển thị modal khi thanh toán thành công
-    const opens = ()=>{
-        $(document).ready(function() {
-            // Giả sử thanh toán thành công
-            const orderId = 12345; // Bạn có thể lấy giá trị này từ URL hoặc dữ liệu của bạn
-            
             // Hiển thị modal
             $('#paymentSuccessModal').modal('show');
-        });
-    }
+        }
 
-        // Hàm để điều hướng về trang chủ khi nhấn nút "Trở về Trang Chủ"
-        function goBackToHomePage() {
-            window.location.href = "?wh=home";  // Thay thế bằng trang chủ của bạn
+        // Hàm chuyển hướng về trang chủ
+        function redirectToHome() {
+            window.location.href = "?wh=home";
         }
     </script>
     <div class="container">
+        <form action="" method="post">
         <h1>Thông Tin Thanh Toán</h1>
 
         <div class="order-details">
@@ -215,14 +212,13 @@ strong {
 
         <!-- Nút thanh toán -->
         <div class="payment-btn">
-            <form action="process_payment.php" method="POST">
-            <button type="button" class="btn btn-success" id="btnPay" data-toggle="modal" data-target="#paymentSuccessModal" onclick="opens()">Thanh Toán</button>
-            </form>
+            <button type="submit" name="back" class="btn btn-success" id="btnPay" data-toggle="modal" data-target="#paymentSuccessModal">Thanh Toán</button>
         </div>
 
         <div class="back-link">
             <a href="index.php" class="btn-back">Trở Về</a>
         </div>
+        </form>
     </div>
 </body>
 

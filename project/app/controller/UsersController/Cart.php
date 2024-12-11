@@ -16,6 +16,12 @@ class Cart extends ConnectDatabase {
                 // $quantity = $_POST['quantity'];
                 (new AddCart())->AddCart($_SESSION["id"],$_POST["product_id"], -1 );
             }
+            if(isset($_POST["delete"] )){
+                // var_dump($_POST["cid"]);
+                (new BillModel())->DelItem($_POST["cid"]);
+                header("Location: ?wh=cart");
+                exit;
+            }
             include  "app/view/Header.php";
             include  "app/view/User/Cart.php";
             include  "app/view/Footer.php";

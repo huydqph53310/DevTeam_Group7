@@ -253,7 +253,9 @@
 												<div class="grid__item cart_info">
 													<div class="ajaxcart__product-name-wrapper cart_name">
 														<a href="?wh=sanpham&id=<?= $item["product_id"]?>" class="ajaxcart__product-name h4" title="<?=  $item['product_name']?>"><?=  $item['product_name']?></a>
-														<a onclick="CartBase.removeItemCart(this);" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" title="Xóa">Xóa</a>
+														<input type="hidden" name="cid" value="<?php echo $item['cart_item_id']; ?>">
+													
+														<button class="cart__btn-remove remove-item-cart"  type="submit" name="delete">Xóa</button>
 													</div>
 													<div class="grid">
 														<div class="grid__item one-half text-right cart_prices">

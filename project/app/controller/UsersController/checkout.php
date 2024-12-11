@@ -6,7 +6,6 @@ class Checkout extends ConnectDatabase {
         $cart = (new Carts())->getListProductByIdUser($_SESSION["id"]);
         $totalAmount=0;
         $data = (new ClientModel())->getClientById($_SESSION["id"]);
-
         if(isset($_POST["btnDatHang"])){
             $billId = (new BillModel())->createBill($_SESSION["id"], $_POST["thanhtien"], 'pending', $_POST["httt_ma"], $data->address, "");
             if ($billId) {

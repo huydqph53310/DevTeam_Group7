@@ -72,7 +72,7 @@
       <ul class="d-flex align-items-center">
         <li class="nav-item d-block d-lg-none">
           <a class="nav-link nav-icon search-bar-toggle" href="#">
-<i class="bi bi-search"></i>
+            <i class="bi bi-search"></i>
           </a>
         </li>
         <!-- Kết thúc Biểu Tượng Tìm Kiếm -->
@@ -158,7 +158,7 @@
 
           <ul
             class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-<li class="dropdown-header">
+            <li class="dropdown-header">
               Bạn có 3 tin nhắn mới
               <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
             </li>
@@ -248,7 +248,7 @@
           <ul
             class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-<h6>Kevin Anderson</h6>
+              <h6>Kevin Anderson</h6>
               <span>Web Designer</span>
             </li>
             <li>
@@ -347,7 +347,7 @@
 
         </ul>
       </li>
-<!-- End Forms Nav -->
+      <!-- End Forms Nav -->
 
       <li class="nav-item">
         <a
@@ -413,6 +413,7 @@
           <th scope="col">Số tiền</th>
           <th scope="col">Trạng thái Đơn hàng</th>
           <th scope="col">Thời gian tạo</th>
+          <th scope="col">TT thanh toán</th>
           <th scope="col">Thời gian cập nhật</th>
           <th scope="col">Phương thức thanh toán</th>
           <th scope="col">Địa chỉ</th>
@@ -421,7 +422,7 @@
       </thead>
       <tbody>
         <?php foreach ($oders as $order): ?>
-          <tr> 
+          <tr>
             <form action="" method="post">
               <td><?= $order['id'] ?></td>
               <td><?= $order['users_id'] ?></td>
@@ -434,14 +435,27 @@
                 </select>
               </td>
               <td><?= htmlspecialchars($order['created_at']) ?></td>
+              <?php
+              $style = '';
+              if ($order['payment_status'] === 'paid') {
+                $style = 'color: green; font-weight: bold;';
+              } elseif ($order['payment_status'] === 'pending') {
+                $style = 'color: orange; font-style: italic;';
+              } else {
+                $style = 'color: red; text-decoration: underline;';
+              }
+              ?>
+              <td style="<?= $style ?>">
+                <?= htmlspecialchars($order['payment_status']) ?>
+              </td>
               <td><?= htmlspecialchars($order['updated_at']) ?></td>
               <td><?= htmlspecialchars($order['payment_method']) ?></td>
               <td><?= htmlspecialchars($order['shipping_address']) ?></td>
               <td>
                 <input type="hidden" name="id" value="<?= $order['id'] ?>">
                 <input type="submit" class="btn btn-primary" name="smf" value="Cập nhật trạng thái">
-              </td> 
-              </form> 
+              </td>
+            </form>
           </tr>
         <?php endforeach; ?>
 
